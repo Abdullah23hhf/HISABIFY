@@ -12,8 +12,31 @@
         body { font-family: 'Inter', sans-serif; background: var(--bg); color: #1f2937; line-height: 1.7; scroll-behavior: smooth; }
 
         header { background: var(--white); padding: 15px 6%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--brand); text-decoration: none; font-weight: bold; }
+        .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--brand); text-decoration: none; font-weight: bold; border-left: 3px solid var(--gold); padding-left: 15px; }
         
+        /* STYLISH HOME BUTTON */
+        .home-btn { 
+            text-decoration: none; 
+            background: var(--brand); 
+            color: white !important; 
+            padding: 10px 25px; 
+            border-radius: 50px; 
+            font-weight: 800; 
+            font-size: 13px; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(5, 46, 22, 0.2);
+        }
+        .home-btn:hover { 
+            background: var(--gold); 
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(198, 163, 6, 0.3);
+        }
+
         /* Quick Nav */
         .quick-nav { background: var(--brand); padding: 10px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         .quick-nav a { color: white; text-decoration: none; font-size: 13px; font-weight: 600; opacity: 0.8; transition: 0.3s; }
@@ -33,11 +56,11 @@
         .mistake-item { display: flex; gap: 15px; margin-bottom: 20px; background: #fff1f2; padding: 20px; border-radius: 15px; border-left: 5px solid #ef4444; }
         .mistake-item i { color: #ef4444; font-size: 20px; }
 
-        /* Reminder Box (Traffic Magnet) */
+        /* Reminder Box */
         .reminder-box { background: linear-gradient(135deg, #052e16 0%, #064e3b 100%); color: white; padding: 60px; border-radius: 30px; text-align: center; }
         .reminder-box h3 { font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 15px; }
         .reminder-form { display: flex; max-width: 600px; margin: 30px auto; gap: 10px; }
-        .reminder-form input { flex: 1; padding: 15px 20px; border-radius: 50px; border: none; font-size: 16px; }
+        .reminder-form input { flex: 1; padding: 15px 20px; border-radius: 50px; border: none; font-size: 16px; outline: none; }
         .reminder-form button { background: var(--gold); color: white; padding: 15px 30px; border-radius: 50px; border: none; font-weight: 700; cursor: pointer; transition: 0.3s; }
         .reminder-form button:hover { transform: scale(1.05); background: #b59405; }
 
@@ -52,7 +75,9 @@
 
     <header>
         <a href="index.html" class="logo">AL-HISAB</a>
-        <a href="calculators.html" style="text-decoration:none; color:var(--brand); font-weight:700;">CALCULATOR</a>
+        <nav>
+            <a href="index.html" class="home-btn"><i class="fas fa-house"></i> Home</a>
+        </nav>
     </header>
 
     <div class="quick-nav">
