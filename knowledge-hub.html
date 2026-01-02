@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Zakat Hub | Comparison, Guides & Reminders</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --brand: #052e16; --gold: #c6a306; --white: #ffffff; --bg: #f3f4f6; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: #1f2937; line-height: 1.7; scroll-behavior: smooth; }
+
+        header { background: var(--white); padding: 15px 6%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--brand); text-decoration: none; font-weight: bold; }
+        
+        /* Quick Nav */
+        .quick-nav { background: var(--brand); padding: 10px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .quick-nav a { color: white; text-decoration: none; font-size: 13px; font-weight: 600; opacity: 0.8; transition: 0.3s; }
+        .quick-nav a:hover { opacity: 1; color: var(--gold); }
+
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        
+        .hub-section { background: white; padding: 50px; border-radius: 30px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #e5e7eb; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 32px; color: var(--brand); margin-bottom: 25px; border-left: 5px solid var(--gold); padding-left: 20px; }
+
+        /* Comparison Table */
+        .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .vs-card { background: #f9fafb; padding: 25px; border-radius: 15px; border: 1px solid #e5e7eb; }
+        .vs-card h4 { color: var(--gold); margin-bottom: 10px; text-transform: uppercase; font-size: 14px; }
+
+        /* Mistakes List */
+        .mistake-item { display: flex; gap: 15px; margin-bottom: 20px; background: #fff1f2; padding: 20px; border-radius: 15px; border-left: 5px solid #ef4444; }
+        .mistake-item i { color: #ef4444; font-size: 20px; }
+
+        /* Reminder Box (Traffic Magnet) */
+        .reminder-box { background: linear-gradient(135deg, #052e16 0%, #064e3b 100%); color: white; padding: 60px; border-radius: 30px; text-align: center; }
+        .reminder-box h3 { font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 15px; }
+        .reminder-form { display: flex; max-width: 600px; margin: 30px auto; gap: 10px; }
+        .reminder-form input { flex: 1; padding: 15px 20px; border-radius: 50px; border: none; font-size: 16px; }
+        .reminder-form button { background: var(--gold); color: white; padding: 15px 30px; border-radius: 50px; border: none; font-weight: 700; cursor: pointer; transition: 0.3s; }
+        .reminder-form button:hover { transform: scale(1.05); background: #b59405; }
+
+        .tag { background: #fef3c7; color: #92400e; padding: 4px 12px; border-radius: 50px; font-size: 12px; font-weight: 700; }
+
+        footer { text-align: center; padding: 40px; color: #94a3b8; font-size: 13px; }
+
+        @media (max-width: 768px) { .vs-grid { grid-template-columns: 1fr; } .reminder-form { flex-direction: column; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">AL-HISAB</a>
+        <a href="calculators.html" style="text-decoration:none; color:var(--brand); font-weight:700;">CALCULATOR</a>
+    </header>
+
+    <div class="quick-nav">
+        <a href="#vs-tax">ZAKAT VS TAX</a>
+        <a href="#vs-sadaqah">ZAKAT VS SADAQAH</a>
+        <a href="#mistakes">COMMON MISTAKES</a>
+        <a href="#ramadan">RAMADAN GUIDE</a>
+        <a href="#reminder">DUE DATE REMINDER</a>
+    </div>
+
+    <div class="container">
+
+        <section class="hub-section" id="vs-tax">
+            <h2>Zakat vs Secular Tax</h2>
+            <p style="margin-bottom: 25px;">Understanding the fundamental difference between State law and Divine law.</p>
+            <div class="vs-grid">
+                <div class="vs-card">
+                    <h4>Zakat (Ibadah)</h4>
+                    <p>Fixed 2.5% rate on surplus wealth. Specifically for 8 categories of people defined in the Quran. It purifies the soul and wealth.</p>
+                </div>
+                <div class="vs-card">
+                    <h4>Tax (State Law)</h4>
+                    <p>Variable rates on income or consumption. Used for infrastructure, defense, and public services. <strong>Tax cannot replace Zakat.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="hub-section" id="vs-sadaqah">
+            <h2>Zakat vs Sadaqah</h2>
+            <p style="margin-bottom: 25px;">One is an obligation, the other is a voluntary virtuous act.</p>
+            
+            <div class="vs-grid">
+                <div class="vs-card">
+                    <span class="tag">Compulsory</span>
+                    <h3 style="margin-top:10px;">Zakat</h3>
+                    <p>Mandatory for every Sahab-e-Nisab Muslim. Has a fixed time (Lunar year) and fixed percentage.</p>
+                </div>
+                <div class="vs-card">
+                    <span class="tag">Voluntary</span>
+                    <h3 style="margin-top:10px;">Sadaqah</h3>
+                    <p>Optional charity given any time. No limit or fixed percentage. Given purely for extra rewards.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="hub-section" id="mistakes">
+            <h2>Common Zakat Mistakes</h2>
+            <div class="mistake-item">
+                <i class="fas fa-times-circle"></i>
+                <div>
+                    <strong>Thinking Tax is Zakat:</strong> Paying income tax does not fulfill your Zakat obligation.
+                </div>
+            </div>
+            <div class="mistake-item">
+                <i class="fas fa-times-circle"></i>
+                <div>
+                    <strong>Ignoring Jewelry:</strong> Many people forget to calculate Zakat on Gold jewelry that is in use.
+                </div>
+            </div>
+            <div class="mistake-item" style="background: #f0fdf4; border-left-color: #22c55e;">
+                <i class="fas fa-check-circle" style="color: #22c55e;"></i>
+                <div>
+                    <strong>Correction:</strong> Always use live Gold/Silver rates for the day you are paying Zakat.
+                </div>
+            </div>
+        </section>
+
+        <section class="hub-section" id="ramadan">
+            <h2>Ramadan Zakat Guide</h2>
+            <p>While Zakat can be paid any time of the year once the Hawl (lunar year) is complete, many prefer Ramadan for multiplied rewards.</p>
+            <ul style="margin-top:20px; margin-left:20px;">
+                <li>Calculate your total assets on the 1st of Ramadan.</li>
+                <li>Subtract immediate debts.</li>
+                <li>Distribute to eligible relatives first (Double reward).</li>
+            </ul>
+        </section>
+
+        <section class="reminder-box" id="reminder">
+            <h3>When is my Zakat due?</h3>
+            <p>Don't miss your purification date. Enter your email and Zakat anniversary date, and we will send you a professional reminder every year.</p>
+            
+            <form class="reminder-form">
+                <input type="email" placeholder="Enter your email" required>
+                <input type="date" title="Select your Zakat Anniversary" required>
+                <button type="submit">Set Reminder</button>
+            </form>
+            <p style="font-size: 12px; opacity: 0.7; margin-top: 15px;"><i class="fas fa-shield-alt"></i> We value your privacy. Unsubscribe at any time.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Al-Hisab Knowledge Hub. Purifying the Ummah's Wealth.
+    </footer>
+
+</body>
+</html>

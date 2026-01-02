@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholars & References | Al-Hisab Research Database</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --brand: #052e16; --gold: #c6a306; --white: #ffffff; --bg: #f8fafc; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: #334155; line-height: 1.6; }
+
+        header { background: var(--white); padding: 15px 6%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--brand); text-decoration: none; font-weight: bold; }
+        .back-btn { text-decoration: none; color: var(--brand); font-weight: 700; border: 2px solid var(--brand); padding: 8px 25px; border-radius: 50px; font-size: 13px; transition: 0.3s; }
+        .back-btn:hover { background: var(--brand); color: white; }
+
+        .hero-ref { background: linear-gradient(rgba(5,46,22,0.92), rgba(5,46,22,0.92)), url('https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=2000'); background-size: cover; color: white; padding: 100px 5%; text-align: center; }
+        .hero-ref h1 { font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 15px; }
+
+        .container { max-width: 1200px; margin: -60px auto 80px; padding: 0 20px; }
+
+        .ref-section { background: white; padding: 60px; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); }
+        .ref-section h2 { font-family: 'Playfair Display', serif; color: var(--brand); margin-bottom: 40px; text-align: center; font-size: 36px; border-bottom: 3px solid var(--gold); display: inline-block; width: 100%; padding-bottom: 10px; }
+
+        .book-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 25px; }
+        .book-item { display: flex; align-items: flex-start; gap: 20px; padding: 25px; border: 1px solid #f1f5f9; border-radius: 20px; transition: 0.4s; background: #fff; }
+        .book-item:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); border-color: var(--gold); }
+        .book-item i { color: var(--gold); font-size: 24px; background: #fdfce8; padding: 15px; border-radius: 15px; }
+        
+        .book-info h4 { font-size: 18px; color: var(--brand); margin-bottom: 8px; font-family: 'Playfair Display', serif; }
+        .book-info p { font-size: 13px; color: #64748b; font-style: italic; line-height: 1.5; }
+
+        .tag-box { margin-top: 10px; }
+        .tag { font-size: 10px; background: #f1f5f9; padding: 3px 10px; border-radius: 10px; color: var(--brand); font-weight: 700; text-transform: uppercase; }
+
+        footer { text-align: center; padding: 60px; background: #020617; color: #94a3b8; font-size: 14px; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">AL-HISAB</a>
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> RETURN HOME</a>
+    </header>
+
+    <section class="hero-ref">
+        <h1>Scholars & Shariah References</h1>
+        <p>A comprehensive database of 40+ classical and modern sources used for Al-Hisab algorithms.</p>
+    </section>
+
+    <div class="container">
+        <div class="ref-section">
+            <h2>The Institutional Library</h2>
+            <div class="book-grid">
+                
+                <div class="book-item">
+                    <i class="fas fa-scroll"></i>
+                    <div class="book-info">
+                        <h4>Sahih al-Bukhari</h4>
+                        <p>The primary source for Hadith regarding Zakat on gold, silver, and livestock.</p>
+                        <div class="tag-box"><span class="tag">Classical Source</span></div>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <i class="fas fa-scroll"></i>
+                    <div class="book-info">
+                        <h4>Sahih Muslim</h4>
+                        <p>Detailed rulings on Ushr (Agricultural tax) and wealth purification thresholds.</p>
+                        <div class="tag-box"><span class="tag">Classical Source</span></div>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <i class="fas fa-book"></i>
+                    <div class="book-info">
+                        <h4>Al-Mughni (Ibn Qudamah)</h4>
+                        <p>Comprehensive Hanbali jurisprudence on debt deduction and business assets.</p>
+                        <div class="tag-box"><span class="tag">Hanbali Fiqh</span></div>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <i class="fas fa-book"></i>
+                    <div class="book-info">
+                        <h4>Fatawa Hindiyya</h4>
+                        <p>The Mughal-era codification of Hanafi Zakat laws for commercial trade.</p>
+                        <div class="tag-box"><span class="tag">Hanafi Fiqh</span></div>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <i class="fas fa-university"></i>
+                    <div class="book-info">
+                        <h4>AAOIFI Standard No. 35</h4>
+                        <p>International Shariah standard for Zakat calculation in modern banks.</p>
+                        <div class="tag-box"><span class="tag">Global Standard</span></div>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <i class="fas fa-landmark"></i>
+                    <div class="book-info">
+                        <h4>Islamic Fiqh Academy (OIC)</h4>
+                        <p>Resolutions on Cryptocurrency, Digital Assets, and Stock Markets.</p>
+                        <div class="tag-box"><span class="tag">Modern Fatwa</span></div>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <i class="fas fa-pen-fancy"></i>
+                    <div class="book-info">
+                        <h4>Fiqh al-Zakat (Al-Qaradawi)</h4>
+                        <p>Modern encyclopedia covering Zakat on salaries and professional income.</p>
+                        <div class="tag-box"><span class="tag">Modern Research</span></div>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <i class="fas fa-book-quran"></i>
+                    <div class="book-info">
+                        <h4>Badai' al-Sanai'</h4>
+                        <p>Imam al-Kasani's logical framework for Zakatable wealth (Nama).</p>
+                        <div class="tag-box"><span class="tag">Classical Logic</span></div>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <div class="book-info">
+                        <h4>Mufti Taqi Usmani's Fatawa</h4>
+                        <p>Specific rulings on Mutual Funds, Insurance, and Real Estate Flipping.</p>
+                        <div class="tag-box"><span class="tag">Contemporary</span></div>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <i class="fas fa-microchip"></i>
+                    <div class="book-info">
+                        <h4>Digital Assets Shariah Report</h4>
+                        <p>Analysis of Ethereum Staking and Liquidity Pools Zakatability.</p>
+                        <div class="tag-box"><span class="tag">Tech Fatwa</span></div>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <i class="fas fa-leaf"></i>
+                    <div class="book-info">
+                        <h4>Kitab al-Kharaj (Abu Yusuf)</h4>
+                        <p>Classical reference for land tax and state-level Zakat administration.</p>
+                        <div class="tag-box"><span class="tag">Governance</span></div>
+                    </div>
+                </div>
+
+                <div class="book-item">
+                    <i class="fas fa-chart-line"></i>
+                    <div class="book-info">
+                        <h4>Dow Jones Islamic Index Rules</h4>
+                        <p>Screening criteria for Shariah-compliant equity investments.</p>
+                        <div class="tag-box"><span class="tag">Market Standard</span></div>
+                    </div>
+                </div>
+
+                <div class="book-item"><div class="book-info"><h4>Al-Hidayah (Imam Marghinani)</h4><p>Rulings on Nisab of Silver and Mixed Metals.</p></div></div>
+                <div class="book-item"><div class="book-info"><h4>Fatawa Shami (Ibn Abidin)</h4><p>Detailed analysis of personal liabilities and debts.</p></div></div>
+                <div class="book-item"><div class="book-info"><h4>Al-Risalah (Imam Shafi'i)</h4><p>Foundational logic for Zakat on trade and agriculture.</p></div></div>
+                <div class="book-item"><div class="book-info"><h4>Muwatta Imam Malik</h4><p>The practice of the people of Madinah regarding Zakat.</p></div></div>
+                <div class="book-item"><div class="book-info"><h4>Majmu' al-Fatawa (Ibn Taymiyyah)</h4><p>Rulings on Zakatable assets in unstable economies.</p></div></div>
+                <div class="book-item"><div class="book-info"><h4>Zakat on Pension Funds (SC Malaysia)</h4><p>Modern Shariah resolutions on retirement savings.</p></div></div>
+                <div class="book-item"><div class="book-info"><h4>International Shariah Board (IDB)</h4><p>Policies on Zakat for Waqf and Charity Trusts.</p></div></div>
+                <div class="book-item"><div class="book-info"><h4>Accounting for Zakat (AAOIFI FAS 9)</h4><p>Financial accounting standards for Zakat calculation.</p></div></div>
+                <div class="book-item"><div class="book-info"><h4>Bidayat al-Mujtahid</h4><p>Comparative Fiqh on differences in Nisab thresholds.</p></div></div>
+                <div class="book-item"><div class="book-info"><h4>Al-Umm (Imam Shafi'i)</h4><p>Original source for Shafi'i Zakat jurisprudence.</p></div></div>
+                <div class="book-item"><div class="book-info"><h4>Fatawa Darul Uloom Deoband</h4><p>Practical Fatwa database for South Asian Muslims.</p></div></div>
+                <div class="book-item"><div class="book-info"><h4>Azhar University Research Journal</h4><p>Analysis of Zakat on Intellectual Property and Patents.</p></div></div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Al-Hisab Research Portal - Verified Shariah References for 2026.</p>
+        <p style="margin-top: 10px; opacity: 0.6;">Designed for Academic and Shariah Transparency.</p>
+    </footer>
+
+</body>
+</html>

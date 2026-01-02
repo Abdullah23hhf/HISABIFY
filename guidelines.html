@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakat Knowledge Hub | Comprehensive Guides 2026</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root { --primary: #022c22; --accent: #d4af37; --white: #ffffff; --bg: #f8fafc; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: #1e293b; line-height: 1.7; }
+
+        /* Header */
+        header {
+            background: var(--white); padding: 15px 6%;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { text-decoration: none; border-left: 3px solid var(--accent); padding-left: 15px; }
+        .logo h1 { font-family: 'Cinzel', serif; font-size: 24px; color: var(--primary); margin: 0; }
+        
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 13px; text-transform: uppercase; }
+
+        /* Hero */
+        .guide-hero { background: var(--primary); color: white; padding: 80px 6%; text-align: center; }
+        .guide-hero h2 { font-family: 'Cinzel', serif; font-size: 36px; color: var(--accent); margin-bottom: 10px; }
+
+        /* Articles Container */
+        .articles-container { max-width: 1000px; margin: 50px auto; padding: 0 20px; }
+        
+        .article-box { background: white; border-radius: 20px; margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); border: 1px solid #eee; overflow: hidden; }
+        
+        .article-header { padding: 30px; display: flex; align-items: center; gap: 20px; cursor: pointer; transition: 0.3s; }
+        .article-header:hover { background: #fdfdfd; }
+        .article-icon { width: 60px; height: 60px; background: #f1f5f9; border-radius: 15px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--accent); }
+        .article-title-area h3 { color: var(--primary); font-size: 20px; font-family: 'Cinzel', serif; }
+        .article-title-area span { font-size: 12px; color: var(--accent); font-weight: 800; text-transform: uppercase; }
+
+        .article-content { max-height: 0; overflow: hidden; transition: 0.5s ease-out; padding: 0 30px; background: #fafafa; }
+        .article-content.open { max-height: 2000px; padding: 30px; border-top: 1px solid #eee; }
+
+        .article-content h4 { color: var(--primary); margin: 20px 0 10px; }
+        .article-content p { margin-bottom: 15px; color: #475569; }
+
+        .read-more-btn { background: none; border: 2px solid var(--accent); color: var(--accent); padding: 8px 20px; border-radius: 50px; font-weight: 800; cursor: pointer; margin-top: 10px; font-size: 12px; transition: 0.3s; }
+        .read-more-btn:hover { background: var(--accent); color: white; }
+
+        footer { background: var(--primary); color: white; padding: 40px; text-align: center; font-size: 13px; }
+
+        @media (max-width: 768px) { .article-header { flex-direction: column; text-align: center; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo"><h1>AL-HISAB</h1></a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="calculators.html">Calculators</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="guide-hero">
+        <h2>Zakat Knowledge Hub</h2>
+        <p>Expert articles and research on wealth purification for the modern world.</p>
+    </section>
+
+    <div class="articles-container">
+
+        <div class="article-box">
+            <div class="article-header" onclick="toggleArticle(this)">
+                <div class="article-icon"><i class="fas fa-coins"></i></div>
+                <div class="article-title-area">
+                    <span>Expert Guide</span>
+                    <h3>Zakat on Gold & Silver Jewelry (2026 Update)</h3>
+                    <button class="read-more-btn">Read Full Article</button>
+                </div>
+            </div>
+            <div class="article-content">
+                <h4>Understanding Nisab for Precious Metals</h4>
+                <p>Zakat is obligatory on gold and silver once they reach a specific weight (Nisab) and have been in your possession for one lunar year. In 2026, with fluctuating market prices, it's vital to use live rates.</p>
+                <p><strong>Gold Nisab:</strong> 87.48 grams (approx. 7.5 Tolas).<br><strong>Silver Nisab:</strong> 612.36 grams (approx. 52.5 Tolas).</p>
+                <h4>What about Jewelry?</h4>
+                <p>According to the Hanafi school, all gold and silver jewelry (worn or stored) is subject to Zakat if it exceeds the Nisab. Other schools of thought vary, but for total purification, many scholars recommend paying on all holdings.</p>
+            </div>
+        </div>
+
+        <div class="article-box">
+            <div class="article-header" onclick="toggleArticle(this)">
+                <div class="article-icon"><i class="fab fa-bitcoin"></i></div>
+                <div class="article-title-area">
+                    <span>Modern Finance</span>
+                    <h3>The Shariah Perspective on Cryptocurrency</h3>
+                    <button class="read-more-btn">Read Full Article</button>
+                </div>
+            </div>
+            <div class="article-content">
+                <h4>Is Crypto Subject to Zakat?</h4>
+                <p>Most contemporary Shariah councils have ruled that digital assets like Bitcoin, Ethereum, and Stablecoins are considered "Maal" (wealth) and are subject to Zakat at a rate of 2.5%.</p>
+                <h4>How to Calculate?</h4>
+                <p>You must calculate the Zakat based on the market value of your coins on your "Zakat Anniversary" date. If you are a long-term holder, you pay 2.5% on the total portfolio value if it meets the Nisab of silver.</p>
+            </div>
+        </div>
+
+        <div class="article-box">
+            <div class="article-header" onclick="toggleArticle(this)">
+                <div class="article-icon"><i class="fas fa-chart-line"></i></div>
+                <div class="article-title-area">
+                    <span>Investments</span>
+                    <h3>Zakat on Stocks and Business Assets</h3>
+                    <button class="read-more-btn">Read Full Article</button>
+                </div>
+            </div>
+            <div class="article-content">
+                <h4>Trading vs. Long-term Investment</h4>
+                <p>If you trade stocks frequently, Zakat is due on the full market value of the shares. If you are a long-term investor, Zakat is only due on the "Zakat-able assets" of the company (cash, receivables, and inventory).</p>
+                <h4>Business Inventory</h4>
+                <p>For business owners, Zakat is calculated on the cost price of the goods intended for sale. Raw materials and finished goods both count towards your Zakat-able total.</p>
+            </div>
+        </div>
+
+        <div class="article-box">
+            <div class="article-header" onclick="toggleArticle(this)">
+                <div class="article-icon"><i class="fas fa-hotel"></i></div>
+                <div class="article-title-area">
+                    <span>Property</span>
+                    <h3>Calculating Zakat on Real Estate & Land</h3>
+                    <button class="read-more-btn">Read Full Article</button>
+                </div>
+            </div>
+            <div class="article-content">
+                <h4>Personal Property vs. Investment</h4>
+                <p>Your primary residence (the house you live in) is exempt from Zakat. However, property bought with the intention to resell (Flip) is subject to 2.5% Zakat on its current market value.</p>
+                <h4>Rental Income</h4>
+                <p>If you own a property for rental income, Zakat is not due on the value of the building itself, but it IS due on the rental income you have saved at the end of your Zakat year.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>&copy; 2026 Al-Hisab Portal | Authority in Wealth Purification</footer>
+
+    <script>
+        function toggleArticle(element) {
+            const content = element.nextElementSibling;
+            const allContent = document.querySelectorAll('.article-content');
+            
+            // Close other articles
+            allContent.forEach(item => {
+                if(item !== content) item.classList.remove('open');
+            });
+
+            // Toggle current article
+            content.classList.toggle('open');
+            
+            // Change button text
+            const btn = element.querySelector('.read-more-btn');
+            if(content.classList.contains('open')) {
+                btn.innerText = "Close Article";
+            } else {
+                btn.innerText = "Read Full Article";
+            }
+        }
+    </script>
+</body>
+</html>

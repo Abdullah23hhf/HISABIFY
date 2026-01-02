@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Al-Hisab | Global Financial Authority</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #022c22; 
+            --accent: #d4af37; 
+            --white: #ffffff; 
+            --text: #334155;
+            --light-bg: #f8fafc;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text); line-height: 1.8; background: var(--white); }
+
+        /* Navigation */
+        header {
+            background: var(--white); padding: 15px 6%;
+            display: flex; justify-content: space-between; align-items: center;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000;
+        }
+        .logo { text-decoration: none; border-left: 3px solid var(--accent); padding-left: 15px; }
+        .logo h1 { font-family: 'Cinzel', serif; font-size: 24px; color: var(--primary); margin: 0; }
+        
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { text-decoration: none; color: var(--primary); font-weight: 700; font-size: 13px; text-transform: uppercase; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Premium Hero */
+        .hero-section {
+            background: linear-gradient(135deg, #022c22 0%, #064e3b 100%);
+            padding: 120px 6%; color: white; text-align: center;
+        }
+        .hero-section h2 { font-family: 'Playfair Display', serif; font-size: 55px; margin-bottom: 20px; }
+        .hero-section p { font-size: 20px; opacity: 0.8; max-width: 800px; margin: 0 auto; font-weight: 300; }
+
+        /* Content Grid */
+        .main-content { max-width: 1200px; margin: -80px auto 80px; padding: 0 20px; }
+        .white-box { background: white; padding: 60px; border-radius: 40px; box-shadow: 0 40px 100px rgba(0,0,0,0.08); }
+
+        .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px; }
+        .story-text h3 { font-family: 'Cinzel', serif; color: var(--primary); font-size: 32px; margin-bottom: 25px; }
+        .story-text p { margin-bottom: 20px; font-size: 17px; color: #475569; }
+
+        .image-placeholder { background: var(--light-bg); border-radius: 30px; height: 400px; overflow: hidden; border: 1px solid #e2e8f0; }
+        .image-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Values Section */
+        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
+        .value-card { padding: 40px; border-radius: 25px; background: var(--light-bg); border: 1px solid #f1f5f9; transition: 0.4s; }
+        .value-card:hover { transform: translateY(-10px); background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .value-card i { font-size: 40px; color: var(--accent); margin-bottom: 25px; }
+        .value-card h4 { font-family: 'Cinzel', serif; color: var(--primary); font-size: 20px; margin-bottom: 15px; }
+
+        /* Founder Section (Crucial for AdSense) */
+        .founder-wrap { margin-top: 100px; background: #f1f5f9; padding: 60px; border-radius: 40px; display: flex; align-items: center; gap: 50px; }
+        .founder-avatar { width: 180px; height: 180px; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 70px; color: var(--accent); font-weight: 800; }
+        .founder-bio h4 { font-family: 'Cinzel', serif; font-size: 28px; color: var(--primary); margin-bottom: 5px; }
+        .founder-bio span { color: var(--accent); font-weight: 800; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; }
+        .founder-bio p { margin-top: 20px; font-style: italic; color: #64748b; }
+
+        footer { background: var(--primary); color: white; padding: 50px; text-align: center; }
+
+        @media (max-width: 900px) {
+            .story-grid, .founder-wrap { grid-template-columns: 1fr; flex-direction: column; text-align: center; }
+            .hero-section h2 { font-size: 35px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <h1>AL-HISAB</h1>
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="calculators.html">Calculators</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <h2>The Science of Wealth Purification</h2>
+        <p>Combining classical Shariah intelligence with cutting-edge financial automation for the global Ummah.</p>
+    </section>
+
+    <main class="main-content">
+        <div class="white-box">
+            <div class="story-grid">
+                <div class="story-text">
+                    <h3>Our Authority</h3>
+                    <p>Al-Hisab is not just a calculator; it is a global vision to standardize the digital landscape of Zakat. In an era where wealth is no longer just physical gold but digital assets, stocks, and crypto-portfolios, our platform acts as the "Standard Authority" to ensure every cent is purified according to the highest Shariah standards.</p>
+                    <p>We leverage live market APIs to bridge the gap between ancient wisdom and modern technology, providing real-time accuracy that was previously impossible.</p>
+                </div>
+                <div class="image-placeholder">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=1000" alt="Finance">
+                </div>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-microchip"></i>
+                    <h4>Precision Tech</h4>
+                    <p>100% Automated tracking of Gold, Silver, and 2,000+ Crypto assets to prevent human error.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-scroll"></i>
+                    <h4>Shariah First</h4>
+                    <p>Our algorithms are built upon the consensus of world-renowned Islamic economic scholars.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-fingerprint"></i>
+                    <h4>Total Privacy</h4>
+                    <p>We operate on a "Zero-Storage" policy. Your financial data never leaves your device.</p>
+                </div>
+            </div>
+
+            <div class="founder-wrap">
+                <div class="founder-avatar">A</div>
+                <div class="founder-bio">
+                    <span>Founder & Chief Engineer</span>
+                    <h4>Abdullah</h4>
+                    <p>"Al-Hisab was built to empower every Muslim with professional-grade tools that were once only available to institutions. Our commitment is to accuracy, transparency, and the service of the global Ummah."</p>
+                    <p style="margin-top: 10px; font-weight: bold; color: var(--primary);">Contact: abdullahnosheen95@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Al-Hisab Global Portal. Engineered by Abdullah.
+    </footer>
+
+</body>
+</html>

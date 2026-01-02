@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works | Al-Hisab Step-by-Step User Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --brand: #052e16; --gold: #c6a306; --white: #ffffff; --bg: #f8fafc; --soft-gold: #fdfce8; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: #334155; line-height: 1.7; }
+
+        header { background: var(--white); padding: 15px 6%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--brand); text-decoration: none; font-weight: bold; }
+        .home-btn { text-decoration: none; color: var(--brand); font-weight: 700; border: 2px solid var(--brand); padding: 8px 20px; border-radius: 50px; font-size: 13px; transition: 0.3s; }
+
+        .hero-guide { background: linear-gradient(135deg, #052e16 0%, #064e3b 100%); color: white; padding: 100px 5%; text-align: center; }
+        .hero-guide h1 { font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 20px; }
+        .hero-guide p { font-size: 18px; opacity: 0.9; max-width: 700px; margin: auto; }
+
+        .container { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
+
+        /* Step Styling */
+        .step-container { position: relative; padding-left: 80px; margin-bottom: 60px; }
+        .step-num { 
+            position: absolute; left: 0; top: 0; 
+            width: 60px; height: 60px; background: var(--gold); 
+            color: white; border-radius: 50%; display: flex; 
+            align-items: center; justify-content: center; 
+            font-size: 24px; font-weight: 900; box-shadow: 0 10px 20px rgba(198, 163, 6, 0.3);
+        }
+        .step-content { background: white; padding: 40px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; }
+        .step-content h2 { color: var(--brand); font-family: 'Playfair Display', serif; margin-bottom: 15px; }
+        .step-content p { font-size: 16px; color: #64748b; margin-bottom: 20px; }
+
+        .feature-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; list-style: none; }
+        .feature-list li { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--brand); }
+        .feature-list li i { color: var(--gold); }
+
+        .visual-box { background: var(--soft-gold); border: 2px dashed var(--gold); padding: 20px; border-radius: 15px; margin-top: 20px; text-align: center; font-style: italic; color: #854d0e; font-size: 14px; }
+
+        .cta-section { background: var(--brand); color: white; padding: 60px; border-radius: 30px; text-align: center; margin-top: 80px; }
+        .cta-section h3 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 20px; }
+        .start-btn { display: inline-block; background: var(--gold); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; cursor: pointer; border: none; }
+        .start-btn:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.2); background: #b59405; }
+
+        footer { text-align: center; padding: 40px; color: #94a3b8; font-size: 13px; }
+
+        @media (max-width: 768px) {
+            .step-container { padding-left: 0; padding-top: 80px; }
+            .step-num { left: 50%; transform: translateX(-50%); }
+            .feature-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">AL-HISAB</a>
+        <a href="index.html" class="home-btn">BACK TO HOME</a>
+    </header>
+
+    <section class="hero-guide">
+        <h1>How Al-Hisab Works</h1>
+        <p>A simple 4-step process to ensure your Zakat is calculated with 100% Shariah accuracy using our advanced algorithms.</p>
+    </section>
+
+    <div class="container">
+
+        <div class="step-container">
+            <div class="step-num">1</div>
+            <div class="step-content">
+                <h2>Identify Your Assets</h2>
+                <p>The first step is gathering all your wealth sources. Our system categorizes assets into four main blocks to ensure nothing is missed.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-check"></i> Cash & Bank Balances</li>
+                    <li><i class="fas fa-check"></i> Gold & Silver Jewelry</li>
+                    <li><i class="fas fa-check"></i> Business Stock/Inventory</li>
+                    <li><i class="fas fa-check"></i> Shares & Cryptocurrencies</li>
+                </ul>
+                <div class="visual-box">
+                    <i class="fas fa-lightbulb"></i> Tip: Use our "Fatwa Bank" if you are unsure if an asset is Zakatable.
+                </div>
+            </div>
+        </div>
+
+        <div class="step-container">
+            <div class="step-num">2</div>
+            <div class="step-content">
+                <h2>Check the Daily Nisab</h2>
+                <p>Zakat is only due if your wealth exceeds the Nisab threshold. Al-Hisab pulls live market data for Gold and Silver to give you the most accurate Nisab value for today.</p>
+                <div class="visual-box">
+                    <i class="fas fa-chart-line"></i> Our system automatically updates prices every 24 hours.
+                </div>
+            </div>
+        </div>
+
+        <div class="step-container">
+            <div class="step-num">3</div>
+            <div class="step-content">
+                <h2>Deduct Your Liabilities</h2>
+                <p>Islam allows you to subtract certain debts from your total wealth. Input your short-term liabilities (bills, immediate loans, etc.) to get your <strong>Net Zakatable Wealth</strong>.</p>
+                <ul class="feature-list">
+                    <li><i class="fas fa-minus-circle"></i> Utility Bills due</li>
+                    <li><i class="fas fa-minus-circle"></i> Personal Loans (Immediate)</li>
+                    <li><i class="fas fa-minus-circle"></i> Business Creditors</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-container">
+            <div class="step-num">4</div>
+            <div class="step-content">
+                <h2>Generate & Purify</h2>
+                <p>Review your final summary. The system applies the Shariah-mandated 2.5% rate and provides a detailed breakdown that you can save or print for your records.</p>
+                <div class="visual-box" style="background: #f0fdf4; border-color: #22c55e; color: #166534;">
+                    <i class="fas fa-shield-check"></i> Result: Your wealth is now purified (Al-Zaka).
+                </div>
+            </div>
+        </div>
+
+        <section class="cta-section">
+            <h3>Ready to Purify Your Wealth?</h3>
+            <p style="margin-bottom: 30px; opacity: 0.9;">Join thousands of Muslims using Al-Hisab for error-free Zakat calculation.</p>
+            
+            <a href="index.html#calculators" class="start-btn">Start Calculation Now</a>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Al-Hisab Global Authority. Engineered for Precision.
+    </footer>
+
+</body>
+</html>
