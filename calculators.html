@@ -19,7 +19,6 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg-light); color: #1e293b; }
 
-        /* Matching Header from Home Page */
         header { 
             background: var(--white); 
             box-shadow: 0 4px 20px rgba(0,0,0,0.05); 
@@ -44,12 +43,10 @@
         }
         .home-link:hover { opacity: 0.9; transform: translateY(-1px); }
 
-        /* Hero Sync Status */
         .hero-mini { background: var(--brand-green); color: white; padding: 40px 20px 80px; text-align: center; }
         .hero-mini h1 { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 10px; }
         .sync-status { color: #34d399; font-size: 11px; font-weight: 800; letter-spacing: 1px; }
 
-        /* Real-time Ticker */
         .ticker-container { max-width: 1250px; margin: -40px auto 40px; padding: 0 20px; }
         .ticker-grid { 
             background: white; border-radius: 15px; padding: 20px; 
@@ -59,12 +56,9 @@
         .asset-box { text-align: center; padding: 10px; border-radius: 10px; transition: 0.3s; border: 1px solid #f1f5f9; }
         .asset-label { font-size: 10px; font-weight: 800; color: #64748b; text-transform: uppercase; margin-bottom: 5px; }
         .asset-price { font-size: 18px; font-weight: 900; color: var(--brand-green); font-variant-numeric: tabular-nums; }
-
-        /* Animation for Live Sync */
         .up { background: #ecfdf5 !important; color: #10b981 !important; border-color: #10b981; }
         .down { background: #fef2f2 !important; color: #ef4444 !important; border-color: #ef4444; }
 
-        /* Calculators Grid */
         .main-content { max-width: 1300px; margin: 0 auto 60px; padding: 0 20px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .card { background: white; border-radius: 16px; padding: 25px; border: 1px solid #e2e8f0; text-align: center; transition: 0.3s; }
@@ -120,62 +114,71 @@
     </footer>
 
     <script>
+        // Safe JS execution + input validation
         const G_FACTOR = 31.1034768; 
         const T_FACTOR = 11.6638;
         let rates = { gold: 0, tola: 0, btc: 0, eth: 0, sol: 0, bnb: 0, cash: 1 };
         let lastRates = { gold: 0, tola: 0, btc: 0, eth: 0, sol: 0, bnb: 0, cash: 1 };
 
         function connectBinance() {
-            const streams = ['paxgusdt@ticker','btcusdt@ticker','ethusdt@ticker','solusdt@ticker','bnbusdt@ticker'];
-            const ws = new WebSocket(`wss://stream.binance.com:9443/stream?streams=${streams.join('/')}`);
+            try {
+                const streams = ['paxgusdt@ticker','btcusdt@ticker','ethusdt@ticker','solusdt@ticker','bnbusdt@ticker'];
+                const ws = new WebSocket(`wss://stream.binance.com:9443/stream?streams=${streams.join('/')}`);
 
-            ws.onmessage = (e) => {
-                const data = JSON.parse(e.data);
-                if(!data.data) return;
-                const s = data.data.s;
-                const p = parseFloat(data.data.c);
+                ws.onmessage = (e) => {
+                    try {
+                        const data = JSON.parse(e.data);
+                        if(!data.data) return;
+                        const s = data.data.s;
+                        const p = parseFloat(data.data.c) || 0;
 
-                if(s === 'PAXGUSDT') {
-                    rates.gold = p / G_FACTOR;
-                    rates.tola = (p / G_FACTOR) * T_FACTOR;
-                } 
-                else if(s === 'BTCUSDT') rates.btc = p;
-                else if(s === 'ETHUSDT') rates.eth = p;
-                else if(s === 'SOLUSDT') rates.sol = p;
-                else if(s === 'BNBUSDT') rates.bnb = p;
+                        if(s === 'PAXGUSDT') {
+                            rates.gold = p / G_FACTOR;
+                            rates.tola = (p / G_FACTOR) * T_FACTOR;
+                        } else if(s === 'BTCUSDT') rates.btc = p;
+                        else if(s === 'ETHUSDT') rates.eth = p;
+                        else if(s === 'SOLUSDT') rates.sol = p;
+                        else if(s === 'BNBUSDT') rates.bnb = p;
 
-                document.getElementById('wsStatus').innerHTML = '<i class="fas fa-circle"></i> LIVE SYNC ACTIVE';
-                renderTicker();
-                setTimeout(() => { lastRates = {...rates}; }, 600);
-            };
+                        document.getElementById('wsStatus').innerHTML = '<i class="fas fa-circle"></i> LIVE SYNC ACTIVE';
+                        renderTicker();
+                        setTimeout(() => { lastRates = {...rates}; }, 600);
+                    } catch(err){ console.warn("Ticker parse error:", err); }
+                };
 
-            ws.onclose = () => {
-                document.getElementById('wsStatus').innerText = 'RECONNECTING...';
-                setTimeout(connectBinance, 2000);
-            };
+                ws.onclose = () => {
+                    document.getElementById('wsStatus').innerText = 'RECONNECTING...';
+                    setTimeout(connectBinance, 2000);
+                };
+            } catch(err){
+                console.warn("WebSocket connection error:", err);
+                document.getElementById('wsStatus').innerText = 'LIVE SYNC UNAVAILABLE';
+            }
         }
 
         function renderTicker(){
-            const ui = document.getElementById('tickerUI');
-            const list = [
-                {l: 'Gold (1g)', v: rates.gold, k: 'gold'},
-                {l: 'Gold (1 Tola)', v: rates.tola, k: 'tola'},
-                {l: 'Bitcoin', v: rates.btc, k: 'btc'},
-                {l: 'Ethereum', v: rates.eth, k: 'eth'},
-                {l: 'Solana', v: rates.sol, k: 'sol'},
-                {l: 'Binance', v: rates.bnb, k: 'bnb'}
-            ];
+            try {
+                const ui = document.getElementById('tickerUI');
+                const list = [
+                    {l: 'Gold (1g)', v: rates.gold, k: 'gold'},
+                    {l: 'Gold (1 Tola)', v: rates.tola, k: 'tola'},
+                    {l: 'Bitcoin', v: rates.btc, k: 'btc'},
+                    {l: 'Ethereum', v: rates.eth, k: 'eth'},
+                    {l: 'Solana', v: rates.sol, k: 'sol'},
+                    {l: 'Binance', v: rates.bnb, k: 'bnb'}
+                ];
 
-            ui.innerHTML = list.map(i => {
-                let cls = '';
-                if(i.v > lastRates[i.k] && lastRates[i.k] !== 0) cls = 'up';
-                else if(i.v < lastRates[i.k] && lastRates[i.k] !== 0) cls = 'down';
+                ui.innerHTML = list.map(i => {
+                    let cls = '';
+                    if(i.v > lastRates[i.k] && lastRates[i.k] !== 0) cls = 'up';
+                    else if(i.v < lastRates[i.k] && lastRates[i.k] !== 0) cls = 'down';
 
-                return `<div class="asset-box ${cls}">
-                    <div class="asset-label">${i.l}</div>
-                    <div class="asset-price">$${(i.v || 0).toLocaleString(undefined, {minimumFractionDigits: 4, maximumFractionDigits: 4})}</div>
-                </div>`;
-            }).join('');
+                    return `<div class="asset-box ${cls}">
+                        <div class="asset-label">${i.l}</div>
+                        <div class="asset-price">$${(i.v || 0).toLocaleString(undefined, {minimumFractionDigits: 4, maximumFractionDigits: 4})}</div>
+                    </div>`;
+                }).join('');
+            } catch(err){ console.warn("Render ticker error:", err); }
         }
 
         const config = [
@@ -202,7 +205,7 @@
                 <div class="card">
                     <i class="fas ${c.i}"></i>
                     <h3>${c.title}</h3>
-                    <input type="number" id="inp-${c.id}" placeholder="Enter ${c.u}...">
+                    <input type="number" id="inp-${c.id}" placeholder="Enter ${c.u}..." min="0">
                     <button class="calc-btn" onclick="execute('${c.id}')">Calculate</button>
                     <div class="result" id="res-${c.id}">$0.00</div>
                 </div>
@@ -211,22 +214,28 @@
         }
 
         window.execute = function(id) {
-            const val = parseFloat(document.getElementById(`inp-${id}`).value) || 0;
-            const item = config.find(x => x.id === id);
-            const resDiv = document.getElementById(`res-${id}`);
-            let rate = (item.key === 'cash') ? 1 : rates[item.key];
+            try {
+                const val = Math.max(0, parseFloat(document.getElementById(`inp-${id}`).value) || 0);
+                const item = config.find(x => x.id === id);
+                const resDiv = document.getElementById(`res-${id}`);
+                let rate = (item.key === 'cash') ? 1 : rates[item.key] || 0;
 
-            if(id === 'nisab') {
-                const threshold = rates.gold * 87.48; 
-                resDiv.innerText = val >= threshold ? "ZAKAT DUE" : "BELOW NISAB";
-                resDiv.style.color = val >= threshold ? "#10b981" : "#ef4444";
-            } else if(id === 'agri') {
-                resDiv.innerText = "Ushr: " + (val * 0.1).toFixed(2) + " Kg";
-            } else {
-                let zakat = (val * rate) * 0.025;
-                resDiv.innerText = "Zakat: $" + zakat.toLocaleString(undefined, {minimumFractionDigits: 2});
+                if(id === 'nisab') {
+                    const threshold = rates.gold * 87.48;
+                    resDiv.innerText = val >= threshold ? "ZAKAT DUE" : "BELOW NISAB";
+                    resDiv.style.color = val >= threshold ? "#10b981" : "#ef4444";
+                } else if(id === 'agri') {
+                    resDiv.innerText = "Ushr: " + (val * 0.1).toFixed(2) + " Kg";
+                    resDiv.style.color = "#052e16";
+                } else {
+                    let zakat = (val * rate) * 0.025;
+                    resDiv.innerText = "Zakat: $" + zakat.toLocaleString(undefined, {minimumFractionDigits: 2});
+                    resDiv.style.color = "#052e16";
+                }
+                resDiv.style.display = 'block';
+            } catch(err){
+                console.warn("Calculation error:", err);
             }
-            resDiv.style.display = 'block';
         }
 
         window.onload = init;
