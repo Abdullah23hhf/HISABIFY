@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs | Al-Hisab Knowledge Base</title>
+    <title>Knowledge Base | Al-Hisab Support Hub</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Cinzel:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,158 +13,203 @@
             --primary: #022c22; 
             --accent: #d4af37; 
             --white: #ffffff; 
-            --bg: #f8fafc;
+            --bg: #f1f5f9;
             --text-dark: #1e293b;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text-dark); line-height: 1.6; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text-dark); line-height: 1.8; }
 
-        /* Navigation Header */
+        /* Modern Header */
         header {
-            background: var(--white); padding: 15px 6%;
+            background: var(--white); padding: 25px 8%;
             display: flex; justify-content: space-between; align-items: center;
-            box-shadow: 0 4px 30px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.03); position: sticky; top: 0; z-index: 1000;
         }
-        .logo { text-decoration: none; border-left: 3px solid var(--accent); padding-left: 15px; }
-        .logo h1 { font-family: 'Cinzel', serif; font-size: 24px; color: var(--primary); margin: 0; }
+        .logo { text-decoration: none; border-left: 5px solid var(--accent); padding-left: 20px; }
+        .logo h1 { font-family: 'Cinzel', serif; font-size: 30px; color: var(--primary); margin: 0; letter-spacing: 1px; }
         
-        /* STYLISH HOME BUTTON */
         .home-btn { 
-            text-decoration: none; 
-            background: var(--primary); 
-            color: white !important; 
-            padding: 10px 25px; 
-            border-radius: 50px; 
-            font-weight: 800; 
-            font-size: 13px; 
-            text-transform: uppercase; 
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(2, 44, 34, 0.2);
+            text-decoration: none; background: var(--primary); color: white !important; 
+            padding: 12px 35px; border-radius: 50px; font-weight: 800; font-size: 14px; 
+            text-transform: uppercase; display: flex; align-items: center; gap: 10px; transition: 0.3s;
         }
-        .home-btn:hover { 
-            background: var(--accent); 
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
-        }
-        .home-btn i { font-size: 14px; }
+        .home-btn:hover { background: var(--accent); transform: scale(1.05); }
 
-        /* FAQ Hero */
+        /* Grand Hero Section */
         .faq-hero {
-            background: var(--primary); padding: 80px 6%; text-align: center; color: white;
+            background: var(--primary); padding: 150px 8% 200px; text-align: center; color: white;
+            background-image: linear-gradient(rgba(2, 44, 34, 0.9), rgba(2, 44, 34, 0.9)), url('https://www.transparenttextures.com/patterns/islamic-art.png');
         }
-        .faq-hero h2 { font-family: 'Cinzel', serif; font-size: 38px; color: var(--accent); margin-bottom: 15px; }
-        .faq-hero p { opacity: 0.8; max-width: 700px; margin: 0 auto; }
+        .faq-hero h2 { font-family: 'Cinzel', serif; font-size: 55px; color: var(--accent); margin-bottom: 25px; }
+        .faq-hero p { opacity: 0.8; max-width: 850px; margin: 0 auto; font-size: 20px; font-weight: 300; }
 
-        /* FAQ Content */
-        .faq-container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
-        
-        .faq-item { background: white; border-radius: 15px; margin-bottom: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.02); border: 1px solid #f1f5f9; }
-        
-        .faq-question { padding: 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--primary); font-size: 17px; }
-        .faq-question i { color: var(--accent); transition: 0.3s; }
-        
-        .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: 0.4s ease-out; color: #475569; border-top: 0 solid #eee; }
-        .faq-answer p { padding-bottom: 25px; }
+        /* Main Content Wrapper */
+        .main-wrapper { max-width: 1200px; margin: -100px auto 100px; padding: 0 25px; }
 
-        .faq-item.active .faq-answer { max-height: 500px; border-top-width: 1px; padding-top: 20px; }
+        /* Search Section */
+        .search-area { background: white; padding: 40px; border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); margin-bottom: 60px; text-align: center; }
+        .search-area h3 { margin-bottom: 20px; color: var(--primary); font-family: 'Cinzel'; }
+        .search-box { display: flex; max-width: 700px; margin: 0 auto; background: #f8fafc; border-radius: 15px; padding: 5px; border: 1px solid #e2e8f0; }
+        .search-box input { border: none; background: transparent; width: 100%; padding: 15px 25px; font-size: 17px; outline: none; }
+        
+        /* FAQ Style */
+        .faq-section-title { font-family: 'Cinzel'; font-size: 28px; color: var(--primary); margin: 60px 0 30px; border-bottom: 3px solid var(--accent); display: inline-block; padding-bottom: 10px; }
+        
+        .faq-item { background: white; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.05); transition: 0.3s; }
+        .faq-item:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        
+        .faq-question { padding: 30px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 800; color: var(--primary); font-size: 19px; }
+        .faq-question i { color: var(--accent); font-size: 20px; transition: 0.4s; }
+        
+        .faq-answer { padding: 0 30px; max-height: 0; overflow: hidden; transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); color: #475569; font-size: 17px; }
+        .faq-answer p { padding-bottom: 30px; }
+
+        .faq-item.active .faq-answer { max-height: 600px; padding-top: 10px; }
         .faq-item.active .faq-question i { transform: rotate(180deg); }
 
-        /* Search Bar for Authority Look */
-        .search-box { background: white; padding: 20px; border-radius: 50px; display: flex; max-width: 600px; margin: -40px auto 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-        .search-box input { border: none; width: 100%; padding: 10px 20px; font-family: inherit; font-size: 16px; outline: none; }
-        .search-box button { background: var(--accent); color: white; border: none; padding: 10px 30px; border-radius: 30px; cursor: pointer; font-weight: 700; }
+        /* Sidebar Info */
+        .knowledge-grid { display: grid; grid-template-columns: 1fr 350px; gap: 50px; }
+        .sidebar-card { background: var(--primary); color: white; padding: 40px; border-radius: 30px; height: fit-content; position: sticky; top: 120px; }
+        .sidebar-card h4 { font-family: 'Cinzel'; color: var(--accent); margin-bottom: 20px; font-size: 22px; }
+        .sidebar-card ul { list-style: none; }
+        .sidebar-card ul li { margin-bottom: 15px; display: flex; gap: 10px; font-size: 15px; opacity: 0.9; }
+        .sidebar-card ul li i { color: var(--accent); margin-top: 5px; }
 
-        footer { background: var(--primary); color: white; padding: 40px; text-align: center; font-size: 13px; }
+        footer { background: var(--primary); color: white; padding: 80px 5%; text-align: center; }
 
-        @media (max-width: 768px) {
-            .faq-hero h2 { font-size: 28px; }
+        @media (max-width: 1000px) {
+            .knowledge-grid { grid-template-columns: 1fr; }
+            .faq-hero h2 { font-size: 35px; }
+            .sidebar-card { position: static; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="logo">
-            <h1>AL-HISAB</h1>
-        </a>
-        <nav>
-            <a href="index.html" class="home-btn"><i class="fas fa-house"></i> Home</a>
-        </nav>
+        <a href="index.html" class="logo"><h1>AL-HISAB</h1></a>
+        <nav><a href="index.html" class="home-btn"><i class="fas fa-house"></i> Home</a></nav>
     </header>
 
     <section class="faq-hero">
-        <h2>Knowledge Base & FAQs</h2>
-        <p>Commonly asked questions regarding Zakat calculation, Shariah principles, and how Al-Hisab works.</p>
+        <h2>Knowledge Base</h2>
+        <p>Understand the intricate principles of Zakat and how our digital engine ensures 100% Shariah-compliant precision for your wealth.</p>
     </section>
 
-    <div class="faq-container">
+    <div class="main-wrapper">
         
-        <div class="faq-item">
-            <div class="faq-question">
-                What is the current Nisab for Zakat in 2026?
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                <p>Nisab is the minimum amount of wealth a Muslim must possess before they are obligated to pay Zakat. It is based on the value of 87.48 grams of gold or 612.36 grams of silver. Al-Hisab automatically updates these values based on live market prices to give you an accurate calculation.</p>
+        <div class="search-area">
+            <h3>How can we help you today?</h3>
+            <div class="search-box">
+                <input type="text" placeholder="Search topics (e.g. Gold Nisab, Crypto Zakat...)">
             </div>
         </div>
 
-        <div class="faq-item">
-            <div class="faq-question">
-                Is Al-Hisab's calculation Shariah compliant?
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                <p>Yes, all our calculators are designed based on established Fiqh principles. We consult historical Shariah standards and contemporary scholarly opinions to ensure that complex assets like Crypto and Stocks are calculated accurately.</p>
-            </div>
-        </div>
+        <div class="knowledge-grid">
+            <div class="faq-content">
+                
+                <h3 class="faq-section-title">Core Principles</h3>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What is the precise definition of Nisab in 2026?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nisab represents the threshold of wealth that makes Zakat obligatory. It is calculated based on the market value of 87.48 grams of Gold or 612.36 grams of Silver. Al-Hisab uses real-time API data to fetch the exact current market rates, ensuring you never underpay or overpay your religious obligation.</p>
+                    </div>
+                </div>
 
-        <div class="faq-item">
-            <div class="faq-question">
-                Do I have to pay Zakat on Cryptocurrency?
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                <p>Most scholars agree that if Cryptocurrency is held as an investment or for trading, it is subject to Zakat at a rate of 2.5% of its current market value, provided it meets the Nisab and the lunar year requirement.</p>
-            </div>
-        </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How is the "Lunar Year" (Hawl) requirement handled?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Zakat is only due on wealth that has been in your possession for one full Islamic (Lunar) year. If your wealth dips below the Nisab during the year but recovers, the year continues. Our calculator helps you log the "Zakat Date" to maintain consistency year after year.</p>
+                    </div>
+                </div>
 
-        <div class="faq-item">
-            <div class="faq-question">
-                Is my financial data stored on your servers?
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                <p>Absolutely not. Al-Hisab operates on a local processing model. All the numbers you enter stay on your browser and are never sent to or stored on our databases. Your privacy is our priority.</p>
-            </div>
-        </div>
+                <h3 class="faq-section-title">Modern Assets & Tech</h3>
 
-        <div class="faq-item">
-            <div class="faq-question">
-                How often are the market rates updated?
-                <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
-                <p>We use high-speed APIs that refresh gold, silver, and digital asset prices multiple times per day to ensure your Zakat calculation is as precise as possible at the time of calculation.</p>
-            </div>
-        </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is Zakat applicable on Stock Market investments?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. If stocks are bought for trade (capital gains), Zakat is paid on the full market value. If bought for dividends (long-term), Zakat is typically paid only on the 'Zakatable assets' of the company. Al-Hisab provides a simplified model to handle both scenarios based on standard scholarly guidelines.</p>
+                    </div>
+                </div>
 
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Does Al-Hisab support Cryptocurrency Zakat?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. Cryptocurrencies are treated as 'Amwal-e-Tijarat' (Trading Goods). Zakat is calculated at 2.5% of the portfolio's total value in your base currency at the time of your Zakat anniversary. We support major tokens including BTC, ETH, and Stablecoins.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is my data secure and private?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Privacy is a core pillar of Al-Hisab. We utilize a "Client-Side" processing logic. This means your numbers are processed by your own browser. We do not store your financial data on our servers, ensuring your wealth remains a private matter between you and your Creator.</p>
+                    </div>
+                </div>
+
+                <h3 class="faq-section-title">Common Inquiries</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I deduct my personal debts from Zakat?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Scholars generally allow the deduction of "Short-term" debts (money you owe others that is due immediately) from your total zakatable wealth. However, long-term liabilities like future mortgage installments are usually not deducted from the current year's Zakat calculation.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <aside class="sidebar-wrapper">
+                <div class="sidebar-card">
+                    <h4>Quick Guidelines</h4>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Calculate on total liquid assets.</li>
+                        <li><i class="fas fa-check-circle"></i> Include Gold, Silver & Cash.</li>
+                        <li><i class="fas fa-check-circle"></i> Include Business Inventory.</li>
+                        <li><i class="fas fa-check-circle"></i> Deduct immediate debts only.</li>
+                        <li><i class="fas fa-check-circle"></i> Pay 2.5% on the total.</li>
+                    </ul>
+                    <hr style="margin: 30px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <p style="font-size: 14px; opacity: 0.8;">Need specialized help? Visit our Contact Hub for direct support.</p>
+                </div>
+            </aside>
+        </div>
     </div>
 
     <footer>
-        &copy; 2026 Al-Hisab Global Portal. Engineered by Abdullah.
+        <div style="font-family: 'Cinzel'; font-size: 24px; color: var(--accent); margin-bottom: 20px;">AL-HISAB GLOBAL</div>
+        <p>&copy; 2026 Al-Hisab Knowledge Base. Engineered by Abdullah.<br>
+        Accurate Rates. Shariah Integrity. Absolute Privacy.</p>
     </footer>
 
     <script>
-        // JavaScript for Accordion Functionality
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const item = question.parentElement;
+                
+                // Optional: Close other items when opening new one
+                document.querySelectorAll('.faq-item').forEach(other => {
+                    if (other !== item) other.classList.remove('active');
+                });
+
                 item.classList.toggle('active');
             });
         });
