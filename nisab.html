@@ -3,200 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Al-Hisab | Professional Live Dashboard</title>
+    <title>Global Terminal | Al-Hisab Financial Hub</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root { 
-            --brand: #052e16; 
-            --gold: #c6a306; 
+            --brand: #022c22; 
+            --gold: #d4af37; 
             --white: #ffffff; 
-            --bg: #f4f7f6;
+            --bg: #f8fafc;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: var(--bg); 
-            color: #1e293b; 
-        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg); color: #1e293b; overflow-x: hidden; }
 
-        /* Navigation Bar */
+        /* Ticker - Mobile friendly height */
+        .ticker-wrap { background: #000; padding: 5px 0; border-bottom: 2px solid var(--gold); }
+
+        /* Navigation Responsive */
         header { 
-            background: var(--white); 
-            padding: 15px 5%; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            background: var(--white); padding: 20px 5%; display: flex; 
+            justify-content: space-between; align-items: center; position: sticky; 
+            top: 0; z-index: 1000; box-shadow: 0 10px 40px rgba(0,0,0,0.05);
         }
-
-        .logo { 
-            font-family: 'Cinzel', serif; 
-            font-size: 24px; 
-            color: var(--brand); 
-            text-decoration: none; 
-            font-weight: bold; 
-        }
-
+        .logo { font-family: 'Cinzel', serif; font-size: clamp(20px, 4vw, 30px); color: var(--brand); text-decoration: none; font-weight: 900; }
         .logo span { color: var(--gold); }
-
+        
         .nav-links a { 
-            text-decoration: none; 
-            color: var(--brand); 
-            font-weight: 700; 
-            padding: 8px 15px;
-            border: 2px solid var(--brand);
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            text-decoration: none; background: var(--brand); color: white; 
+            padding: 10px 20px; border-radius: 50px; font-weight: 800; 
+            font-size: 12px; transition: 0.3s;
         }
 
-        /* Hero Section */
+        /* Hero Responsive */
         .hero { 
-            background: var(--brand); 
-            color: white; 
-            padding: 60px 5% 100px; 
-            text-align: center; 
-            border-bottom: 5px solid var(--gold);
+            background: var(--brand); color: white; padding: clamp(100px, 15vh, 150px) 5% clamp(150px, 20vh, 250px); 
+            text-align: center;
+            background-image: linear-gradient(rgba(2, 44, 34, 0.85), rgba(2, 44, 34, 0.85)), url('https://www.transparenttextures.com/patterns/dark-matter.png');
         }
+        .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(32px, 8vw, 75px); margin-bottom: 20px; color: var(--gold); }
+        .hero p { font-size: clamp(16px, 3vw, 22px); opacity: 0.9; max-width: 900px; margin: 0 auto; font-weight: 300; }
 
-        .hero h1 { font-family: 'Cinzel', serif; font-size: clamp(24px, 5vw, 40px); margin-bottom: 10px; }
+        /* Container Responsive */
+        .container { max-width: 1440px; margin: -120px auto 100px; padding: 0 20px; }
 
-        .live-tag {
-            display: inline-flex;
-            align-items: center;
-            background: rgba(255,255,255,0.1);
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-size: 12px;
-            margin-bottom: 20px;
-        }
-
-        .dot { 
-            height: 10px; width: 10px; background: #2ecc71; 
-            border-radius: 50%; margin-right: 8px; 
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.5); opacity: 0.5; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        /* Content Grid */
-        .container { 
-            max-width: 1100px; 
-            margin: -60px auto 40px; 
-            padding: 0 20px; 
-        }
-
-        .grid { 
+        /* Stats Grid - Adjusts automatically from 1 to 3 columns */
+        .stats-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
             gap: 25px; 
+            margin-bottom: 40px; 
         }
-
-        .card { 
-            background: white; 
-            border-radius: 20px; 
-            padding: 25px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            border-top: 6px solid var(--gold);
+        
+        .stat-card { 
+            background: white; border-radius: 35px; padding: 40px 30px; 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08); border-top: 6px solid var(--gold); 
+            transition: 0.4s; 
         }
+        .stat-card h2 { font-family: 'Cinzel'; font-size: 20px; margin-bottom: 20px; color: var(--brand); display: flex; align-items: center; gap: 12px; }
 
-        .card h2 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            text-align: center;
-            color: var(--brand);
-        }
+        /* Chart Section Responsive Height */
+        .chart-section { background: white; border-radius: 40px; padding: clamp(20px, 5vw, 50px); box-shadow: 0 30px 60px rgba(0,0,0,0.08); margin-bottom: 40px; }
+        .chart-section h2 { font-family: 'Cinzel'; font-size: clamp(24px, 5vw, 32px); color: var(--brand); margin-bottom: 30px; text-align: center; }
+        .chart-container { height: clamp(400px, 60vh, 650px); border-radius: 20px; overflow: hidden; }
 
-        .widget-area {
-            height: 130px;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #eee;
-        }
+        /* Bottom Grid Responsive */
+        .bottom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .bottom-card { background: white; padding: clamp(25px, 5vw, 45px); border-radius: 35px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); }
+        .bottom-card h3 { font-family: 'Cinzel'; font-size: 22px; margin-bottom: 25px; color: var(--brand); }
 
-        footer { 
-            background: #0f172a; 
-            color: #94a3b8; 
-            padding: 40px 5%; 
-            text-align: center; 
-            margin-top: 60px;
+        footer { background: var(--brand); color: white; padding: 80px 5%; text-align: center; margin-top: 50px; }
+
+        /* Specific Mobile Fixes */
+        @media (max-width: 600px) {
+            .container { margin-top: -80px; }
+            .stat-card { padding: 30px 20px; }
+            header { padding: 15px 5%; }
+            .nav-links a { padding: 8px 15px; font-size: 11px; }
         }
     </style>
 </head>
 <body>
 
-<header>
-    <a href="index.html" class="logo">AL-<span>HISAB</span></a>
-    <nav class="nav-links">
-        <a href="index.html"><i class="fas fa-home"></i> HOME</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <div class="live-tag"><span class="dot"></span> LIVE MARKET TICKER</div>
-    <h1>Global Nisab Tracking</h1>
-    <p>Live International Spot Rates for Zakat Calculation</p>
-</section>
-
-<div class="container">
-    <div class="grid">
-        
-        <div class="card">
-            <h2>Gold Nisab (87.48g)</h2>
-            <div class="widget-area">
-                <div class="tradingview-widget-container">
-                    <div class="tradingview-widget-container__widget"></div>
-                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-                    {
-                        "symbol": "TVC:GOLD",
-                        "width": "100%",
-                        "colorTheme": "light",
-                        "isTransparent": true,
-                        "locale": "en"
-                    }
-                    </script>
-                </div>
-            </div>
-            <p style="text-align: center; font-size: 12px; color: #666; margin-top: 10px;">Price shown per Ounce. Multiply by 2.8126 for Nisab value.</p>
-        </div>
-
-        <div class="card" style="border-top-color: #94a3b8;">
-            <h2>Silver Nisab (612.36g)</h2>
-            <div class="widget-area">
-                <div class="tradingview-widget-container">
-                    <div class="tradingview-widget-container__widget"></div>
-                    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
-                    {
-                        "symbol": "TVC:SILVER",
-                        "width": "100%",
-                        "colorTheme": "light",
-                        "isTransparent": true,
-                        "locale": "en"
-                    }
-                    </script>
-                </div>
-            </div>
-            <p style="text-align: center; font-size: 12px; color: #666; margin-top: 10px;">Price shown per Ounce. Multiply by 19.687 for Nisab value.</p>
-        </div>
-
+<div class="ticker-wrap">
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+          "symbols": [
+            {"proName": "TVC:GOLD", "title": "Gold"},
+            {"proName": "TVC:SILVER", "title": "Silver"},
+            {"proName": "BINANCE:BTCUSDT", "title": "BTC/USDT"},
+            {"proName": "FX_IDC:USDPKR", "title": "USD/PKR"}
+          ],
+          "colorTheme": "dark", "isTransparent": true, "displayMode": "adaptive", "locale": "en"
+        }
+        </script>
     </div>
 </div>
 
+<header>
+    <a href="index.html" class="logo">AL-<span>HISAB</span></a>
+    <nav class="nav-links"><a href="index.html">EXIT HUB</a></nav>
+</header>
+
+<section class="hero">
+    <h1>Global Terminal</h1>
+    <p>Premium Grade Financial Data for Shariah Compliant Asset Audit.</p>
+</section>
+
+<div class="container">
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h2><i class="fas fa-gem"></i> Gold Spot</h2>
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {"symbol": "TVC:GOLD", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en"}
+                </script>
+            </div>
+        </div>
+
+        <div class="stat-card" style="border-top-color: #94a3b8;">
+            <h2><i class="fas fa-coins"></i> Silver Spot</h2>
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {"symbol": "TVC:SILVER", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en"}
+                </script>
+            </div>
+        </div>
+
+        <div class="stat-card" style="border-top-color: #f7931a;">
+            <h2><i class="fab fa-bitcoin"></i> Bitcoin</h2>
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+                {"symbol": "BINANCE:BTCUSDT", "width": "100%", "colorTheme": "light", "isTransparent": true, "locale": "en"}
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-section">
+        <h2>Market Analytics Engine</h2>
+        <div class="chart-container">
+            <div class="tradingview-widget-container" style="height:100%;width:100%">
+                <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+                {
+                  "autosize": true, "symbol": "TVC:GOLD", "interval": "D", "timezone": "Etc/UTC",
+                  "theme": "light", "style": "3", "locale": "en", "enable_publishing": false,
+                  "allow_symbol_change": true, "calendar": false, "support_host": "https://www.tradingview.com"
+                }
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-grid">
+        <div class="bottom-card">
+            <h3>Currency Matrix</h3>
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
+                {"width": "100%", "height": "350", "currencies": ["EUR", "USD", "PKR", "SAR"], "isTransparent": true, "colorTheme": "light", "locale": "en"}
+                </script>
+            </div>
+        </div>
+
+        <div class="bottom-card">
+            <h3>Global Timeline</h3>
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                {"feedMode": "all_symbols", "colorTheme": "light", "isTransparent": true, "displayMode": "regular", "width": "100%", "height": "350", "locale": "en"}
+                </script>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 <footer>
-    <p>&copy; 2026 Al-Hisab International. Powered by Live TradingView Feeds.</p>
+    <div style="font-family: 'Cinzel'; font-size: 24px; color: var(--gold); margin-bottom: 20px;">AL-HISAB TERMINAL</div>
+    <p>&copy; 2026 Al-Hisab Global Finance. <br> High-precision data for the Digital Ummah.</p>
 </footer>
 
 </body>
