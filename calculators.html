@@ -48,7 +48,11 @@
         .calc-btn { width: 100%; padding: 16px; background: var(--brand-green); color: white; border: none; border-radius: 12px; font-weight: 800; cursor: pointer; text-transform: uppercase; }
         .result { margin-top: 20px; padding: 15px; background: #fdfbf7; border-radius: 12px; display: none; font-weight: 900; color: var(--brand-green); border: 2px dashed var(--gold); }
 
-        /* 2000 WORDS SEO CONTENT SECTION */
+        /* INTEL MATRIX SECTION */
+        .intel-matrix-promo { max-width: 1300px; margin: 60px auto; padding: 0 20px; }
+        .intel-box { background: linear-gradient(135deg, #052e16 0%, #0a4d25 100%); border-radius: 30px; padding: 50px; border: 2px solid var(--gold); position: relative; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.2); text-align: center; }
+        .intel-btn { background: var(--gold); color: var(--brand-green); text-decoration: none; padding: 18px 45px; border-radius: 12px; font-weight: 900; display: inline-block; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.2); text-transform: uppercase; }
+
         .mega-seo-content { max-width: 1100px; margin: 100px auto; padding: 40px; background: #fff; border-radius: 30px; box-shadow: 0 10px 50px rgba(0,0,0,0.05); }
         .mega-seo-content h2 { font-family: 'Playfair Display', serif; color: var(--brand-green); font-size: 36px; margin-bottom: 25px; border-left: 6px solid var(--gold); padding-left: 20px; }
         .mega-seo-content h3 { color: var(--brand-green); font-weight: 800; margin: 30px 0 15px; font-size: 22px; }
@@ -60,7 +64,6 @@
     </style>
 </head>
 <body>
-
     <header>
         <a href="index.html" class="logo-area"><div class="logo-icon"><i class="fas fa-kaaba"></i></div><div class="site-name">HISABIFY</div></a>
         <a href="index.html" style="background: var(--brand-green); color: var(--gold); text-decoration: none; font-weight: 800; font-size: 13px; padding: 10px 22px; border-radius: 8px;">HOME</a>
@@ -75,22 +78,29 @@
 
     <div class="main-content"><div id="mainGrid" class="grid"></div></div>
 
+    <section class="intel-matrix-promo">
+        <div class="intel-box">
+            <div style="position: relative; z-index: 2;">
+                <span style="color: var(--gold); font-weight: 800; text-transform: uppercase; letter-spacing: 3px; font-size: 14px;">Exclusive Feature</span>
+                <h2 style="font-family: 'Playfair Display', serif; color: white; font-size: 38px; margin: 15px 0;">Zakat Intelligence Matrix</h2>
+                <p style="color: #d1d5db; font-size: 18px; max-width: 800px; margin: 0 auto 30px;">Standard calculators use 24K gold rates for everything. But is your jewelry actually 24K? Use our Intelligence Matrix to calculate Zakat based on Karat Purity (18K, 21K, 22K) and Shariah-deductible debts.</p>
+                <a href="intelligence.html" class="intel-btn">OPEN INTELLIGENCE HUB <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <i class="fas fa-microchip" style="position: absolute; right: -30px; bottom: -30px; font-size: 200px; color: rgba(198, 163, 6, 0.05); z-index: 1;"></i>
+        </div>
+    </section>
+
     <article class="mega-seo-content">
         <h2>The Ultimate Guide to Zakat Calculation in 2026</h2>
         <p>In the rapidly evolving financial landscape of 2026, understanding your religious obligations is more critical than ever. <strong>Hisabify</strong> stands as the world's premier platform, designed to bridge the gap between ancient Shariah principles and modern fintech. Whether you are holding traditional assets like Gold or navigating the complex world of <strong>Decentralized Finance (DeFi)</strong>, our suite ensures your wealth purification is flawless.</p>
-
         <h3>Zakat on Cryptocurrencies: Bitcoin, Ethereum, and Beyond</h3>
         <p>One of the most frequent questions in 2026 is: <em>"Is Zakat due on Bitcoin?"</em> According to leading global Shariah boards, digital currencies are considered 'Mal' (Wealth) because they possess value and are tradable. If you hold cryptocurrencies for investment purposes (to sell later for profit), Zakat is due on the full market value at the end of your lunar year (Hawl). Hisabify's live integration with the Binance API means you don't have to check exchange rates manually; we do it for you in real-time.</p>
-
         <h3>Understanding Gold and Silver Nisab in 2026</h3>
         <p>The Nisab is the minimum threshold of wealth that makes Zakat mandatory. Historically, this is calculated as 87.48 grams of Gold or 612.36 grams of Silver. In today's volatile market, these values change by the minute. Hisabify tracks these fluctuations to give you an instant <strong>Nisab Checker</strong>. If your total net wealth—including cash, gold, and tradeable assets—exceeds this threshold, you are obligated to pay 2.5% of that total amount.</p>
-
         <h3>Zakat on Real Estate and Stock Equity</h3>
         <p>Real estate investments require careful consideration. Zakat is not due on your primary residence or a car used for personal transport. However, if you own a property with the intention to resell it (Trading), Zakat is due on its current market value, not the purchase price. Similarly, for stocks, if you are a long-term investor, Zakat is calculated on the company's zakatable assets. If you are a day trader, you pay Zakat on the full market value of your portfolio.</p>
-
         <h3>Agricultural Production and Ushr Calculation</h3>
         <p>Agriculture remains the backbone of many economies. Islam mandates <strong>Ushr</strong> on agricultural produce. Our specialized module helps farmers calculate their dues: 10% for land irrigated naturally by rain and 5% for land using artificial irrigation systems. This ensures that even the most traditional sectors have access to high-precision tools.</p>
-
         <h3>Why Hisabify is the "Most Wanted" Financial Suite?</h3>
         <ul>
             <li><strong>Live Data Sync:</strong> No more outdated rates. We use industrial-grade WebSockets for accuracy.</li>
