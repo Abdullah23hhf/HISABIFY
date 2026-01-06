@@ -25,7 +25,6 @@
         html, body { overflow-x: hidden; width: 100%; position: relative; scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; background-color: var(--white); color: var(--text-dark); line-height: 1.8; }
 
-        /* HEADER & NAVIGATION (PURANA ROYAL DESIGN) */
         header { background: var(--white); box-shadow: 0 4px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; width: 100%; }
         nav { max-width: 1400px; margin: auto; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; width: 100%; }
         .logo-area { display: flex; align-items: center; text-decoration: none; gap: 10px; }
@@ -33,7 +32,6 @@
         .site-name { font-family: 'Cinzel', serif; font-size: 20px; color: var(--brand-green); font-weight: 700; letter-spacing: 1px; }
         .menu-toggle { font-size: 22px; color: var(--brand-green); cursor: pointer; background: none; border: none; }
 
-        /* FULL SIDE MENU (SARE 17 BUTTONS) */
         .side-menu {
             position: fixed; top: 0; right: -300px; width: 300px; height: 100%;
             background: var(--brand-green); z-index: 2000; transition: 0.4s;
@@ -45,7 +43,6 @@
         .side-menu a:hover { color: var(--gold); background: rgba(255,255,255,0.05); }
         .close-btn { color: white; font-size: 30px; align-self: flex-end; cursor: pointer; margin-bottom: 20px; }
 
-        /* HERO SECTION */
         .hero { 
             min-height: 80vh; background: linear-gradient(rgba(5, 46, 22, 0.8), rgba(5, 46, 22, 0.8)), url('https://images.unsplash.com/photo-1590059379661-d007f9754f73?q=80&w=2000&auto=format&fit=crop');
             background-size: cover; background-position: center; background-attachment: fixed;
@@ -55,14 +52,12 @@
         .hero-box p { font-size: 20px; max-width: 900px; margin: 0 auto 35px; opacity: 0.9; }
         .cta-gold-large { background: var(--gold); color: white !important; border-radius: 50px; font-weight: 800; text-decoration: none; padding: 20px 50px; font-size: 20px; text-transform: uppercase; display: inline-block; box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: 0.3s; }
 
-        /* MEGA CONTENT AREA */
         .content-wrap { max-width: 1200px; margin: auto; padding: 100px 20px; }
         .mega-section { margin-bottom: 120px; }
         .mega-section h2 { font-family: 'Playfair Display', serif; font-size: 45px; color: var(--brand-green); margin-bottom: 30px; border-bottom: 3px solid var(--gold); display: inline-block; }
         .mega-section h3 { font-size: 28px; color: var(--mid-green); margin: 40px 0 20px; }
         .mega-section p { font-size: 18px; color: #374151; margin-bottom: 20px; text-align: justify; }
 
-        /* DATA CARDS & TABLES */
         .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 50px 0; }
         .info-card { padding: 40px; background: var(--gray-light); border-radius: 20px; border-top: 5px solid var(--gold); }
         .info-card i { font-size: 40px; color: var(--brand-green); margin-bottom: 20px; }
@@ -71,9 +66,12 @@
         .nisab-table th, .nisab-table td { padding: 20px; border: 1px solid #eee; text-align: left; }
         .nisab-table th { background: var(--brand-green); color: white; }
 
-        /* FOOTER (PURANA ROYAL) */
+        /* FOOTER RESTORED */
         footer { background: #020617; color: #94a3b8; padding: 100px 20px 30px; margin-top: 100px; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; max-width: 1400px; margin: auto; }
+        .footer-grid h4 { color: white; font-size: 18px; margin-bottom: 20px; border-left: 3px solid var(--gold); padding-left: 10px; }
+        .footer-grid p, .footer-grid a { color: #94a3b8; text-decoration: none; display: block; margin-bottom: 10px; transition: 0.3s; }
+        .footer-grid a:hover { color: var(--gold); }
         .bottom-line { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 13px; }
     </style>
 </head>
@@ -147,6 +145,24 @@
             </div>
         </div>
 
+        <div class="mega-section" style="background: #f8fafc; border-radius: 40px; padding: 60px 40px; border: 1px solid #e2e8f0;">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="font-size: 38px; border-bottom: none;">Advanced Wealth Intelligence</h2>
+                    <p style="font-size: 19px; color: #475569;">In 2026, Zakat calculation requires more than just a basic sum. Our <strong>Intelligence Matrix</strong> is a specialized deep-dive tool that handles:</p>
+                    <ul style="list-style: none; margin-bottom: 30px;">
+                        <li style="margin-bottom: 15px; font-size: 17px;"><i class="fas fa-check-circle" style="color:var(--gold); margin-right: 10px;"></i> <strong>Gold Purity Analysis:</strong> Precise math for 18K, 21K, and 22K jewelry.</li>
+                        <li style="margin-bottom: 15px; font-size: 17px;"><i class="fas fa-check-circle" style="color:var(--gold); margin-right: 10px;"></i> <strong>Debt Liability Matrix:</strong> Real-time Shariah classification of deductible loans.</li>
+                    </ul>
+                    <a href="intelligence.html" class="cta-gold-large" style="padding: 15px 40px; font-size: 16px;">Access Intelligence Hub</a>
+                </div>
+                <div style="flex: 0.8; min-width: 250px; background: var(--brand-green); border-radius: 30px; padding: 40px; text-align: center;">
+                    <i class="fas fa-brain" style="font-size: 60px; color: var(--gold); margin-bottom: 20px;"></i>
+                    <h4 style="color: white; font-size: 24px; font-family: 'Playfair Display';">Precision over Guesswork</h4>
+                </div>
+            </div>
+        </div>
+
         <div class="mega-section">
             <h2>Ushr: Zakat on Agriculture</h2>
             <p>One of the most neglected aspects of Zakat is <strong>Ushr</strong> (Zakat on land produce). Islamic law distinguishes between land irrigated by natural means (rain/rivers) and land irrigated by artificial means (wells/tube wells). HISABIFY includes a dedicated module for farmers to calculate 10% or 5% Ushr based on their irrigation methods.</p>
@@ -155,21 +171,6 @@
                 <tr><td>Natural (Rain, Springs, Floods)</td><td>10% of Produce</td></tr>
                 <tr><td>Artificial (Tractor, Tube wells, Purchased Water)</td><td>5% of Produce</td></tr>
             </table>
-        </div>
-
-        <div class="mega-section">
-            <h2>Zakat on Stocks, Crypto & Modern Investments</h2>
-            <p>The rise of digital assets has brought new questions for the Ummah. Is Zakat due on Bitcoin? How do we calculate Zakat on long-term stock portfolios? Scholars have reached a consensus that if these assets are held for trading purposes, Zakat is due on their full market value. If held for dividends, only the 'zakatable assets' of the company are considered. HISABIFY simplifies this with our <strong>Modern Investment Module</strong>.</p>
-        </div>
-
-        <div class="mega-section">
-            <h2>Livestock & Cattle Zakat Rules</h2>
-            <p>For those involved in livestock farming, Zakat becomes mandatory on Camels, Cattle, Goats, and Sheep if they graze freely for most of the year. Our portal provides a detailed chart for <strong>Nisab on Livestock</strong>, helping pastoralists fulfill their religious duties accurately.</p>
-            <div class="info-grid">
-                <div class="info-card"><h4>Goats & Sheep</h4><p>Zakat starts at 40 animals. (1 Goat/Sheep per 40).</p></div>
-                <div class="info-card"><h4>Cattle & Cows</h4><p>Zakat starts at 30 animals. (1 Tabi' per 30).</p></div>
-                <div class="info-card"><h4>Camels</h4><p>Zakat starts at 5 animals. (1 Goat per 5 camels).</p></div>
-            </div>
         </div>
 
         <div class="mega-section">
@@ -185,14 +186,14 @@
     <footer>
         <div class="footer-grid">
             <div>
-                <h3 style="color:white; font-family:'Cinzel';">HISABIFY</h3>
+                <h3 style="color:white; font-family:'Cinzel'; margin-bottom: 20px;">HISABIFY</h3>
                 <p>The Global Authority in Digital Islamic Finance. Bridging the gap between faith and financial precision.</p>
             </div>
             <div>
                 <h4>Expert Links</h4>
-                <a href="fatawa.html" style="color: #94a3b8; text-decoration: none; display: block; margin: 10px 0;">Fatwa Resources</a>
-                <a href="nisab.html" style="color: #94a3b8; text-decoration: none; display: block; margin: 10px 0;">Live Nisab Tracker</a>
-                <a href="knowledge-hub.html" style="color: #94a3b8; text-decoration: none; display: block; margin: 10px 0;">Zakat Articles</a>
+                <a href="fatawa.html">Fatwa Resources</a>
+                <a href="nisab.html">Live Nisab Tracker</a>
+                <a href="knowledge-hub.html">Zakat Articles</a>
             </div>
             <div>
                 <h4>Official Support</h4>
