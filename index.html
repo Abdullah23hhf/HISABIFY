@@ -2,20 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDWWEN978"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CPDWWEN978');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDWWEN978"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CPDWWEN978');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>HISABIFY | Official Global Zakat Portal 2026 - All-in-One Calculator</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <meta name="description" content="The most comprehensive Zakat portal for 2026. Calculate Zakat on Gold, Silver, Cash, Stocks, Business, Crypto, Agriculture (Ushr), and Livestock. Shariah-compliant guidance.">
-    <meta name="keywords" content="Zakat Calculator 2026, Gold Nisab 2026, Silver Nisab Rate Pakistan, Zakat on Business Assets, How to calculate Ushr, Zakat on Crypto, Islamic Wealth Purification, Hisabify Official">
+    <meta name="keywords" content="Zakat Calculator 2026, Gold Niab 2026, Silver Nisab Rate Pakistan, Zakat on Business Assets, How to calculate Ushr, Zakat on Crypto, Islamic Wealth Purification, Hisabify Official">
     
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -82,6 +80,12 @@
         .footer-grid p, .footer-grid a { color: #94a3b8; text-decoration: none; display: block; margin-bottom: 10px; transition: 0.3s; }
         .footer-grid a:hover { color: var(--gold); }
         .bottom-line { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 13px; }
+
+        /* Contact Section Styling */
+        .contact-item { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; color: #94a3b8; text-decoration: none; transition: 0.3s; }
+        .contact-item:hover { color: var(--gold); }
+        .contact-item i { font-size: 20px; color: var(--gold); }
+        .wa-small-logo { color: #25d366 !important; }
     </style>
 </head>
 <body>
@@ -98,7 +102,6 @@
 
     <div class="side-menu" id="navMenu">
         <span class="close-btn" onclick="closeMenu()">&times;</span>
-        
         <a href="how-it-works.html" style="color: var(--gold);">How It Works / Guide</a>
         <a href="about.html">About Us</a>
         <a href="guidelines.html">Guidelines</a>
@@ -205,9 +208,13 @@
             </div>
             <div>
                 <h4>Official Support</h4>
-                <p>Email: abdullahnosheen95@gmail.com</p>
-                <p>WhatsApp: +92-347-6841038</p>
-                <p>Active for the Global Ummah.</p>
+                <a href="mailto:hisabify.online@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i> hisabify.online@gmail.com
+                </a>
+                <a href="https://wa.me/923476841038" target="_blank" class="contact-item">
+                    <i class="fab fa-whatsapp wa-small-logo"></i> WhatsApp Chat
+                </a>
+                <p style="margin-top: 15px;">Active for the Global Ummah.</p>
             </div>
         </div>
         <div class="bottom-line">
