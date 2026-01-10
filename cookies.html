@@ -3,127 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cookie Policy | Al-Hisab Transparency Portal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Cookie Policy | Hisabify Luxury Transparency Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --brand: #052e16; --gold: #c6a306; --bg: #ffffff; --text: #1e293b; --light-bg: #f8fafc; }
+        :root { 
+            --royal-green: #022c22; 
+            --deep-emerald: #064e3b;
+            --gold-gradient: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            --gold-solid: #c6a306;
+            --soft-cream: #fdfbf7;
+            --text-main: #1e293b;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.8; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--soft-cream); 
+            color: var(--text-main); 
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
 
-        /* Elegant Navigation */
-        header { background: #fff; padding: 1.2rem 6%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #edf2f7; position: sticky; top: 0; z-index: 1000; }
-        .logo { font-family: 'Cinzel', serif; font-size: 1.4rem; color: var(--brand); text-decoration: none; font-weight: 700; }
-        .back-link { text-decoration: none; color: var(--brand); font-weight: 700; font-size: 0.8rem; border: 1.5px solid var(--brand); padding: 0.5rem 1.2rem; border-radius: 4px; transition: 0.2s; }
-        .back-link:hover { background: var(--brand); color: #fff; }
+        /* Luxury Header */
+        header { 
+            background: rgba(255, 255, 255, 0.95); 
+            padding: 1.5rem 8%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 3px solid transparent;
+            border-image: var(--gold-gradient) 1;
+            position: sticky; top: 0; z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        .logo { 
+            font-family: 'Cinzel', serif; 
+            font-size: 1.8rem; 
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none; 
+            font-weight: 900; 
+            letter-spacing: 2px;
+        }
+        .back-link { 
+            text-decoration: none; 
+            color: var(--royal-green); 
+            font-weight: 700; 
+            font-size: 0.75rem; 
+            letter-spacing: 1px;
+            border: 2px solid var(--gold-solid); 
+            padding: 0.7rem 1.8rem; 
+            border-radius: 50px; 
+            transition: 0.4s all ease;
+        }
+        .back-link:hover { 
+            background: var(--gold-gradient); 
+            color: var(--royal-green);
+            box-shadow: 0 4px 15px rgba(191, 149, 63, 0.4);
+        }
 
-        /* Professional Policy Header */
-        .policy-header { padding: 80px 5% 40px; text-align: center; background: var(--light-bg); }
-        .policy-header h1 { font-size: 2.8rem; color: var(--brand); font-weight: 800; letter-spacing: -1px; margin-bottom: 10px; }
-        .last-update { font-size: 0.85rem; color: #64748b; font-weight: 500; text-transform: uppercase; }
+        /* Hero Section */
+        .policy-hero { 
+            padding: 100px 5% 60px; 
+            text-align: center; 
+            background: var(--royal-green);
+            color: white;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+        }
+        .policy-hero h1 { 
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem; 
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .gold-divider {
+            height: 3px;
+            width: 100px;
+            background: var(--gold-gradient);
+            margin: 20px auto;
+        }
+        .last-update { font-size: 0.9rem; color: #a7f3d0; letter-spacing: 2px; font-weight: 600; }
 
-        .container { max-width: 900px; margin: 50px auto; padding: 0 25px; }
+        .container { max-width: 1000px; margin: 80px auto; padding: 0 30px; }
 
-        /* Content Sections */
-        .section { margin-bottom: 40px; }
-        h2 { font-size: 1.5rem; color: var(--brand); margin-bottom: 15px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
-        h2 i { color: var(--gold); font-size: 1.2rem; }
-        p { margin-bottom: 18px; font-size: 1.05rem; color: #475569; text-align: justify; }
+        /* Content Luxury Cards */
+        .card { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-bottom: 50px;
+            border-top: 5px solid var(--gold-solid);
+        }
+        
+        h2 { 
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem; 
+            color: var(--royal-green); 
+            margin-bottom: 25px; 
+            display: flex; 
+            align-items: center; 
+            gap: 15px;
+        }
+        h2 i { color: var(--gold-solid); }
 
-        /* Cookie Table Styling */
-        .cookie-table { width: 100%; border-collapse: collapse; margin: 25px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
-        .cookie-table th { background: var(--brand); color: #fff; text-align: left; padding: 15px; font-size: 0.9rem; }
-        .cookie-table td { padding: 15px; border-bottom: 1px solid #f1f5f9; font-size: 0.9rem; background: #fff; }
-        .cookie-table tr:last-child td { border-bottom: none; }
+        p { margin-bottom: 20px; font-size: 1.1rem; color: #334155; }
+        
+        .feature-list { list-style: none; margin-bottom: 25px; }
+        .feature-list li { 
+            padding: 12px 0; 
+            border-bottom: 1px solid #f1f5f9; 
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .feature-list li i { color: var(--gold-solid); margin-top: 5px; }
 
-        /* Consent Box */
-        .info-box { background: #fffbeb; border-left: 4px solid var(--gold); padding: 25px; border-radius: 8px; margin: 30px 0; }
-        .info-box h3 { color: #92400e; font-size: 1.1rem; margin-bottom: 8px; }
+        /* Premium Table */
+        .cookie-table-wrapper { overflow-x: auto; margin: 30px 0; border-radius: 15px; border: 1px solid #e2e8f0; }
+        .cookie-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        .cookie-table th { background: var(--royal-green); color: #fff; padding: 20px; text-align: left; }
+        .cookie-table td { padding: 20px; border-bottom: 1px solid #f1f5f9; background: #fff; }
 
-        footer { text-align: center; padding: 60px; color: #94a3b8; font-size: 0.8rem; border-top: 1px solid #f1f5f9; }
+        .highlight-box { 
+            background: linear-gradient(to right, #f8fafc, #f1f5f9); 
+            border-left: 5px solid var(--royal-green); 
+            padding: 30px; 
+            margin: 40px 0;
+            font-style: italic;
+        }
 
+        footer { 
+            background: var(--royal-green); 
+            color: #d1d5db; 
+            padding: 80px 5% 40px; 
+            text-align: center;
+        }
+        .footer-logo { font-family: 'Cinzel', serif; font-size: 2rem; color: white; margin-bottom: 20px; display: block; }
+        
         @media (max-width: 768px) {
-            .policy-header h1 { font-size: 2rem; }
-            .cookie-table { display: block; overflow-x: auto; }
+            .policy-hero h1 { font-size: 2.2rem; }
+            .card { padding: 25px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="logo">AL-HISAB</a>
-        <a href="index.html" class="back-link">RETURN HOME</a>
+        <a href="index.html" class="logo">HISABIFY</a>
+        <a href="index.html" class="back-link">RETURN TO DASHBOARD</a>
     </header>
 
-    <div class="policy-header">
-        <p class="last-update">Effective Date: January 01, 2026</p>
+    <div class="policy-hero">
+        <p class="last-update">OFFICIAL COMPLIANCE DOCUMENT • 2026</p>
         <h1>Cookie Policy</h1>
+        <div class="gold-divider"></div>
+        <p style="color: #d1fae5; font-weight: 300;">Transparency in Hisabify Digital Shariah Tools</p>
     </div>
 
     <div class="container">
         
-        <section class="section">
-            <h2><i class="fas fa-cookie-bite"></i> What Are Cookies?</h2>
-            <p>Cookies are small text files that are placed on your device by websites that you visit. They are widely used in order to make websites work more efficiently, as well as to provide information to the owners of the site. At Al-Hisab, we use cookies to improve your Zakat calculation experience and analyze our traffic.</p>
-        </section>
-
-        <section class="section">
-            <h2><i class="fas fa-layer-group"></i> How We Use Cookies</h2>
-            <p>We use cookies for a variety of reasons detailed below. Unfortunately, in most cases, there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site.</p>
-            
-            <table class="cookie-table">
-                <thead>
-                    <tr>
-                        <th>Type</th>
-                        <th>Purpose</th>
-                        <th>Duration</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Essential</strong></td>
-                        <td>Necessary for basic site navigation and calculation logic.</td>
-                        <td>Session</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Analytical</strong></td>
-                        <td>Helps us understand how visitors interact with our Shariah tools.</td>
-                        <td>Persistent</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Advertising</strong></td>
-                        <td>Used by Google AdSense to serve relevant ads based on your interests.</td>
-                        <td>Persistent</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <div class="info-box">
-            <h3><i class="fas fa-info-circle"></i> Managing Your Preferences</h3>
-            <p>You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit.</p>
+        <div class="card">
+            <h2><i class="fas fa-gem"></i> Premium Experience & Data Integrity</h2>
+            <p>At <strong>Hisabify</strong>, we believe that transparency is a pillar of trust, especially when it comes to sacred obligations like Zakat. To provide you with a sophisticated and seamless experience while using our high-precision Zakat calculators, we utilize "Cookies."</p>
+            <p>This policy explains how these small digital identifiers allow <strong>Hisabify</strong> to recognize your preferences and ensure that our Shariah-compliant algorithms function with 100% accuracy every time you visit. By using our platform, you acknowledge our use of these digital tools to enhance your spiritual and financial management journey.</p>
         </div>
 
-        <section class="section">
-            <h2><i class="fas fa-shield-alt"></i> Third-Party Cookies</h2>
-            <p>In some special cases, we also use cookies provided by trusted third parties. The following section details which third-party cookies you might encounter through this site.</p>
-            <ul style="margin-left: 20px; color: #475569;">
-                <li style="margin-bottom: 10px;"><strong>Google AdSense:</strong> This service uses a DoubleClick cookie to serve more relevant ads across the web and limit the number of times a given ad is shown to you.</li>
-                <li style="margin-bottom: 10px;"><strong>Google Analytics:</strong> One of the most widespread and trusted analytics solution on the web for helping us to understand how you use the site.</li>
-            </ul>
-        </section>
+        <div class="card">
+            <h2><i class="fas fa-layer-group"></i> How Hisabify Classifies Cookies</h2>
+            <p>We use different tiers of cookies to maintain the luxury and functionality of the <strong>Hisabify</strong> portal. Each category serves a specific purpose in ensuring your Zakat is calculated without error:</p>
+            
+            <div class="cookie-table-wrapper">
+                <table class="cookie-table">
+                    <thead>
+                        <tr>
+                            <th>Classification</th>
+                            <th>Operational Purpose</th>
+                            <th>Persistence</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Essential Infrastructure</strong></td>
+                            <td>Required for secure calculations, preventing session hijacking, and maintaining calculation state.</td>
+                            <td>Immediate / Session</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Analytical Intelligence</strong></td>
+                            <td>Helps <strong>Hisabify</strong> understand which Shariah tools are most impactful for the global Ummah.</td>
+                            <td>Persistent (1 Year)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Marketing & Personalization</strong></td>
+                            <td>Used by Google AdSense to deliver ethical advertisements tailored to your financial interests.</td>
+                            <td>Persistent (2 Years)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-        <section class="section">
-            <h2><i class="fas fa-envelope-open-text"></i> More Information</h2>
-            <p>Hopefully, that has clarified things for you. If you are looking for more information, you can contact us through our preferred contact methods:</p>
-            <p><strong>Email:</strong> abdullahnosheen95@gmail.com</p>
-        </section>
+        <div class="card">
+            <h2><i class="fas fa-shield-halved"></i> Global Third-Party Partners</h2>
+            <p>To support our free mission of providing accurate Zakat tools, <strong>Hisabify</strong> collaborates with world-class partners. These entities may set cookies on your browser through our site:</p>
+            <ul class="feature-list">
+                <li><i class="fas fa-check-circle"></i> <strong>Google AdSense:</strong> <strong>Hisabify</strong> uses the DoubleClick DART cookie to serve ads based on your visit to our site and other financial platforms. This ensures the ads you see are relevant and high-quality.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Google Analytics:</strong> Helps <strong>Hisabify</strong> analyze global traffic flow to ensure our servers remain fast and responsive for users in every time zone.</li>
+                <li><i class="fas fa-check-circle"></i> <strong>Infrastructure CDNs:</strong> Used to load our elegant fonts and complex mathematical scripts instantly, ensuring <strong>Hisabify</strong> performs flawlessly on any device.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-mosque"></i> Ethical Data Usage</h2>
+            <p>In accordance with Islamic principles of Amanah (Trust), <strong>Hisabify</strong> does not sell your private calculation data to third parties. Our cookies are strictly used to improve the interface and allow us to continue providing these services without cost to the user.</p>
+            <p>Whether you are calculating Zakat on Gold, Silver, Savings, or Business Assets, <strong>Hisabify</strong> ensures that your interaction remains private and your browser settings are respected at all times.</p>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-user-shield"></i> Your Authority & Control</h2>
+            <p>As a valued user of <strong>Hisabify</strong>, you hold full authority over your digital footprint. You can choose to:</p>
+            <ol class="feature-list" style="margin-left: 20px;">
+                <li><strong>Browser Settings:</strong> Adjust your Chrome, Safari, or Firefox settings to block all cookies from <strong>Hisabify</strong>.</li>
+                <li><strong>Opt-Out of Tracking:</strong> Use Google's official opt-out tools to prevent your data from being used by Analytics or AdSense.</li>
+                <li><strong>Clear Session Data:</strong> Manually delete cookies after finishing your Zakat calculation for the year.</li>
+            </ol>
+            <div class="highlight-box">
+                "Please note: <strong>Hisabify</strong> relies on certain cookies to remember your input between steps. Disabling them may require you to re-enter your asset values if the page refreshes."
+            </div>
+        </div>
+
+        <div class="card" style="text-align: center; border-top: 5px solid var(--deep-emerald);">
+            <h2><i class="fas fa-paper-plane"></i> Direct Inquiry</h2>
+            <p>If you require further clarification regarding our digital ethics or cookie usage at <strong>Hisabify</strong>, our transparency team is available to assist you.</p>
+            <p style="font-size: 1.4rem; font-weight: 700; color: var(--royal-green);">
+                <i class="fas fa-envelope-open-text" style="color: var(--gold-solid);"></i> 
+                hisabify.online@gmail.com
+            </p>
+        </div>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Al-Hisab Global. Designed for Transparency & Trust.</p>
+        <span class="footer-logo">HISABIFY</span>
+        <p style="max-width: 600px; margin: 0 auto 30px;">The world's most transparent Zakat and Shariah compliance portal. Built for the modern Ummah with integrity, precision, and Amanah.</p>
+        <p>&copy; 2026 Hisabify Global. All Rights Reserved.</p>
     </footer>
-<script src="brand.js"></script>
+
+    <script src="brand.js"></script>
 </body>
 </html>
