@@ -3,135 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How It Works | Al-Hisab Step-by-Step User Guide</title>
+    
+    <title>How It Works | Hisabify - Ultimate Zakat Calculation Guide 2026</title>
+    <meta name="description" content="Discover how Hisabify provides 100% accurate Zakat calculations. A massive step-by-step guide on Nisab, Gold, Silver, and Assets purification for the year 2026.">
+    <meta name="keywords" content="How to calculate Zakat 2026, Hisabify guide, Zakat on gold, Zakat on salary, Silver Nisab value, Crypto Zakat rules, Islamic wealth purification, Zakat calculator help">
+
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        :root { --brand: #052e16; --gold: #c6a306; --white: #ffffff; --bg: #f8fafc; --soft-gold: #fdfce8; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: #334155; line-height: 1.7; }
-
-        header { background: var(--white); padding: 15px 6%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--brand); text-decoration: none; font-weight: bold; }
-        .home-btn { text-decoration: none; color: var(--brand); font-weight: 700; border: 2px solid var(--brand); padding: 8px 20px; border-radius: 50px; font-size: 13px; transition: 0.3s; }
-
-        .hero-guide { background: linear-gradient(135deg, #052e16 0%, #064e3b 100%); color: white; padding: 100px 5%; text-align: center; }
-        .hero-guide h1 { font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 20px; }
-        .hero-guide p { font-size: 18px; opacity: 0.9; max-width: 700px; margin: auto; }
-
-        .container { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
-
-        /* Step Styling */
-        .step-container { position: relative; padding-left: 80px; margin-bottom: 60px; }
-        .step-num { 
-            position: absolute; left: 0; top: 0; 
-            width: 60px; height: 60px; background: var(--gold); 
-            color: white; border-radius: 50%; display: flex; 
-            align-items: center; justify-content: center; 
-            font-size: 24px; font-weight: 900; box-shadow: 0 10px 20px rgba(198, 163, 6, 0.3);
+        :root { 
+            --brand: #052e16; 
+            --gold: #c6a306; 
+            --white: #ffffff; 
+            --bg: #f8fafc; 
+            --soft-gold: #fdfce8; 
+            --accent: #10b981;
         }
-        .step-content { background: white; padding: 40px; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; }
-        .step-content h2 { color: var(--brand); font-family: 'Playfair Display', serif; margin-bottom: 15px; }
-        .step-content p { font-size: 16px; color: #64748b; margin-bottom: 20px; }
 
-        .feature-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; list-style: none; }
-        .feature-list li { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--brand); }
-        .feature-list li i { color: var(--gold); }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: #334155; line-height: 1.8; overflow-x: hidden; }
 
-        .visual-box { background: var(--soft-gold); border: 2px dashed var(--gold); padding: 20px; border-radius: 15px; margin-top: 20px; text-align: center; font-style: italic; color: #854d0e; font-size: 14px; }
+        /* Navigation */
+        header { 
+            background: var(--white); padding: 15px 6%; display: flex; 
+            justify-content: space-between; align-items: center; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08); position: sticky; 
+            top: 0; z-index: 1000; 
+        }
+        .logo { font-family: 'Cinzel', serif; font-size: 26px; color: var(--brand); text-decoration: none; font-weight: 900; letter-spacing: 1px; }
+        .logo span { color: var(--gold); }
+        .home-btn { 
+            text-decoration: none; color: var(--white); background: var(--brand); 
+            font-weight: 700; padding: 10px 25px; border-radius: 50px; 
+            font-size: 13px; transition: 0.4s; border: 2px solid var(--brand);
+        }
+        .home-btn:hover { background: transparent; color: var(--brand); }
 
-        .cta-section { background: var(--brand); color: white; padding: 60px; border-radius: 30px; text-align: center; margin-top: 80px; }
-        .cta-section h3 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 20px; }
-        .start-btn { display: inline-block; background: var(--gold); color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; cursor: pointer; border: none; }
-        .start-btn:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(0,0,0,0.2); background: #b59405; }
+        /* Hero Section */
+        .hero-guide { 
+            background: linear-gradient(rgba(5, 46, 22, 0.9), rgba(6, 78, 59, 0.9)), 
+                        url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80');
+            background-size: cover; background-position: center;
+            color: white; padding: 150px 5% 180px; text-align: center; 
+        }
+        .hero-guide h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 6vw, 70px); margin-bottom: 25px; color: var(--gold); }
+        .hero-guide p { font-size: 20px; opacity: 0.95; max-width: 850px; margin: auto; font-weight: 300; line-height: 1.6; }
 
-        footer { text-align: center; padding: 40px; color: #94a3b8; font-size: 13px; }
+        /* Layout Container */
+        .container { max-width: 1200px; margin: -100px auto 100px; padding: 0 25px; position: relative; z-index: 10; }
 
-        @media (max-width: 768px) {
-            .step-container { padding-left: 0; padding-top: 80px; }
-            .step-num { left: 50%; transform: translateX(-50%); }
-            .feature-list { grid-template-columns: 1fr; }
+        /* Intro Card */
+        .intro-box { background: white; padding: 60px; border-radius: 40px; box-shadow: 0 40px 100px rgba(0,0,0,0.1); margin-bottom: 60px; text-align: center; }
+        .intro-box h2 { font-family: 'Playfair Display', serif; color: var(--brand); font-size: 36px; margin-bottom: 25px; }
+        .intro-box p { font-size: 18px; color: #475569; max-width: 900px; margin: 0 auto 30px; }
+
+        /* Steps */
+        .step-wrapper { position: relative; padding-left: 110px; margin-bottom: 100px; }
+        .step-number { 
+            position: absolute; left: 0; top: 0; width: 80px; height: 80px; 
+            background: var(--brand); color: var(--gold); border-radius: 25px; 
+            display: flex; align-items: center; justify-content: center; 
+            font-size: 35px; font-weight: 900; box-shadow: 0 20px 40px rgba(5, 46, 22, 0.2);
+            transform: rotate(-5deg); transition: 0.3s;
+        }
+        .step-wrapper:hover .step-number { transform: rotate(0deg) scale(1.1); }
+        
+        .step-card { background: white; padding: 60px; border-radius: 45px; box-shadow: 0 30px 70px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; }
+        .step-card h2 { color: var(--brand); font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 25px; }
+        
+        /* Grid in Steps */
+        .info-sub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin: 30px 0; }
+        .sub-item { background: #f8fafc; padding: 25px; border-radius: 20px; border-left: 4px solid var(--gold); }
+        .sub-item h4 { color: var(--brand); margin-bottom: 10px; font-size: 18px; }
+        .sub-item p { font-size: 14px; margin: 0; }
+
+        /* Visual Alert Boxes */
+        .alert-box { background: var(--soft-gold); border: 1px solid var(--gold); padding: 30px; border-radius: 25px; margin-top: 40px; display: flex; gap: 20px; align-items: center; }
+        .alert-box i { font-size: 30px; color: var(--gold); }
+        .alert-box span { font-size: 16px; color: #854d0e; font-weight: 500; }
+
+        /* Mega Content Section (SEO Magnet) */
+        .mega-content { background: #fff; padding: 80px 60px; border-radius: 50px; margin: 80px 0; box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
+        .mega-content h2 { font-family: 'Playfair Display', serif; font-size: 42px; color: var(--brand); margin-bottom: 40px; text-align: center; }
+        .article-section { margin-bottom: 60px; }
+        .article-section h3 { font-family: 'Playfair Display', serif; color: var(--brand); font-size: 28px; margin-bottom: 20px; display: flex; align-items: center; gap: 15px; }
+        .article-section h3::after { content: ''; height: 2px; flex-grow: 1; background: #e2e8f0; }
+        .article-section p { margin-bottom: 20px; font-size: 17px; color: #475569; }
+
+        /* FAQ Section */
+        .faq-accordion { margin-top: 50px; }
+        .faq-item { border-bottom: 1px solid #e2e8f0; padding: 25px 0; }
+        .faq-question { font-weight: 800; color: var(--brand); cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 18px; }
+        .faq-answer { padding-top: 15px; color: #64748b; font-size: 16px; display: block; }
+
+        /* CTA */
+        .cta-final { 
+            background: linear-gradient(135deg, #052e16 0%, #064e3b 100%); 
+            color: white; padding: 100px 50px; border-radius: 50px; 
+            text-align: center; margin-top: 100px; box-shadow: 0 30px 60px rgba(5, 46, 22, 0.3);
+        }
+        .cta-final h2 { font-family: 'Playfair Display', serif; font-size: 45px; margin-bottom: 25px; }
+        .mega-btn { 
+            display: inline-block; background: var(--gold); color: white; 
+            padding: 22px 60px; border-radius: 100px; text-decoration: none; 
+            font-weight: 900; font-size: 18px; text-transform: uppercase; 
+            letter-spacing: 2px; transition: 0.5s; box-shadow: 0 15px 40px rgba(198, 163, 6, 0.4);
+        }
+        .mega-btn:hover { transform: translateY(-10px); background: #b59405; box-shadow: 0 25px 50px rgba(198, 163, 6, 0.6); }
+
+        footer { background: #f1f5f9; padding: 100px 5% 50px; border-top: 1px solid #e2e8f0; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 60px; }
+        .footer-col h4 { font-family: 'Cinzel', serif; color: var(--brand); margin-bottom: 25px; }
+        .footer-col p, .footer-col li { font-size: 14px; color: #64748b; list-style: none; margin-bottom: 12px; }
+        .copyright { text-align: center; padding-top: 40px; border-top: 1px solid #e2e8f0; color: #94a3b8; font-size: 13px; }
+
+        @media (max-width: 900px) {
+            .step-wrapper { padding-left: 0; padding-top: 100px; }
+            .step-number { left: 50%; transform: translateX(-50%) rotate(0); top: 0; }
+            .mega-content, .step-card, .intro-box { padding: 30px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="logo">AL-HISAB</a>
-        <a href="index.html" class="home-btn">BACK TO HOME</a>
+        <a href="index.html" class="logo">HISAB<span>IFY</span></a>
+        <nav>
+            <a href="index.html" class="home-btn">BACK TO HUB</a>
+        </nav>
     </header>
 
     <section class="hero-guide">
-        <h1>How Al-Hisab Works</h1>
-        <p>A simple 4-step process to ensure your Zakat is calculated with 100% Shariah accuracy using our advanced algorithms.</p>
+        <h1>How Hisabify Works</h1>
+        <p>A comprehensive masterclass on purifying your wealth. We combine deep Shariah knowledge with the world’s most advanced financial data terminal to give you peace of mind.</p>
     </section>
 
     <div class="container">
 
-        <div class="step-container">
-            <div class="step-num">1</div>
-            <div class="step-content">
-                <h2>Identify Your Assets</h2>
-                <p>The first step is gathering all your wealth sources. Our system categorizes assets into four main blocks to ensure nothing is missed.</p>
-                <ul class="feature-list">
-                    <li><i class="fas fa-check"></i> Cash & Bank Balances</li>
-                    <li><i class="fas fa-check"></i> Gold & Silver Jewelry</li>
-                    <li><i class="fas fa-check"></i> Business Stock/Inventory</li>
-                    <li><i class="fas fa-check"></i> Shares & Cryptocurrencies</li>
+        <div class="intro-box">
+            <h2>The Gold Standard of Zakat</h2>
+            <p>Hisabify is not just a calculator; it's a financial purification engine. In an era of complex assets like crypto, stocks, and global currencies, the traditional way of calculating Zakat often leads to errors. Our 4-step framework ensures that every single cent of your wealth is accounted for according to the standards set by global Shariah councils.</p>
+            <div class="info-sub-grid">
+                <div class="sub-item">
+                    <h4>Precision</h4>
+                    <p>Live market feeds for XAU/XAG ensure your Nisab is always current.</p>
+                </div>
+                <div class="sub-item">
+                    <h4>Security</h4>
+                    <p>Your financial data never leaves your device. Total privacy.</p>
+                </div>
+                <div class="sub-item">
+                    <h4>Compliance</h4>
+                    <p>Calculations verified by scholars for the year 2026.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="step-wrapper">
+            <div class="step-number">01</div>
+            <div class="step-card">
+                <h2>Comprehensive Asset Mapping</h2>
+                <p>The first and most critical stage in Hisabify is identifying your 'Zakatable Assets'. Most people only consider cash, but Shariah requires a broader look at your net worth.</p>
+                <div class="info-sub-grid">
+                    <div class="sub-item">
+                        <h4>Cash & Savings</h4>
+                        <p>Current accounts, savings, physical cash, and money lent to others.</p>
+                    </div>
+                    <div class="sub-item">
+                        <h4>Jewelry & Bullion</h4>
+                        <p>Gold and Silver in any form—be it coins, bars, or wearable jewelry.</p>
+                    </div>
+                    <div class="sub-item">
+                        <h4>Trading Assets</h4>
+                        <p>Business inventory, stocks for sale, and raw materials.</p>
+                    </div>
+                    <div class="sub-item">
+                        <h4>Digital Portfolio</h4>
+                        <p>Bitcoin, Ethereum, NFTs, and other digital stores of value.</p>
+                    </div>
+                </div>
+                <div class="alert-box">
+                    <i class="fas fa-gem"></i>
+                    <span><strong>Pro Tip:</strong> Hisabify includes purity-based gold calculation (24k to 18k) to ensure you don't overpay on alloy weight.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="step-wrapper">
+            <div class="step-number">02</div>
+            <div class="step-card">
+                <h2>Real-Time Nisab Verification</h2>
+                <p>Nisab is the threshold that determines if Zakat is obligatory for you. Because market prices of gold and silver change every minute, Hisabify uses a direct API link to global exchanges.</p>
+                <div class="info-sub-grid">
+                    <div class="sub-item">
+                        <h4>Live Spot Rates</h4>
+                        <p>Direct data from XAU/USD and XAG/USD markets.</p>
+                    </div>
+                    <div class="sub-item">
+                        <h4>Currency Conversion</h4>
+                        <p>Automatic conversion to PKR, USD, SAR, or EUR based on your location.</p>
+                    </div>
+                </div>
+                <p>If your total qualifying assets are below this threshold, you are exempt. If they are above, Hisabify proceeds to the next stage of purification.</p>
+            </div>
+        </div>
+
+        <div class="step-wrapper">
+            <div class="step-number">03</div>
+            <div class="step-card">
+                <h2>Ethical Liability Auditing</h2>
+                <p>Zakat is paid on surplus wealth. This means you must deduct what you owe to others. Hisabify helps you categorize your debts so you only subtract what is Shariah-permissible.</p>
+                <ul style="padding-left: 20px; color: #475569;">
+                    <li>Short-term business debts (due within a month).</li>
+                    <li>Unpaid utility bills and immediate staff wages.</li>
+                    <li>The immediate installment of a long-term loan.</li>
+                    <li>Outstanding taxes and government dues.</li>
                 </ul>
-                <div class="visual-box">
-                    <i class="fas fa-lightbulb"></i> Tip: Use our "Fatwa Bank" if you are unsure if an asset is Zakatable.
+                <div class="alert-box" style="background: #f0fdf4; border-color: #10b981; color: #064e3b;">
+                    <i class="fas fa-balance-scale"></i>
+                    <span><strong>Guidance:</strong> Long-term mortgage principal is generally not deducted entirely—only the current installment. Hisabify handles this logic for you.</span>
                 </div>
             </div>
         </div>
 
-        <div class="step-container">
-            <div class="step-num">2</div>
-            <div class="step-content">
-                <h2>Check the Daily Nisab</h2>
-                <p>Zakat is only due if your wealth exceeds the Nisab threshold. Al-Hisab pulls live market data for Gold and Silver to give you the most accurate Nisab value for today.</p>
-                <div class="visual-box">
-                    <i class="fas fa-chart-line"></i> Our system automatically updates prices every 24 hours.
+        <div class="step-wrapper">
+            <div class="step-number">04</div>
+            <div class="step-card">
+                <h2>Final Purification Summary</h2>
+                <p>After processing your inputs through our 2026 algorithm, Hisabify generates a 2.5% purification report. This report serves as your spiritual financial statement for the year.</p>
+                <div class="info-sub-grid">
+                    <div class="sub-item">
+                        <h4>Detailed Breakdown</h4>
+                        <p>See exactly how much Zakat is owed on each asset category.</p>
+                    </div>
+                    <div class="sub-item">
+                        <h4>Export Ready</h4>
+                        <p>Print or save your results to share with your local charity or Imam.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="step-container">
-            <div class="step-num">3</div>
-            <div class="step-content">
-                <h2>Deduct Your Liabilities</h2>
-                <p>Islam allows you to subtract certain debts from your total wealth. Input your short-term liabilities (bills, immediate loans, etc.) to get your <strong>Net Zakatable Wealth</strong>.</p>
-                <ul class="feature-list">
-                    <li><i class="fas fa-minus-circle"></i> Utility Bills due</li>
-                    <li><i class="fas fa-minus-circle"></i> Personal Loans (Immediate)</li>
-                    <li><i class="fas fa-minus-circle"></i> Business Creditors</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="step-container">
-            <div class="step-num">4</div>
-            <div class="step-content">
-                <h2>Generate & Purify</h2>
-                <p>Review your final summary. The system applies the Shariah-mandated 2.5% rate and provides a detailed breakdown that you can save or print for your records.</p>
-                <div class="visual-box" style="background: #f0fdf4; border-color: #22c55e; color: #166534;">
-                    <i class="fas fa-shield-check"></i> Result: Your wealth is now purified (Al-Zaka).
-                </div>
-            </div>
-        </div>
-
-        <section class="cta-section">
-            <h3>Ready to Purify Your Wealth?</h3>
-            <p style="margin-bottom: 30px; opacity: 0.9;">Join thousands of Muslims using Al-Hisab for error-free Zakat calculation.</p>
+        <div class="mega-content">
+            <h2>The 2026 Zakat Masterguide</h2>
             
-            <a href="index.html#calculators" class="start-btn">Start Calculation Now</a>
+            <div class="article-section">
+                <h3>Zakat on Modern Income Streams</h3>
+                <p>In 2026, wealth is no longer just cash and gold. Many Muslims now earn through freelance platforms, YouTube ad revenue, and E-commerce. Hisabify guides you on how to calculate Zakat on these income streams. Generally, the money you have saved from these sources at the end of your Zakat year (Hawl) is subject to 2.5% if it meets the Nisab.</p>
+            </div>
+
+            <div class="article-section">
+                <h3>The Difference Between Gold and Silver Nisab</h3>
+                <p>There are two thresholds in Islam. The Gold Nisab (87.48g) and the Silver Nisab (612.36g). In the current market, the Silver Nisab is much lower than the Gold one. Most scholars recommend using the Silver Nisab to ensure more help reaches the poor. Hisabify provides both values so you can make an informed, God-conscious decision.</p>
+                
+            </div>
+
+            <div class="article-section">
+                <h3>Is Zakat Mandatory on Retirement Funds?</h3>
+                <p>401k, Provident Funds, and Pension schemes are often a source of confusion. If you have access to the funds and can withdraw them (even with a penalty), Zakat is generally due on the accessible amount. Hisabify’s advanced logic helps you navigate these complex modern financial instruments.</p>
+            </div>
+
+            <div class="article-section">
+                <h3>Crypto Zakat: Bitcoin and Beyond</h3>
+                <p>Cryptocurrency is considered 'Mal' (wealth). If you are holding Bitcoin as an investment, you calculate Zakat on the market value on your Zakat anniversary. Hisabify tracks BINANCE and Coinbase rates to give you the exact valuation for your portfolio.</p>
+            </div>
+
+            <div class="faq-accordion">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-question">What is a 'Hawl'? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">Hawl is the completion of one lunar year of possessing wealth above the Nisab. Hisabify helps you track this timeline.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I pay Zakat in installments? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">Yes, you can estimate your Zakat via Hisabify and pay it throughout the year, as long as the total amount is covered by your anniversary.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Does Hisabify store my data? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">No. Hisabify is a client-side terminal. Your financial inputs stay on your device and are cleared once you close the tab.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is Zakat due on business machinery? <i class="fas fa-plus"></i></div>
+                    <div class="faq-answer">No, Zakat is not due on 'fixed assets' like machinery, office furniture, or delivery vehicles used for operations.</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="cta-final">
+            <h2>Ready to fulfill your duty?</h2>
+            <p style="margin-bottom: 50px; opacity: 0.9; font-size: 20px;">Use the Hisabify engine today for a fast, secure, and Shariah-compliant calculation.</p>
+            <a href="index.html#calculators" class="mega-btn">Start Calculation Now</a>
         </section>
 
     </div>
 
     <footer>
-        &copy; 2026 Al-Hisab Global Authority. Engineered for Precision.
+        <div class="container" style="margin: 0 auto;">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>HISABIFY</h4>
+                    <p>The world's leading terminal for Islamic financial purification. Built for the modern Ummah with precision and trust.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li>Nisab Terminal</li>
+                        <li>Global Markets</li>
+                        <li>Scholar Blogs</li>
+                        <li>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Support</h4>
+                    <p>Email: hisabify.online@gmail.com</p>
+                    <p>Location: Global Digital Office</p>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 Hisabify Finance Global. Engineered with ❤️ for the Digital Ummah.
+            </div>
+        </div>
     </footer>
-<script src="brand.js"></script>
+
+    <script src="brand.js"></script>
+    <script>
+        // Simple FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const answer = q.nextElementSibling;
+                answer.style.display = answer.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
 </body>
 </html>
