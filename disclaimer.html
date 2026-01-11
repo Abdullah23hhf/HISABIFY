@@ -1,90 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Disclaimer | Al-Hisab Global Authority</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --brand: #052e16;
-            --gold: #c6a306;
-            --text: #1e293b;
-            --bg: #fdfbf7;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Official Legal Disclaimer for HISABIFY. Comprehensive transparency statement regarding educational content, AdSense compliance, financial advice, and Shariah-compliant calculations.">
+<title>Legal Disclaimer | HISABIFY Global Authority</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+--brand: #052e16;
+--gold: #c6a306;
+--text: #1e293b;
+--bg: #fdfbf7;
+}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.8; }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.8; }
+    header { background: white; padding: 20px 6%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+    .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--brand); text-decoration: none; font-weight: bold; }
+    .home-link { text-decoration: none; color: var(--brand); font-weight: 700; font-size: 14px; border: 1.5px solid var(--brand); padding: 8px 20px; border-radius: 50px; transition: 0.3s; }
+    .home-link:hover { background: var(--brand); color: white; }
 
-        header { background: white; padding: 20px 6%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-        .logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--brand); text-decoration: none; font-weight: bold; }
-        .home-link { text-decoration: none; color: var(--brand); font-weight: 700; font-size: 14px; border: 1.5px solid var(--brand); padding: 8px 20px; border-radius: 50px; transition: 0.3s; }
-        .home-link:hover { background: var(--brand); color: white; }
+    .disclaimer-container { max-width: 900px; margin: 60px auto; background: white; padding: 60px; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; }
+    
+    .badge { background: #fef3c7; color: #92400e; padding: 6px 15px; border-radius: 50px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; display: inline-block; }
+    h1 { font-family: 'Cinzel', serif; color: var(--brand); font-size: 36px; margin-bottom: 30px; border-bottom: 4px solid var(--gold); display: inline-block; }
+    
+    .section { margin-bottom: 40px; }
+    .section h2 { color: var(--brand); font-size: 20px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+    .section h3 { color: var(--brand); font-size: 17px; margin: 15px 0 10px; font-weight: 600; }
+    .section h2 i { color: var(--gold); font-size: 18px; }
+    .section p { font-size: 15px; color: #475569; text-align: justify; margin-bottom: 15px; }
+    .section ul { margin-left: 20px; margin-bottom: 15px; list-style-type: square; }
+    .section ul li { font-size: 14px; color: #475569; margin-bottom: 8px; }
 
-        .disclaimer-container { max-width: 900px; margin: 60px auto; background: white; padding: 60px; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; }
-        
-        .badge { background: #fef3c7; color: #92400e; padding: 6px 15px; border-radius: 50px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; display: inline-block; }
-        h1 { font-family: 'Cinzel', serif; color: var(--brand); font-size: 36px; margin-bottom: 30px; border-bottom: 4px solid var(--gold); display: inline-block; }
-        
-        .section { margin-bottom: 40px; }
-        .section h2 { color: var(--brand); font-size: 20px; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-        .section h2 i { color: var(--gold); font-size: 18px; }
-        .section p { font-size: 15px; color: #475569; text-align: justify; }
+    .highlight-box { background: #f8fafc; border-left: 5px solid var(--brand); padding: 25px; margin: 30px 0; border-radius: 0 15px 15px 0; }
+    
+    footer { text-align: center; padding: 40px; color: #94a3b8; font-size: 13px; }
+    
+    @media (max-width: 768px) {
+        .disclaimer-container { padding: 30px; margin: 20px; }
+        h1 { font-size: 28px; }
+    }
+</style>
 
-        .highlight-box { background: #f8fafc; border-left: 5px solid var(--brand); padding: 25px; margin: 30px 0; border-radius: 0 15px 15px 0; }
-        
-        footer { text-align: center; padding: 40px; color: #94a3b8; font-size: 13px; }
-        
-        @media (max-width: 768px) {
-            .disclaimer-container { padding: 30px; margin: 20px; }
-            h1 { font-size: 28px; }
-        }
-    </style>
 </head>
 <body>
+<header>
+    <a href="index.html" class="logo">HISABIFY</a>
+    <a href="index.html" class="home-link">BACK TO HOME</a>
+</header>
 
-    <header>
-        <a href="index.html" class="logo">AL-HISAB</a>
-        <a href="index.html" class="home-link">BACK TO HOME</a>
-    </header>
+<div class="disclaimer-container">
+    <span class="badge">Legal Transparency</span>
+    <h1>Legal Disclaimer</h1>
 
-    <div class="disclaimer-container">
-        <span class="badge">Legal Transparency</span>
-        <h1>Legal Disclaimer</h1>
-
-        <div class="section">
-            <h2><i class="fas fa-info-circle"></i> General Information</h2>
-            <p>The information provided by <strong>Al-Hisab</strong> ("we," "us," or "our") on this website is for general educational and informational purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, or completeness of any information on the site.</p>
-        </div>
-
-        <div class="highlight-box">
-            <p><strong>Strict Notice:</strong> Al-Hisab is a digital Shariah-compliance portal. We are NOT registered financial advisors, nor do we provide legal or tax advice. Any financial decisions made based on our calculators or fatawa are the sole responsibility of the user.</p>
-        </div>
-
-        <div class="section">
-            <h2><i class="fas fa-balance-scale"></i> No Professional Advice</h2>
-            <p>The Zakat calculations and Fatawa provided are based on classical Islamic Jurisprudence (Fiqh) applied to modern assets. Because every individual's financial situation is unique, the information provided here cannot substitute for professional advice. Before taking any actions based upon such information, we encourage you to consult with a qualified local Mufti or a certified Shariah Auditor.</p>
-        </div>
-
-        <div class="section">
-            <h2><i class="fas fa-link"></i> External Links Disclaimer</h2>
-            <p>Our website may contain links to external websites or content belonging to third parties. Such external links are not investigated, monitored, or checked for accuracy by us. We do not warrant, endorse, guarantee, or assume responsibility for the accuracy or reliability of any information offered by third-party websites linked through the site.</p>
-        </div>
-
-        <div class="section">
-            <h2><i class="fas fa-exclamation-triangle"></i> Errors and Omissions</h2>
-            <p>While we have made every attempt to ensure that the information contained in this site has been obtained from reliable sources, Al-Hisab is not responsible for any errors or omissions, or for the results obtained from the use of this information.</p>
-        </div>
-
-        <div class="section" style="border-top: 1px solid #eee; padding-top: 30px;">
-            <p style="font-style: italic; font-size: 13px;">Last Updated: January 01, 2026. By using our website, you hereby consent to our disclaimer and agree to its terms.</p>
-        </div>
+    <div class="section">
+        <h2><i class="fas fa-info-circle"></i> General Information</h2>
+        <p>The information provided by <strong>HISABIFY</strong> ("we," "us," or "our") on this website is for general educational and informational purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, or completeness of any information on the site.</p>
+        <p>Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the site or reliance on any information provided on the site. Your use of the site and your reliance on any information on the site is solely at your own risk.</p>
     </div>
 
-    <footer>
-        &copy; 2026 Al-Hisab Global. All Rights Reserved. Engineered by Abdullah.
-    </footer>
-<script src="brand.js"></script>
+    <div class="highlight-box">
+        <p><strong>Strict Notice:</strong> HISABIFY is a digital Shariah-compliance portal. We are NOT registered financial advisors, nor do we provide legal or tax advice. Any financial decisions made based on our calculators or fatawa are the sole responsibility of the user. This platform serves as a modern bridge to classical Islamic jurisprudence for educational purposes only.</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-graduation-cap"></i> Educational Purpose Disclaimer</h2>
+        <p>The content hosted on HISABIFY, including but not limited to articles, guides, infographics, and automated calculation tools, is designed strictly for academic and educational exploration. The theological interpretations provided represent a synthesis of classical and contemporary Islamic scholarship (Fiqh) applied to modern financial instruments.</p>
+        <p>This content does not constitute a formal binding fatwa (legal ruling) for your specific individual circumstances but rather serves as a general resource to aid in your personal understanding of Islamic financial duties. Users are encouraged to utilize this platform as a starting point for their own research and to verify findings with local ecclesiastical authorities.</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-ad"></i> Advertising & Google AdSense Compliance</h2>
+        <p>HISABIFY participates in digital advertising programs, including Google AdSense. This is necessary to maintain the free accessibility of our research and tools. Please be advised of the following transparency points regarding our advertising practices:</p>
+        <ul>
+            <li>Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to our website or other websites.</li>
+            <li>Google's use of advertising cookies enables it and its partners to serve ads to our users based on their visit to our sites and/or other sites on the Internet.</li>
+            <li>We do not control the specific content of the advertisements served by third-party networks, though we make reasonable efforts to block content that is explicitly prohibited by Shariah principles.</li>
+            <li>The presence of an advertisement on HISABIFY does not constitute an endorsement of the product or service by us.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-handshake"></i> Affiliate Disclosure</h2>
+        <p>In the interest of full transparency and in compliance with global trade commission guidelines, HISABIFY discloses that we may occasionally recommend books, software, or services that we believe add value to our users. While our primary mission is educational:</p>
+        <p>We may receive a small commission if you choose to purchase a product through certain links on this site. This comes at no additional cost to you. As of the current date, HISABIFY maintains a strictly neutral research stance and does not prioritize affiliate revenue over the accuracy of Shariah content. Our goal remains the provision of high-integrity information regardless of any potential commission structure.</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-ban"></i> No Financial, Legal, or Tax Advice</h2>
+        <p>The information on this site is not intended to be a substitute for professional financial, legal, or tax advice. HISABIFY is not a financial institution, a law firm, or a certified public accounting firm. The complexities of modern tax laws and financial regulations vary significantly by jurisdiction.</p>
+        <h3>Financial Risk</h3>
+        <p>Calculations regarding Zakat, purification of wealth, or Shariah-compliant investing involve variables that are subject to market volatility. We do not guarantee any financial outcome based on the use of our digital tools.</p>
+        <h3>Legal and Tax Compliance</h3>
+        <p>Your religious obligations (Zakat) and your civil obligations (Taxes) are distinct. Fulfilling a calculation on HISABIFY does not satisfy legal tax filing requirements in your country of residence. Always consult with a licensed professional in your specific region before making significant financial commitments.</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-balance-scale"></i> No Professional Advice</h2>
+        <p>The Zakat calculations and Fatawa provided are based on classical Islamic Jurisprudence (Fiqh) applied to modern assets. Because every individual's financial situation is unique, the information provided here cannot substitute for professional advice. Before taking any actions based upon such information, we encourage you to consult with a qualified local Mufti or a certified Shariah Auditor.</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-user-shield"></i> User Responsibility & Risk Acknowledgment</h2>
+        <p>By using HISABIFY, you acknowledge and agree that:</p>
+        <ul>
+            <li>You are using our calculation tools at your own discretion and risk.</li>
+            <li>You are responsible for the accuracy of the data you input into any digital calculators.</li>
+            <li>Islamic jurisprudence contains various schools of thought (Madhahib); our tools may follow specific interpretations that might differ from your personal or local scholarly tradition.</li>
+            <li>You will not hold HISABIFY liable for any perceived spiritual or financial discrepancy resulting from the use of the platform.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-gavel"></i> Jurisdiction & Governing Law</h2>
+        <p>This website is controlled and operated from our global headquarters. While HISABIFY is accessible worldwide, we make no representation that the content is appropriate for all legal jurisdictions. If you access this site from locations where the content might be restricted, you do so on your own initiative and are responsible for compliance with local laws.</p>
+        <p>Any legal disputes arising from the use of this website shall be governed by the laws of the jurisdiction in which our primary parent entity is registered, without regard to conflict of law principles.</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-sync-alt"></i> Accuracy, Updates & Content Changes Policy</h2>
+        <p>The world of finance and the evolution of modern Fiqh are dynamic. While we strive to keep our database current, HISABIFY does not warrant that the content is always up-to-date or free from technical inaccuracies.</p>
+        <p>We reserve the right to modify, update, or delete content at any time without prior notice. This includes adjustments to calculation logic to reflect new scholarly consensus or changes in global market standards. We recommend that users check this page regularly to stay informed of any changes to our legal stance.</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-microchip"></i> Third-Party Tools & External Data Disclaimer</h2>
+        <p>To provide real-time value, HISABIFY may utilize third-party APIs or data streams for currency exchange rates, gold/silver prices, and stock market data. We are not responsible for:</p>
+        <ul>
+            <li>Delays or outages in third-party data feeds.</li>
+            <li>Inaccuracies in market pricing provided by external sources.</li>
+            <li>Malfunctions in third-party software integrations that may affect your user experience.</li>
+        </ul>
+        <p>Data provided by these external sources is for reference only and should be cross-verified if being used for high-stakes financial calculations.</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-link"></i> External Links Disclaimer</h2>
+        <p>Our website may contain links to external websites or content belonging to third parties. Such external links are not investigated, monitored, or checked for accuracy by us. We do not warrant, endorse, guarantee, or assume responsibility for the accuracy or reliability of any information offered by third-party websites linked through the site. We will not be a party to or in any way be responsible for monitoring any transaction between you and third-party providers of products or services.</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-shield-alt"></i> Limitation of Liability</h2>
+        <p>To the maximum extent permitted by applicable law, in no event shall HISABIFY or its directors, employees, or agents be liable for any direct, indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:</p>
+        <ul>
+            <li>Your access to or use of (or inability to access or use) the service.</li>
+            <li>Any conduct or content of any third party on the service.</li>
+            <li>Any content obtained from the service.</li>
+            <li>Unauthorized access, use, or alteration of your transmissions or data.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-exclamation-triangle"></i> Errors and Omissions</h2>
+        <p>While we have made every attempt to ensure that the information contained in this site has been obtained from reliable sources, HISABIFY is not responsible for any errors or omissions, or for the results obtained from the use of this information. All information in this site is provided "as is," with no guarantee of completeness, accuracy, timeliness or of the results obtained from the use of this information.</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-envelope-open-text"></i> Contact & Transparency Statement</h2>
+        <p>Transparency is the cornerstone of HISABIFY. If you have any questions regarding this disclaimer, the logic behind our calculators, or the scholarly sources we utilize, we invite you to contact our legal and compliance department.</p>
+        <p>We are committed to resolving any concerns and providing further clarification to ensure your journey toward financial purification is built on a foundation of trust and clarity.</p>
+    </div>
+
+    <div class="section" style="border-top: 1px solid #eee; padding-top: 30px;">
+        <p style="font-style: italic; font-size: 13px;">Last Updated: January 01, 2026. By using our website, you hereby consent to our disclaimer and agree to its terms. All rights regarding the digital architecture and intellectual property of HISABIFY are strictly reserved.</p>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 HISABIFY Global. All Rights Reserved. Engineered by Abdullah.
+</footer>
+
 </body>
 </html>
