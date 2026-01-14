@@ -3,49 +3,524 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fatwa Bank | 45+ Comprehensive Zakat Rulings - Hisabify</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Fatwa Bank | 50+ Comprehensive Zakat Rulings - Hisabify</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --brand: #052e16; --gold: #c6a306; --white: #ffffff; --bg: #f8fafc; --text: #334155; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+        :root { 
+            --brand: #052e16; 
+            --gold: #c6a306; 
+            --white: #ffffff; 
+            --cream: #fdfbf7; 
+            --text: #1e293b; 
+            --emerald: #064e3b;
+            --light-gold: #f6e05e;
+        }
+        
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: var(--cream);
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(197, 163, 6, 0.03) 35px, rgba(197, 163, 6, 0.03) 70px),
+                repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(5, 46, 22, 0.02) 35px, rgba(5, 46, 22, 0.02) 70px);
+            color: var(--text); 
+            line-height: 1.8; 
+            overflow-x: hidden; 
+        }
 
-        header { background: var(--white); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .logo { font-family: 'Cinzel', serif; font-size: clamp(20px, 4vw, 26px); color: var(--brand); text-decoration: none; font-weight: 800; letter-spacing: 1px; }
-        .back-home { text-decoration: none; color: var(--brand); font-weight: 700; border: 2px solid var(--brand); padding: 8px 20px; border-radius: 50px; transition: 0.3s; font-size: 13px; display: flex; align-items: center; gap: 8px; }
-        .back-home:hover { background: var(--brand); color: white; }
+        /* PREMIUM HEADER */
+        header { 
+            background: linear-gradient(135deg, var(--white) 0%, #fefefe 100%);
+            padding: 18px 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 8px 32px rgba(5, 46, 22, 0.12), 0 2px 8px rgba(198, 163, 6, 0.08);
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
+            border-bottom: 3px solid var(--gold);
+            backdrop-filter: blur(10px);
+        }
+        
+        .logo { 
+            font-family: 'Cinzel', serif; 
+            font-size: clamp(22px, 4vw, 28px); 
+            background: linear-gradient(135deg, var(--brand) 0%, var(--emerald) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none; 
+            font-weight: 800; 
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(198, 163, 6, 0.2);
+            position: relative;
+        }
+        
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+        }
+        
+        .back-home { 
+            text-decoration: none; 
+            color: var(--brand); 
+            font-weight: 700; 
+            border: 2px solid var(--gold);
+            padding: 10px 24px; 
+            border-radius: 50px; 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-size: 13px; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px;
+            background: linear-gradient(135deg, transparent 0%, rgba(198, 163, 6, 0.05) 100%);
+            box-shadow: 0 4px 15px rgba(198, 163, 6, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .back-home::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: var(--gold);
+            transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+        
+        .back-home:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .back-home:hover { 
+            color: white;
+            border-color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(198, 163, 6, 0.3);
+        }
 
-        .hero { background: linear-gradient(135deg, #052e16 0%, #064e3b 100%); color: white; padding: 60px 5% 100px; text-align: center; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 7vw, 52px); margin-bottom: 20px; letter-spacing: -1px; }
-        .hero p { font-size: clamp(14px, 3vw, 18px); opacity: 0.9; max-width: 700px; margin: auto; padding: 0 10px; }
+        /* HERO SECTION */
+        .hero { 
+            background: linear-gradient(135deg, #052e16 0%, #064e3b 50%, #065f46 100%);
+            color: white; 
+            padding: 80px 5% 120px; 
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(198, 163, 6, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(198, 163, 6, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: clamp(32px, 7vw, 58px); 
+            margin-bottom: 24px; 
+            letter-spacing: -1px;
+            font-weight: 900;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero p { 
+            font-size: clamp(15px, 3vw, 19px); 
+            opacity: 0.95; 
+            max-width: 800px; 
+            margin: auto; 
+            padding: 0 15px;
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+        }
 
-        .search-container { max-width: 850px; width: 90%; margin: -40px auto 60px; background: white; padding: 10px; border-radius: 100px; display: flex; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); border: 1px solid #e2e8f0; }
-        .search-container input { flex: 1; border: none; padding: 10px 20px; outline: none; font-size: 16px; border-radius: 100px; width: 100%; }
-        .search-container button { background: var(--gold); color: white; border: none; padding: 12px 30px; border-radius: 100px; cursor: pointer; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+        /* SEARCH CONTAINER */
+        .search-container { 
+            max-width: 900px; 
+            width: 90%; 
+            margin: -50px auto 80px; 
+            background: white;
+            padding: 12px; 
+            border-radius: 100px; 
+            display: flex; 
+            box-shadow: 
+                0 30px 60px -12px rgba(5, 46, 22, 0.25),
+                0 0 0 1px rgba(198, 163, 6, 0.1),
+                inset 0 2px 4px rgba(198, 163, 6, 0.05);
+            border: 2px solid rgba(198, 163, 6, 0.2);
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+        
+        .search-container::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 100px;
+            padding: 2px;
+            background: linear-gradient(135deg, var(--gold), var(--brand));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        .search-container input { 
+            flex: 1; 
+            border: none; 
+            padding: 14px 24px; 
+            outline: none; 
+            font-size: 16px; 
+            border-radius: 100px; 
+            width: 100%;
+            background: transparent;
+            color: var(--text);
+            font-weight: 500;
+        }
+        
+        .search-container input::placeholder {
+            color: #94a3b8;
+        }
+        
+        .search-container button { 
+            background: linear-gradient(135deg, var(--gold) 0%, #b8960a 100%);
+            color: white; 
+            border: none; 
+            padding: 14px 32px; 
+            border-radius: 100px; 
+            cursor: pointer; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(198, 163, 6, 0.3);
+        }
+        
+        .search-container button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(198, 163, 6, 0.5);
+        }
 
-        .container { max-width: 1300px; margin: 0 auto 80px; padding: 0 5%; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap: 25px; }
-        .card { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #f1f5f9; transition: all 0.4s ease; position: relative; overflow: hidden; display: flex; flex-direction: column; }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border-color: var(--gold); }
-        .card::before { content: ""; position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: var(--brand); }
-        .category { display: inline-block; background: #f0fdf4; color: #166534; padding: 4px 12px; border-radius: 100px; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 15px; align-self: flex-start; }
-        .card h3 { font-family: 'Playfair Display', serif; color: var(--brand); font-size: clamp(20px, 4vw, 24px); margin-bottom: 12px; line-height: 1.3; }
-        .card p { color: #475569; font-size: 14px; margin-bottom: 20px; flex-grow: 1; text-align: justify; }
-        .footer-card { border-top: 1px solid #f1f5f9; padding-top: 15px; font-size: 12px; color: #94a3b8; display: flex; justify-content: space-between; align-items: center; }
-        .footer-card span { font-weight: 600; color: var(--gold); }
+        /* CARDS GRID */
+        .container { 
+            max-width: 1400px; 
+            margin: 0 auto 100px; 
+            padding: 0 5%; 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr)); 
+            gap: 35px; 
+        }
+        
+        .card { 
+            background: linear-gradient(145deg, #ffffff 0%, #fefefe 100%);
+            border-radius: 24px; 
+            padding: 35px; 
+            box-shadow: 
+                0 10px 30px rgba(5, 46, 22, 0.08),
+                0 1px 3px rgba(0, 0, 0, 0.05),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(198, 163, 6, 0.15);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative; 
+            overflow: hidden; 
+            display: flex; 
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+        }
+        
+        .card::before { 
+            content: ""; 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 6px; 
+            height: 100%; 
+            background: linear-gradient(180deg, var(--gold) 0%, var(--brand) 100%);
+            box-shadow: 0 0 20px rgba(198, 163, 6, 0.5);
+        }
+        
+        .card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(198, 163, 6, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+            transition: all 0.6s ease;
+        }
+        
+        .card:hover { 
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 
+                0 25px 50px rgba(5, 46, 22, 0.15),
+                0 0 0 1px var(--gold),
+                0 0 40px rgba(198, 163, 6, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 1);
+            border-color: var(--gold);
+        }
+        
+        .card:hover::after {
+            top: -25%;
+            right: -25%;
+        }
+        
+        .category { 
+            display: inline-block; 
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            color: #065f46; 
+            padding: 6px 16px; 
+            border-radius: 100px; 
+            font-size: 11px; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            margin-bottom: 18px; 
+            align-self: flex-start;
+            letter-spacing: 1px;
+            border: 1px solid rgba(5, 95, 70, 0.2);
+            box-shadow: 0 2px 8px rgba(5, 95, 70, 0.1);
+        }
+        
+        .card h3 { 
+            font-family: 'Playfair Display', serif; 
+            color: var(--brand); 
+            font-size: clamp(21px, 4vw, 26px); 
+            margin-bottom: 16px; 
+            line-height: 1.4;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        
+        .card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+            border-radius: 10px;
+        }
+        
+        .card p { 
+            color: #475569; 
+            font-size: 15px; 
+            margin-bottom: 24px; 
+            flex-grow: 1; 
+            text-align: justify;
+            line-height: 1.9;
+            font-weight: 400;
+        }
+        
+        .footer-card { 
+            border-top: 2px solid rgba(198, 163, 6, 0.15);
+            padding-top: 18px; 
+            font-size: 13px; 
+            color: #64748b; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .footer-card span { 
+            font-weight: 700; 
+            color: var(--gold);
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
 
-        #noData { display: none; text-align: center; font-size: 20px; color: var(--brand); grid-column: 1/-1; padding: 80px 20px; }
+        #noData { 
+            display: none; 
+            text-align: center; 
+            font-size: 22px; 
+            color: var(--brand); 
+            grid-column: 1/-1; 
+            padding: 100px 20px;
+            font-family: 'Playfair Display', serif;
+        }
 
-        footer { background: #020617; color: #94a3b8; padding: 60px 5% 40px; text-align: center; }
-        .disclaimer { max-width: 900px; margin: 0 auto 30px; font-size: 12px; line-height: 1.6; border: 1px solid #1e293b; padding: 20px; border-radius: 15px; background: rgba(255,255,255,0.02); }
+        /* FAQ SECTION */
+        .faq-section {
+            max-width: 1200px;
+            margin: 80px auto 100px;
+            padding: 0 5%;
+        }
+        
+        .faq-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .faq-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 6vw, 48px);
+            color: var(--brand);
+            margin-bottom: 16px;
+            font-weight: 900;
+        }
+        
+        .faq-header p {
+            font-size: 18px;
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(5, 46, 22, 0.08);
+            border: 1px solid rgba(198, 163, 6, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 8px 25px rgba(5, 46, 22, 0.12);
+            border-color: var(--gold);
+        }
+        
+        .faq-question {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: var(--brand);
+            padding: 28px 35px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #fefefe 0%, #fdfbf7 100%);
+        }
+        
+        .faq-question:hover {
+            background: linear-gradient(135deg, #fdfbf7 0%, #fcf9f3 100%);
+        }
+        
+        .faq-question i {
+            color: var(--gold);
+            transition: transform 0.3s ease;
+            font-size: 18px;
+        }
+        
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+            padding: 0 35px;
+            color: #475569;
+            font-size: 15px;
+            line-height: 1.9;
+            text-align: justify;
+        }
+        
+        .faq-answer.active {
+            max-height: 1000px;
+            padding: 0 35px 28px 35px;
+        }
+
+        /* FOOTER */
+        footer { 
+            background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+            color: #94a3b8; 
+            padding: 70px 5% 50px; 
+            text-align: center;
+            border-top: 3px solid var(--gold);
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+        
+        .disclaimer { 
+            max-width: 1000px; 
+            margin: 0 auto 35px; 
+            font-size: 13px; 
+            line-height: 1.8; 
+            border: 2px solid rgba(198, 163, 6, 0.3);
+            padding: 28px; 
+            border-radius: 20px; 
+            background: rgba(198, 163, 6, 0.03);
+            backdrop-filter: blur(10px);
+            box-shadow: inset 0 2px 8px rgba(198, 163, 6, 0.1);
+        }
+        
+        .disclaimer strong {
+            color: var(--gold);
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+        
+        footer p {
+            font-size: 14px;
+            margin-top: 20px;
+            color: #cbd5e1;
+        }
 
         @media (max-width: 600px) {
-            header { padding: 12px 4%; }
-            .search-container { border-radius: 15px; flex-direction: column; gap: 10px; padding: 8px; margin-top: -30px; }
-            .search-container button { border-radius: 10px; width: 100%; }
-            .hero { padding: 50px 4% 80px; }
+            header { padding: 14px 4%; }
+            .search-container { 
+                border-radius: 20px; 
+                flex-direction: column; 
+                gap: 12px; 
+                padding: 10px; 
+                margin-top: -35px; 
+            }
+            .search-container button { 
+                border-radius: 15px; 
+                width: 100%; 
+            }
+            .hero { padding: 60px 4% 90px; }
             .back-home span { display: none; }
-            .card { padding: 20px; }
+            .card { padding: 25px; }
+            .faq-question { padding: 20px 20px; font-size: 18px; }
+            .faq-answer { padding: 0 20px; }
+            .faq-answer.active { padding: 0 20px 20px 20px; }
         }
     </style>
 </head>
@@ -58,177 +533,459 @@
 
     <section class="hero">
         <h1>Institutional Fatwa Database</h1>
-        <p>Comprehensive Shariah analysis of 45+ modern financial instruments, assets, and liabilities for the 2026 global economy.</p>
+        <p>Comprehensive Shariah analysis of 50+ modern financial instruments, assets, and liabilities for the 2026 global economy with detailed technical definitions and contemporary calculation scenarios.</p>
     </section>
 
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search by asset (e.g. Bitcoin, Gold, Committee, Salary)..." onkeyup="filter()">
+        <input type="text" id="searchInput" placeholder="Search by asset (e.g. Bitcoin, Gold, Committee, Salary, NFT, Real Estate)..." onkeyup="filter()">
         <button><i class="fas fa-search"></i> Search</button>
     </div>
 
     <div class="container" id="grid">
-        <div class="card" data-key="crypto bitcoin ethereum btc eth digital">
+        
+        <div class="card" data-key="crypto bitcoin ethereum btc eth digital blockchain staking mining">
             <span class="category">Digital Assets</span>
-            <h3>Bitcoin & Crypto Staking</h3>
-            <p>Cryptocurrencies held for investment are subject to 2.5% Zakat on their market value. If you are staking coins, Zakat is due on both the principal and rewards earned.</p>
-            <div class="footer-card">Ref: <span>AAOIFI Standard 35</span></div>
+            <h3>Bitcoin & Cryptocurrency Holdings</h3>
+            <p>Cryptocurrencies such as Bitcoin (BTC), Ethereum (ETH), and other digital assets held for investment purposes are classified as 'Urudh al-Tijarah' (trade goods) in Islamic jurisprudence. The technical definition encompasses decentralized digital currencies operating on blockchain technology using cryptographic protocols for secure peer-to-peer transactions. For Zakat calculation in 2026, you must determine the fair market value of your entire crypto portfolio on your Zakat anniversary date (Hawl completion). Example Scenario: If you hold 0.5 BTC purchased at $40,000 but current market price is $65,000, your Zakatable value is $32,500. Apply the 2.5% rate resulting in $812.50 Zakat due. For staking rewards, the principle followed by contemporary scholars including the AAOIFI Shariah Board is that both the principal staked amount AND the rewards earned throughout the year are subject to Zakat. The Nisab threshold in 2026 is equivalent to 87.48 grams of gold or 612.36 grams of silver at current market rates. Shariah Evidence: The general principle "fi al-rikaz al-khumus" (Bukhari 1499) establishes that wealth from earth requires purification. Modern scholars extend this to digital wealth. Calculate using the lower Nisab (silver) for maximum benefit to recipients. Deduct any crypto locked in non-accessible wallets for regulatory reasons only after consulting a Mufti about the specific circumstances of restriction.</p>
+            <div class="footer-card">Ref: <span>AAOIFI Shariah Standard 35, Islamic Fiqh Council Resolution 167</span></div>
         </div>
 
-        <div class="card" data-key="nft digital art web3">
-            <span class="category">Web3</span>
-            <h3>Zakat on NFTs and Digital Art</h3>
-            <p>If NFTs are purchased for resale, they are trading goods. 2.5% Zakat is due on the current floor price or estimated market value at the time of your Zakat anniversary.</p>
-            <div class="footer-card">Ref: <span>Contemporary Fiqh</span></div>
+        <div class="card" data-key="nft digital art web3 token metaverse collectible opensea">
+            <span class="category">Web3 Assets</span>
+            <h3>NFTs and Digital Collectibles</h3>
+            <p>Non-Fungible Tokens (NFTs) represent unique digital assets verified through blockchain technology, including digital art, virtual real estate, gaming items, and membership tokens. The Shariah classification depends entirely on intent (niyyah) at the time of acquisition. If purchased with the intention of resale for profit, NFTs are categorized as trade inventory requiring annual Zakat at 2.5% of current market value. Technical Definition: NFTs are cryptographic tokens on blockchains (typically Ethereum ERC-721 or Polygon) that prove ownership and authenticity of unique digital items. 2026 Calculation Scenario: You purchased a Bored Ape NFT for 50 ETH ($100,000) in 2023. On your Zakat date in 2026, the floor price is 30 ETH ($75,000). Your Zakatable value is $75,000, resulting in $1,875 Zakat due regardless of whether you're in profit or loss. If the NFT has zero liquidity and hasn't sold in 12+ months despite listing, some contemporary scholars allow deferment until actual sale, then paying accumulated Zakat for all past years. For NFTs held purely for personal enjoyment (like traditional art), no Zakat applies to the NFT itself, only to any income generated from licensing or royalties. Shariah Principle: "Al-ghunm bi al-ghurm" - profit accompanies liability. Since NFTs can appreciate and generate wealth, they require purification. The Hanafi school's approach to trade goods applies: value is assessed at current market rate on Zakat date, not purchase price. For NFTs in gaming ecosystems with play-to-earn mechanisms, both the NFT asset value and earned cryptocurrency tokens are Zakatable separately.</p>
+            <div class="footer-card">Ref: <span>Contemporary Fiqh Majlis, AMJA Fatwa Committee 2024</span></div>
         </div>
 
-        <div class="card" data-key="gold jewelry ornaments 24k 22k">
-            <span class="category">Bullion</span>
-            <h3>Gold Jewelry and Ornaments</h3>
-            <p>Zakat is obligatory on all gold jewelry if it reaches the Nisab (87.48g). Calculation is based on the current market rate on your specific Zakat date.</p>
-            <div class="footer-card">Ref: <span>Hanafi Jurisprudence</span></div>
+        <div class="card" data-key="gold jewelry ornaments 24k 22k 18k bullion bars coins investment">
+            <span class="category">Precious Metals</span>
+            <h3>Gold Jewelry and Investment Bullion</h3>
+            <p>Gold in all its forms - whether jewelry, bullion bars, coins, or investment certificates - is subject to Zakat once it reaches the Nisab threshold of 87.48 grams (approximately 2.8 troy ounces). The Hanafi school, which represents the majority position for Zakat on gold, mandates Zakat on ALL gold jewelry regardless of usage, while the Shafi'i, Maliki, and Hanbali schools exempt jewelry regularly worn by women within customary norms (ma'ruf). Technical Definition: Gold is a precious metal element (Au) valued for its rarity, malleability, and resistance to corrosion, serving as both ornament and store of value. 2026 Calculation Scenario: A woman owns 150 grams of 22k gold jewelry (mixed purity). First, calculate pure gold content: 150g × (22/24) = 137.5g of pure gold. At 2026 market rate of $65/gram, the value is $8,937.50. Zakat due: $8,937.50 × 2.5% = $223.44. For mixed karat jewelry, always reduce to 24k equivalent for accurate calculation. Investment gold bars and coins purchased specifically for wealth preservation are unequivocally Zakatable at 2.5% annually. Shariah Evidence: The Prophet ﷺ stated, "Any owner of gold or silver who does not pay what is due on it, on the Day of Resurrection it will be made into plates of fire..." (Muslim 987). The Nisab is fixed at 20 Mithqal (87.48g) as authentically narrated. For inherited gold jewelry, the Hawl (lunar year) begins from the date of receiving possession after estate settlement. White gold and rose gold are treated identically to yellow gold. For gold mixed with significant base metals or gemstones, only the extractable gold weight counts toward Nisab and Zakat calculation.</p>
+            <div class="footer-card">Ref: <span>Hanafi Fiqh: Al-Fatawa al-Hindiyya, Hadith: Sahih Muslim 987</span></div>
         </div>
 
-        <div class="card" data-key="silver coins utensils jewelry">
-            <span class="category">Bullion</span>
-            <h3>Silver Nisab and Assets</h3>
-            <p>The Silver Nisab is 612.36 grams. If your total wealth exceeds the value of this much silver, you are liable for Zakat at a rate of 2.5%.</p>
-            <div class="footer-card">Ref: <span>Mishkat al-Masabih</span></div>
+        <div class="card" data-key="silver coins utensils jewelry bars investment nisab threshold">
+            <span class="category">Precious Metals</span>
+            <h3>Silver Assets and Nisab Calculation</h3>
+            <p>Silver holds a unique position in Islamic wealth calculation as it establishes the lower Nisab threshold, making it the more beneficial standard for determining Zakat obligation for most Muslims. The Nisab for silver is fixed at 595 grams (or 612.36 grams per some calculations accounting for different gram standards), equivalent to 200 Dirhams in the Prophetic measurement system. Technical Definition: Silver (Ag) is a precious metal valued historically as currency and currently as industrial commodity and investment vehicle. Its Nisab is lower in monetary value than gold, meaning more people qualify to pay Zakat when using the silver standard. 2026 Calculation Scenario: You own 800 grams of silver coins and jewelry. At 2026 market rate of $0.85/gram, total value is $680. Zakat due: $680 × 2.5% = $17. Additionally, you have $15,000 in cash savings. Gold Nisab (87.48g × $65) = $5,686.20. Silver Nisab (612.36g × $0.85) = $520.51. Your cash exceeds both Nisabs, but using silver Nisab is mustahabb (recommended) as it results in more Zakat going to the deserving recipients. Shariah Evidence: The Prophet ﷺ established 200 Dirhams (595-612g silver) as Nisab for currency and trade goods (Abu Dawud 1558). Contemporary scholars including Mufti Taqi Usmani strongly recommend using silver Nisab in modern times because inflation has made the gold Nisab extremely high, potentially exempting many wealthy individuals from their obligations. For silver utensils and decorative items, the same ruling as gold applies in Hanafi school: Zakatable regardless of use. For investment-grade silver bars, coins (like American Eagles or Canadian Maples), and ETFs backed by physical silver, 2.5% Zakat applies annually on market value. Mixed alloy silver items require purity testing to determine actual silver content.</p>
+            <div class="footer-card">Ref: <span>Hadith: Sunan Abu Dawud 1558, Mufti Taqi Usmani - Fiqh al-Zakat</span></div>
         </div>
 
-        <div class="card" data-key="committee bc monthly saving group">
+        <div class="card" data-key="committee bc monthly saving group rotating fund chit">
             <span class="category">Social Finance</span>
-            <h3>Zakat on Committees (BC)</h3>
-            <p>Money paid into a committee but not received yet is an asset; pay Zakat on it. If already received, subtract remaining installments as debt.</p>
-            <div class="footer-card">Ref: <span>Local Darul Ifta</span></div>
+            <h3>Committee (BC) and Rotating Savings</h3>
+            <p>Committees, known as BC (Beesi Committee), Chit Funds, or ROSCAs (Rotating Savings and Credit Associations), are informal savings mechanisms where members contribute fixed monthly amounts and receive lump sums on rotation. The Shariah ruling is nuanced based on whether you've received your payout or are still contributing. Technical Definition: A committee is a financial arrangement where N participants contribute amount X monthly, and each month one participant receives N×X until all have received once. Example: 12 people contributing $1,000/month means each receives $12,000 over the 12-month cycle. 2026 Calculation Scenario: You joined a 10-person committee with $2,000 monthly contribution. You're member #7, meaning you'll receive $20,000 in month 7. Zakat Application: (a) Months 1-6 (before receiving): Each month you contribute $2,000. This money is your asset (the committee organizer owes it to you). On your Zakat date, if you've contributed $12,000 so far, this full amount is Zakatable as a receivable (dayn). Zakat due: $12,000 × 2.5% = $300. (b) Month 7 (received $20,000): You now have $20,000 cash. Remaining liability: You owe 3 more payments of $2,000 = $6,000. Zakatable amount: $20,000 - $6,000 = $14,000. Zakat: $350. (c)
+            <Months 8-10 (after receiving): Continue deducting remaining installments as short-term debt. Shariah Evidence: The principle "al-gharimu yusqitu al-ghurma" - debt offsets debt - allows deduction of imminent liabilities. The Hanafi position permits deducting debts from Zakatable wealth. Some scholars differentiate between "strong" receivables (likely to be repaid, like organized committees) and "weak" receivables (doubtful collection). For strong receivables, pay Zakat annually even before collection. IMPORTANT: Interest-based committees where early receivers pay extra to late receivers are prohibited (riba), and scholars differ on whether such amounts are even Zakatable or must be disposed of to charity without Zakat credit.</p>
+<div class="footer-card">Ref: <span>Local Fatwa Councils, Fiqh Principle: Al-Dayn al-Qawi vs Al-Dayn al-Da'if</span></div>
+</div>
+<div class="card" data-key="insurance life health policy premium takaful conventional surrender value">
+        <span class="category">Insurance & Takaful</span>
+        <h3>Life Insurance and Takaful Policies</h3>
+        <p>Insurance products present complex Zakat scenarios because most conventional life insurance contains elements of gharar (uncertainty) and riba (interest), making the policies themselves problematic in Shariah, though the Zakat obligation remains on the monetary components. Islamic Takaful (cooperative insurance) is structured differently and has distinct rulings. Technical Definitions: Conventional life insurance is a contract where the policyholder pays periodic premiums in exchange for a death benefit or maturity payout with guaranteed returns. Takaful is a cooperative insurance model based on tabarru (donation) and mutual assistance without interest or gambling elements. 2026 Calculation Scenarios: (a) Conventional Whole Life Policy: You've paid $30,000 in premiums over 10 years. The current surrender value (amount you'd receive if cancelling) is $32,000 due to accumulated "interest." Majority Scholarly Opinion: Only pay Zakat on the principal premiums paid ($30,000 × 2.5% = $750) annually. The $2,000 "gain" is problematic riba that many scholars recommend disposing of to charity separately without Zakat credit. Minority Opinion (stricter): No Zakat on inherently haram contracts. (b) Islamic Takaful: You've contributed $25,000 to a family Takaful plan. Current surrender value is $24,000 (slightly less due to costs). Zakat is due on the full surrender value: $24,000 × 2.5% = $600, as this represents your actual recoverable wealth. Shariah Evidence: The principle "laa zakaata fi maali haraam" - no purification required on inherently prohibited wealth - creates the distinction. However, the Hanafi position is that Zakat remains obligatory even on unlawfully acquired wealth as a separate obligation. For term life insurance with no cash value, there is no Zakat obligation. For employer-provided group life insurance where you have no cash value access, no Zakat applies. For investment-linked policies (ULIPs), calculate based on the current fund value minus penalties and charges that would apply if withdrawing.</p>
+        <div class="footer-card">Ref: <span>Islamic Fiqh Academy Jeddah, AAOIFI Shariah Standard 26</span></div>
+    </div>
+
+    <div class="card" data-key="plot land property house real estate investment sale purchase residential commercial">
+        <span class="category">Real Estate</span>
+        <h3>Investment Plots and Land Holdings</h3>
+        <p>Real estate classification for Zakat depends entirely on intention (niyyah) at time of purchase. Property acquired with the explicit intention to resell for profit is trade inventory (Urudh al-Tijarah) requiring annual Zakat. Property for personal use, rental income, or long-term holding without resale intent is a fixed asset (Iqtina) exempt from Zakat on its value, though rental income is Zakatable once received and held until your Zakat date. Technical Definition: Investment plots are land parcels purchased in developing areas or housing schemes with the primary intention of appreciation and resale within a foreseeable timeframe. 2026 Calculation Scenario: In 2022, you purchased a 10-marla plot in a housing society for $50,000 intending to sell when developed. By 2026, the plot's market value is $85,000. Your intention remains to sell (no construction plans). Zakat due: $85,000 × 2.5% = $2,125 annually, regardless of whether the plot has appreciated or depreciated, and regardless of whether you have liquid cash to pay. You must arrange payment from other sources if needed. Critical Intention Principle: If you purchased property undecided between personal use and sale, or primarily for personal use but later changed intention to sale, Zakat begins from the year you FIRMLY decided to sell, not from purchase. Some scholars require an actual public listing or clear evidence of sale intention. If you built a house on the plot for personal residence, it exits trade inventory and becomes exempt, even if you later decide to sell - this is considered disposal of a fixed asset, not trade. Shariah Evidence: The Prophet ﷺ said "Actions are by intentions" (Bukhari 1). Ibn Umar رضي الله عنه would ask "What did you intend when purchasing?" before giving Zakat verdicts on property. Contemporary application: For plots in installment-based housing schemes where you haven't received possession, some scholars allow paying Zakat only on installments actually paid, while others require Zakat on the agreed total price as it represents your committed wealth.</p>
+        <div class="footer-card">Ref: <span>Fatawa Alamgiri Vol 1, AAOIFI Standard 35 Art 6</span></div>
+    </div>
+
+    <div class="card" data-key="rent income property apartment house rental yield lease tenant">
+        <span class="category">Real Estate</span>
+        <h3>Rental Properties and Income</h3>
+        <p>Rental properties held for income generation are categorized as productive fixed assets (Asl al-Mustaqill) in Islamic jurisprudence, similar to agricultural land or commercial machinery. The fundamental ruling is that NO Zakat is due on the property value itself, regardless of how valuable the building is. Zakat ONLY applies to the rental income collected and remaining in your possession on your Zakat anniversary date. Technical Definition: Rental property is immovable real estate (residential apartments, commercial buildings, shops, warehouses) leased to tenants in exchange for periodic rent payments, held with the intention of generating continuous income rather than capital gain through resale. 2026 Calculation Scenario: You own three rental apartments collectively worth $500,000 generating $3,000 monthly rent ($36,000 annually). Property value: $500,000 → NO Zakat. Rental income received and held: If on your Zakat date (e.g., Ramadan 1st) you have $25,000 accumulated from rent after expenses, then $25,000 × 2.5% = $625 Zakat is due. If you spent all rent on living expenses or reinvestment and have zero balance, then zero Zakat on rental income. Expense Deductions: You may deduct actual operational expenses (maintenance, property tax, management fees) from collected rent before calculating Zakat. Mortgage/loan payments are debatable: some scholars allow deducting the principal portion as a liability, others say long-term debt isn't deductible against income. Shariah Evidence: Analogy (Qiyas) to agricultural land - the land itself is not Zakatable, only the crops harvested from it. Similarly, rental property's value is not Zakatable, only the income "harvested" from it. The Maliki school explicitly exempts all fixed assets from Zakat. Important Distinction: If you purchased rental property intending to sell after collecting rent for a few years, the property's full value IS Zakatable as trade inventory. Intention at purchase determines classification permanently unless you make a clear new intention later.</p>
+        <div class="footer-card">Ref: <span>Mufti Taqi Usmani - Contemporary Fatawa, Maliki Fiqh</span></div>
+    </div>
+
+    <div class="card" data-key="stock shop inventory warehouse business merchandise goods retail wholesale">
+        <span class="category">Commercial Assets</span>
+        <h3>Business Inventory and Stock-in-Trade</h3>
+        <p>Business inventory represents the most classical application of Zakat on trade goods (Urudh al-Tijarah), dating back to the early Islamic commercial practices in Makkah and Madinah. All merchandise held with the intention of sale - whether raw materials, work-in-progress, or finished goods - is subject to annual Zakat at 2.5% of current market value. Technical Definition: Stock-in-trade comprises all tangible goods a business owns for sale in the ordinary course of operations, including retail inventory, wholesale merchandise, manufacturing materials, and even "dead stock" (slow-moving or obsolete items that haven't sold). 2026 Calculation Scenario: You operate a clothing retail store. On your Zakat date, inventory count shows: 500 shirts (cost $15 each, retail $40), 300 pants (cost $20, retail $50), 100 jackets (cost $50, retail $120). Total retail value: (500×$40) + (300×$50) + (100×$120) = $47,000. Scholarly Difference: Hanafi school calculates on retail/market value = $47,000 × 2.5% = $1,175. Shafi'i and Hanbali schools allow using cost price = [(500×$15) + (300×$20) + (100×$50)] × 2.5% = $362.50. Most contemporary scholars recommend market value for accuracy and higher benefit to recipients. Exempt Items: Store fixtures, display racks, computers, cash registers, and delivery vehicles used IN the business but not FOR sale are productive assets exempt from Zakat. Only pay Zakat on sellable inventory. Damaged/Unsellable Goods: Completely worthless inventory can be excluded. Discounted "clearance" items should be valued at expected selling price. Cash in Register: Count as liquid asset. Accounts Receivable (customer debts): Zakatable if collection is likely. Accounts Payable (supplier debts): Deductible from total Zakatable assets. Shariah Evidence: Ibn Umar رضي الله عنه would pay Zakat on all his trade goods (Muwatta Malik). The principle "ma u'idda lil bay'" - what is prepared for sale - establishes the category.</p>
+        <div class="footer-card">Ref: <span>Kitab al-Zakat, Al-Mughni by Ibn Qudamah, Hanafi Fiqh</span></div>
+    </div>
+
+    <div class="card" data-key="partnership investment musharakah mudarabah business joint venture shares profit">
+        <span class="category">Business Structures</span>
+        <h3>Business Partnerships and Shares</h3>
+        <p>Business partnerships in Islamic law take several forms - Musharakah (equity partnership), Mudarabah (profit-sharing), and modern corporate shareholding. Each partner is individually responsible for Zakat on their ownership share of the business's Zakatable assets, not the gross revenue or total business value. Technical Definitions: Musharakah is a partnership where all partners contribute capital and share profits/losses proportionally. Mudarabah is where one party provides capital (Rabb al-Mal) and another provides expertise (Mudarib), sharing profits at agreed ratios. Corporate shares represent fractional ownership in a company's net assets. 2026 Calculation Scenario: You own 30% of a partnership grocery business. On the Zakat date, the business has: Cash $50,000, Inventory $200,000, Receivables $30,000, Fixed Assets (building, vehicles) $150,000, Payables $40,000. Zakatable Assets Calculation: Cash $50,000 + Inventory $200,000 + Receivables $30,000 = $280,000 total. Deduct Payables: $280,000 - $40,000 = $240,000 net Zakatable. Your 30% share: $240,000 × 30% = $72,000. Your Zakat: $72,000 × 2.5% = $1,800. Note: Fixed assets ($150,000 building and vehicles) are NOT included as they're productive capital, not trade goods. Corporate Shares: For publicly traded stocks, if held for investment (not trading), some scholars allow paying only on the Zakatable portion of company assets (requires examining balance sheet to extract cash, receivables, and inventory ratios). Most contemporary scholars simplify this to 2.5% of market value of the shares for ease. For shares held for short-term trading, definitely 2.5% of market value. Shariah Evidence: The principle "al-kharaj bi al-daman" - entitlement follows liability - means if you own a portion of business assets, you're responsible for Zakat on that portion. Each partner calculates independently, the business entity doesn't pay Zakat collectively (unless corporate Zakat is organized centrally for simplicity, with shareholder consent).</p>
+        <div class="footer-card">Ref: <span>Majmua Fatawa Ibn Taymiyyah, AAOIFI Shariah Standards</span></div>
+    </div>
+
+    <div class="card" data-key="debt loan credit mortgage liabilities borrowing installment payment">
+        <span class="category">Liabilities</span>
+        <h3>Personal Loans and Debt Deduction</h3>
+        <p>Debt (Dayn) plays a crucial role in Zakat calculation, as Islam permits deducting genuine financial liabilities from your Zakatable wealth before applying the 2.5% rate. However, scholarly positions differ on what types of debts are deductible and to what extent, creating a spectrum of strictness. Technical Definition: Debt is a financial obligation to repay a specific amount to a creditor, whether arising from loans, purchases on credit, unpaid utilities, or contractual commitments. For Zakat purposes, only genuine, legally enforceable debts are considered. 2026 Calculation Scenario: You have $80,000 in Zakatable assets (cash, gold, investments) on your Zakat date. You also have: (a) $15,000 personal loan from bank due in 6 months, (b) $200,000 home mortgage with 20 years remaining, (c) $2,000 credit card balance, (d) $800 monthly rent due next week. Hanafi Position (Most Lenient): Deduct ALL debts regardless of term or nature. $80,000 - $15,000 - $200,000 = Cannot deduct more than you have. Effectively, no Zakat due as debt exceeds assets. Maliki/Shafi'i Position (Moderate): Only deduct debts that are immediately due (not long-term). $80,000 - $15,000 - $2,000 - $800 = $62,200. Zakat: $1,555. Stricter Contemporary View: Only deduct short-term business debts or amounts that would prevent you from meeting Nisab. Personal long-term debt (mortgages) not deductible. Practical Application for 2026: Most mainstream Muftis recommend deducting immediate liabilities (due within the year) and the current year's installments from long-term loans. For the mortgage example, deduct 12 monthly payments: $200,000 ÷ 240 months = ~$833/month × 12 = ~$10,000 deductible. Shariah Evidence: The Hadith "There is no Zakat on the property of a debtor" (Daraqutni) supports deduction. However, scholars note this applied to consumptive debt, not modern mortgages for appreciating assets. Umar Ibn Abdul Aziz ruled that business debts are deductible while personal consumption debts are not, establishing the distinction.</p>
+        <div class="footer-card">Ref: <span>Hadith: Daraqutni, Al-Fatawa al-Hindiyya, Fiqh al-Zakat by Al-Qaradawi</span></div>
+    </div>
+
+    <div class="card" data-key="loan given receivable money back lending qard debt owed">
+        <span class="category">Assets - Receivables</span>
+        <h3>Money Lent to Others (Qard)</h3>
+        <p>Money you've lent to others represents an asset called "Dayn" (debt receivable), and your obligation to pay Zakat on it varies based on the likelihood of repayment and the nature of the debt. Islamic law categorizes receivables into "Qawi" (strong/likely to be repaid) and "Da'if" (weak/unlikely collection). Technical Definition: Qard is a benevolent loan in Islamic law where you lend money expecting only principal repayment without interest. Any additional return would be riba. For Zakat purposes, this lent money technically remains your wealth even though you don't physically possess it. 2026 Calculation Scenario: You lent $20,000 to three people: (a) $10,000 to your brother for business, he's repaying $500 monthly reliably, (b) $7,000 to a friend for medical emergency, he acknowledges debt but has no repayment capacity, (c) $3,000 to a colleague who denies owing you. Hanafi School: Pay Zakat every year on all receivables, even if uncollected, because they remain your wealth. Annual Zakat on $20,000 = $500 each year, regardless of collection. This is the strictest position. Maliki School: Pay Zakat only once, when you actually receive the money. So if you collect the $10,000 from your brother in 2028, you pay 2.5% × 1 year = $250, not accumulated years. Shafi'i School: Distinguish between strong and weak debts. Strong debts (category a: $10,000) - pay Zakat annually. Weak debts (category b: $7,000) - pay only upon receipt. Denied debts (category c: $3,000) - no Zakat until received and treated as found treasure (different calculation). Contemporary Practical Fatwa: Most Muftis recommend the Shafi'i approach for balance. For friends/family likely to repay, pay annual Zakat. For genuinely struggling borrowers or disputed amounts, defer until collection. Shariah Evidence: Ibn Abbas رضي الله عنه said about debt, "If it is with a wealthy person, pay Zakat on it every year. If with a poor person, pay once when received" (Daraqutni). The principle honors both the obligation to purify wealth and the reality that uncollectible debts aren't true wealth.</p>
+        <div class="footer-card">Ref: <span>Hidayah, Al-Mudawwana, Fatawa of Ibn Taymiyyah</span></div>
+    </div>
+
+    <div class="card" data-key="agriculture crops wheat rice fruit ushr harvest farming irrigation rain">
+        <span class="category">Agricultural Assets</span>
+        <h3>Ushr on Seasonal Crops and Produce</h3>
+        <p>Agricultural Zakat, called Ushr, operates on completely different principles than Zakat on wealth. Ushr is due on harvested crops at rates of 10% or 5% depending on irrigation method, and it's calculated at harvest time, not on an annual Hawl cycle. This makes it unique among Zakat categories. Technical Definition: Ushr (meaning "one-tenth") is the Zakat on agricultural produce from land cultivated for crops such as wheat, rice, corn, dates, grapes, and other staple foods. The Nisab is 5 Wasq (approximately 653 kg or 1,440 lbs of produce after processing). 2026 Calculation Scenario: You own farmland that produced 2,000 kg of rice in the spring harvest. The land is irrigated by natural rainfall. Step 1: Check Nisab - 2,000 kg exceeds 653 kg Nisab ✓. Step 2: Determine rate - Rain-watered (no irrigation cost) = 10% Ushr. If using well/tube-well/machinery for irrigation = 5% Ushr. Step 3: Calculate on harvested amount - 2,000 kg × 10% = 200 kg rice due as Zakat. You can give this as physical produce to the poor or sell it and distribute equivalent cash value. Mixed Irrigation: If the crop is 50% rain-watered and 50% mechanically irrigated, the classical ruling is to pay 7.5% (average). Contemporary scholars allow proportional calculation or simplify to the dominant method. Crop Types: Only "Iqtiyat" crops (staple foods stored and measured) clearly require Ushr according to strictest view. Hanafi and Maliki schools extend this to all edible produce including fruits and vegetables. Shafi'i school limits to storable grains and dates. Modern cash crops (cotton, tobacco) have differing opinions. Shariah Evidence: The Prophet ﷺ said, "On that which is watered by rain, springs, or underground water, is Ushr (10%), and on that watered by irrigation, is half Ushr (5%)" (Bukhari 1483). This establishes the differential rates based on irrigation effort. Ushr is due IMMEDIATELY at harvest, not delayed to a personal Zakat anniversary. If you harvest 3 times annually, calculate Ushr 3 times separately.</p>
+        <div class="footer-card">Ref: <span>Sahih Bukhari 1483, Al-Mughni by Ibn Qudamah</span></div>
+    </div>
+
+    <div class="card" data-key="livestock cows goats sheep cattle camels animals grazing pasture farming">
+        <span class="category">Livestock</span>
+        <h3>Zakat on Grazing Animals</h3>
+        <p>Livestock Zakat (Zakat al-An'am) is one of the oldest and most detailed categories, with specific Nisab thresholds and rates established in Prophetic tradition for camels, cattle, sheep, and goats. The ruling applies primarily to freely grazing animals, not stall-fed commercial livestock, though contemporary scholars extend principles to modern farming operations. Technical Definitions: Saimah (grazing livestock) are animals that feed themselves by grazing on open pastures most of the year without significant owner expense. Ma'lufah (fed livestock) are animals primarily fed by the owner's purchased fodder. Classical rule: only Saimah are subject to livestock Zakat. Modern dairy and meat farms blur this distinction. 2026 Calculation Scenarios: (a) Goats/Sheep: Nisab begins at 40 animals. You own 85 goats grazing on your land. Zakat due: 1 sheep/goat (one year old) or 1 lamb (six months old). This remains fixed until you reach 121 animals (then 2 animals due). (b) Cattle: Nisab is 30 cattle. You own 45 cows. Zakat due: 1 Tabiya (one-year-old calf) or 1 Musinnah (two-year-old cow, depending on classical school). At 60 cattle, 2 Tabiya are due. (c) Commercial Meat Farm: You own 200 cattle being raised for sale as meat. Contemporary Ruling: These are trade goods (Urudh al-Tijarah), not classical Saimah. Pay 2.5% of the market value of the entire herd annually, not individual animals. If herd value is $300,000, Zakat is $7,500 (can pay in cash). Historical Complexity: Camels have the most detailed schedule - starting at 5 camels (1 sheep due), scaling up to 120+ camels with complex animal-based payments. Modern applications are rare but the principle remains valid. Shariah Evidence: The Prophet ﷺ sent detailed instructions to Zakat collectors specifying exact animal counts and ages (Bukhari 1454). Anas ibn Malik narrated that Abu Bakr wrote, "This is the obligation of Sadaqah which the Messenger of Allah made compulsory upon the Muslims" followed by detailed livestock schedules. If animals are jointly owned by partners, each calculates their share's Zakat independently. Hybrid Situation: If you own both grazing sheep (personal, non-trade) and a commercial fattening operation, calculate each separately under their respective categories.</p>
+        <div class="footer-card">Ref: <span>Sahih Bukhari 1454, Kitab al-Amwal by Abu Ubayd</span></div>
+    </div>
+
+    <div class="card" data-key="salary wage income monthly paycheck earnings employment job compensation">
+        <span class="category">Income</span>
+        <h3>Zakat on Monthly Salary and Wages</h3>
+        <p>A common misconception is that Zakat is due on salary as soon as you receive it, similar to income tax. This is incorrect. Zakat is not an income tax but a wealth tax, applied only to savings that have been in your possession for one complete lunar year (Hawl). Your monthly salary only becomes Zakatable if you save it and it remains unspent until your Zakat anniversary. Technical Definition: Salary (Ujrah/Ratib) is compensation for labor or services, received periodically (weekly, bi-weekly, monthly). It represents earned income, not pre-existing wealth. In Islamic Zakat jurisprudence, "flow" income is treated differently than "stock" wealth. 2026 Calculation Scenario: Your Zakat date is Ramadan 1st every year. You earn $5,000 monthly salary. Case 1: You spend your entire salary each month on living expenses, bills, education, with nothing saved. On Ramadan 1st, you have $2,000 in checking account (from last month's salary). Zakat Analysis: This $2,000 has NOT completed a Hawl (it's only one month old), therefore NO Zakat is due on it. Next year, if that $2,000 remains untouched and grows to $15,000 in savings, then those funds become Zakatable. Case 2: You save $1,500 monthly and have accumulated $20,000 in savings account that has been there for over a year. Zakat due: $20,000 × 2.5% = $500. The fresh income from this month's salary is not added to this calculation until next year (if it remains). Hawl Complication: Technically, each dollar earned has its own Hawl. February's savings complete Hawl in February next year, March's in March, etc. This creates 12 different Zakat dates, which is impractical. Scholarly Solution: Most contemporary Muftis allow setting one annual Zakat date and including ALL savings on that date, even recently saved amounts, to simplify calculation and ensure you pay more rather than less. This is called the "lunar anniversary method" and is the dominant approach. Shariah Evidence: The Prophet ﷺ established "hawl" (annual cycle) as a condition for Zakat: "There is no Zakat on wealth until a year passes over it" (Tirmidhi 631). This prevents Zakat from being an income tax and distinguishes it from modern payroll deductions.</p>
+        <div class="footer-card">Ref: <span>Hadith: Jami' Tirmidhi 631, Fatawa Shami, Contemporary Fiqh</span></div>
+    </div>
+
+    <div class="card" data-key="pension fund provident pf gratuity retirement 401k savings employment benefit">
+        <span class="category">Retirement Funds</span>
+        <h3>Provident Fund and Pension Zakat</h3>
+        <p>Provident Funds (PF), pension plans, 401(k)s, and similar retirement schemes present unique Zakat challenges because the money is technically yours but locked away until retirement or specific conditions. Scholarly positions differ based on whether you have immediate access, whether contributions are voluntary or mandatory, and whether the employer's contribution is guaranteed. Technical Definition: Provident Fund is a retirement savings scheme where employee contributes a percentage of salary (often matched by employer), accumulating with returns until retirement/resignation. Money is typically inaccessible except in emergencies or upon leaving employment. 2026 Calculation Scenarios: (a) Accessible PF: You have $50,000 in your PF account. Company policy allows withdrawal anytime with penalty. Your contributions: $30,000. Employer contributions: $20,000. Majority Scholarly Position: Your own voluntary contributions ($30,000) are Zakatable annually because they represent your wealth, just held in a retirement account. Zakat: $30,000 × 2.5% = $750 each year. Employer's contribution ($20,000): Two opinions - (i) Not Zakatable until you receive it, as it's not yet your unconditional property (you might leave and forfeit it), (ii) Zakatable if vested (guaranteed to you even if you leave). (b) Locked Government PF: You have $80,000 in a government pension fund with zero access until age 60 (you're currently 35). Stricter Opinion: Still Zakatable on full amount because it legally belongs to you, even if inaccessible. Zakat: $80,000 × 2.5% = $2,000 annually. Lenient Opinion: Not Zakatable annually due to inaccessibility. Pay accumulated Zakat for all years once you receive the lump sum at retirement. Example: If you retire with $200,000 and it was inaccessible for 25 years, pay $200,000 × 2.5% = $5,000 for one year only (not 25 × $5,000), treating it like a newly acquired inheritance. Contemporary Practical Fatwa: Most Muftis recommend the middle path - pay annual Zakat on your own contributions that are vested/withdrawable, defer on employer contributions until receipt. This balances the obligation with practical hardship.</p>
+        <div class="footer-card">Ref: <span>Contemporary Scholars, Islamic Fiqh Council Resolution 140</span></div>
+    </div>
+
+    <div class="card" data-key="inheritance wirasat death wealth estate legacy bequest">
+        <span class="category">Inherited Wealth</span>
+        <h3>Zakat on Inherited Assets and Estate</h3>
+        <p>Receiving an inheritance introduces new wealth into your possession, triggering the commencement of a new Hawl (lunar year cycle) for that wealth. However, the nature of inherited assets (cash, property, gold, stocks) determines how Zakat is calculated, and the timing of estate settlement affects when your obligation begins. Technical Definition: Inheritance (Miras/Wirasat) is wealth transferred to heirs upon someone's death according to Islamic inheritance law (Fara'id) or testamentary bequest (Wasiyyah) within the permitted one-third. The wealth becomes the heir's property upon the death, but practical possession may be delayed due to estate administration. 2026 Calculation Scenarios: (a) Cash Inheritance: Your father passed away in Muharram 2025. After estate settlement in Rajab 2025, you received $100,000 cash as your share. Your regular Zakat date is Ramadan 1st. Analysis: The Hawl begins from Rajab 2025 (when you took possession). On Ramadan 1st 2025, only 2 months have passed - no Zakat due yet. On Ramadan 1st 2026, if the $100,000 remains, pay $2,500 Zakat. Some scholars argue Hawl begins from date of death, but majority position is from actual possession/settlement. (b) Inherited Property: You inherited a house worth $300,000. If you're using it as residence - no Zakat on the house value. If you're renting it out - no Zakat on the house value, only on accumulated rent (see rental income section). If you're selling it - Zakat due at 2.5% of market value from the year you decided to sell (intention converts it to trade inventory). (c) Inherited Gold: You inherited 200 grams of gold jewelry. Hawl begins immediately upon possession. Next Zakat date: 200g × 2.5% = 5g gold or equivalent cash value. (d) Mixed Estate: You inherited $50,000 cash + 100g gold + rental property. Each asset follows its specific ruling. Cash and gold are Zakatable on their respective Hawls. Rental property is not Zakatable. Shariah Evidence: Quran establishes inheritance shares (4:11-12). For Zakat, the principle "mulkun tamm" (complete ownership) determines when obligation begins. The Prophet ﷺ clarified that ownership through inheritance is immediate upon death legally, but Hawl starts from practical possession per majority of scholars to avoid hardship of paying Zakat on wealth you haven't yet received.</p>
+        <div class="footer-card">Ref: <span>Quran 4:11-12, Al-Fatawa al-Kubra, Mufti Taqi Usmani</span></div>
+    </div>
+
+    <div class="card" data-key="charity sadaqah donation zakat difference obligatory voluntary">
+        <span class="category">Philanthropy</span>
+        <h3>Zakat vs Sadaqah: Understanding the Difference</h3>
+        <p>Many Muslims conflate Zakat and Sadaqah, but they are fundamentally different acts of worship with distinct rules, recipients, and spiritual rewards. Zakat is a precise financial obligation with specific calculations, while Sadaqah is voluntary charity with immense flexibility. Understanding this distinction ensures proper fulfillment of the mandatory duty while encouraging additional generosity. Technical Definitions: Zakat (literally "purification") is the mandatory 2.5% wealth tax on specific assets held for one lunar year, payable to eight defined categories in Quran 9:60. Sadaqah (literally "truthfulness/sincerity") is any voluntary charitable giving - money, food, services, even a smile - with no minimum amount, no Nisab requirement, and unlimited eligible recipients. Theological Framework: Zakat is the Third Pillar of Islam (Rukn), making it as fundamental as prayer. Denying its obligation is disbelief. Refusing to pay it (while acknowledging obligation) is a major sin. Historical precedent: Abu Bakr رضي الله عنه waged war against tribes refusing Zakat after the Prophet's death. Sadaqah, while highly rewarded, is optional (Mandub/Mustahabb). 2026 Practical Applications: (a) Can Sadaqah replace Zakat? Absolutely not. If you owe $2,000 Zakat and give $5,000 to charity without Zakat intention, your Zakat obligation remains unfulfilled. Intention (niyyah) is crucial - you must intend "Zakat" when giving Zakat. (b) Can you give Zakat to anyone? No. Zakat has 8 eligible categories: (1) Fuqara (poor), (2) Masakin (needy), (3) Zakat administrators, (4) Those whose hearts are to be reconciled, (5) Freeing slaves/captives, (6) Those in debt, (7) In the path of Allah (specific meanings debated), (8) Travelers in need. You CANNOT give Zakat to your parents, children, or spouse (their expenses are your obligation regardless). Sadaqah can be given to literally anyone, including family, non-Muslims, animals, environmental causes, etc. (c) Reward Comparison: Zakat, being obligatory, purifies your wealth and fulfills a divine command. Sadaqah earns unlimited reward multiplication - the Prophet ﷺ said Allah multiplies Sadaqah up to 700 times or more (Bukhari 1374). Ibn Abbas said giving Sadaqah publicly is better, but Zakat should ideally be private to avoid pride. Combined Strategy: Pay Zakat as the bare minimum obligation. Add generous Sadaqah for extra reward. Never let voluntary charity excuse you from mandatory Zakat.</p>
+<div class="footer-card">Ref: <span>Quran Surah At-Tawbah 9:60, Sahih Bukhari 1374, Fiqh al-Sunnah</span></div>
+</div>
+<div class="card" data-key="stocks shares equity investment trading portfolio dividends capital gains">
+        <span class="category">Financial Instruments</span>
+        <h3>Stock Market Investments and Shares</h3>
+        <p>Stock market investments require careful Shariah analysis both for permissibility (halal screening) and Zakat calculation. Shares represent fractional ownership in companies, and your Zakat obligation depends on whether you're holding for investment (long-term) or trading (short-term), and whether the company's business is permissible. Technical Definition: Stocks/shares are equity securities representing ownership percentage in a corporation. When you own shares, you own proportional rights to the company's assets, earnings, and voting power. Shariah screening examines: (1) Business activity (must be halal - no alcohol, pork, interest-based banking, gambling), (2) Financial ratios (debt, interest income must be below thresholds). 2026 Calculation Scenarios: (a) Trading Shares (Short-term): You actively buy/sell stocks for profit. You own $75,000 worth of halal-screened stocks on your Zakat date. Ruling: These are trade goods (Urudh al-Tijarah). Pay 2.5% on full market value = $1,875 Zakat, regardless of whether stocks are up or down from purchase price. This is the simpler, stricter calculation. (b) Investment Shares (Long-term): You hold a diversified portfolio of $200,000 in Shariah-compliant stocks for retirement, not actively trading. Two Methods: Simple Method (Most Contemporary Scholars): $200,000 × 2.5% = $5,000 Zakat on full market value. Complex Method (Classical Breakdown): Examine company balance sheets. Extract your proportional share of: Zakatable assets (cash, receivables, inventory) vs Non-Zakatable assets (fixed assets, buildings, machinery). Example: Company has 40% Zakatable assets, 60% fixed assets. Your Zakatable portion: $200,000 × 40% = $80,000. Zakat: $80,000 × 2.5% = $2,000. This method requires detailed financial analysis, which is impractical for diversified portfolios. AAOIFI Shariah Standard No. 35 allows the simple method for ease, though the complex method is technically more precise. Dividends: Cash dividends received and held until your Zakat date are separately Zakatable as liquid cash. Stock dividends (additional shares) increase your holding value. Shariah Evidence: Since shares represent real asset ownership, Zakat applies based on the underlying asset type. The principle of "analogical reasoning" (Qiyas) extends classical trade goods rules to modern securities. Contemporary scholars including Dr. Yusuf al-Qaradawi and Sheikh Muhammad Taqi Usmani have developed these methodologies specifically for modern financial markets.</p>
+        <div class="footer-card">Ref: <span>AAOIFI Shariah Standard 35, Fiqh al-Zakat by Al-Qaradawi</span></div>
+    </div>
+    <div class="card" data-key="mutual funds etf index investment portfolio vanguard securities">
+        <span class="category">Financial Instruments</span>
+        <h3>Mutual Funds and ETF Holdings</h3>
+        <p>Mutual funds and Exchange-Traded Funds (ETFs) are pooled investment vehicles that hold diversified portfolios of stocks, bonds, or other securities. For Zakat purposes, they're treated similarly to direct stock ownership, but the diversification and fund structure create additional considerations for Shariah compliance and calculation methodology. Technical Definitions: Mutual funds are professionally managed investment portfolios where multiple investors pool money to buy a diversified collection of securities. ETFs are similar but trade on exchanges like individual stocks. Index funds passively track market indices (e.g., S&P 500). For Islamic investors, Shariah-compliant funds screen out haram businesses and purify any incidental non-compliant income. 2026 Calculation Scenarios: (a) Shariah-Compliant Equity Fund: You own $120,000 in an Islamic equity fund (like Amana Growth Fund) that has already screened out interest-based businesses. Zakat Calculation: Simple approach - $120,000 × 2.5% = $3,000 annually. The fund's Shariah board has already ensured compliance. Your obligation is on the market value of your units/shares on Zakat date. (b) Conventional Index ETF: You invested $80,000 in an S&P 500 index ETF. This contains both halal and haram companies (banks, alcohol producers, etc.). Shariah Dilemma: Technically, you own fractional shares of impermissible businesses. Strict view: Impermissible to hold; calculate Zakat after divesting. Pragmatic contemporary view: If held due to lack of knowledge or limited alternatives (e.g., employer 401k), calculate Zakat on full value ($80,000 × 2.5% = $2,000) and separately purify any estimated haram income/dividends by donating to charity without Zakat credit. (c) Bond Funds: Conventional bond funds (government bonds, corporate bonds) are interest-based (riba) and impermissible to hold. Sukuk (Islamic bonds) structured as asset-backed certificates are permissible alternatives. Zakat on Sukuk: Treat as investment securities - 2.5% of market value annually. Practical Complexity: Many funds hold 30-100 different companies. Performing detailed balance sheet analysis (Zakatable vs non-Zakatable assets) for each company is practically impossible for retail investors. Scholarly concession: The "market value method" is permitted for ease, acknowledging slight imprecision. Fund Fees: Management fees and expense ratios are NOT deductible from Zakat calculation (they're operating expenses, not liabilities). Unrealized Gains/Losses: Irrelevant for Zakat. Whether your fund is up 20% or down 15% from purchase price, Zakat applies to current market value, not cost basis.</p>
+        <div class="footer-card">Ref: <span>AAOIFI Standards, Shariah Scholars of Amana Funds, Contemporary Fiqh</span></div>
+    </div>
+
+    <div class="card" data-key="savings account bank deposit interest riba checking balance cash">
+        <span class="category">Cash Instruments</span>
+        <h3>Bank Savings and Interest Income</h3>
+        <p>Money held in conventional bank savings accounts typically earns interest, which is categorically prohibited (riba) in Islam. This creates a dual obligation: (1) paying Zakat on the principal amount, and (2) disposing of interest income without counting it toward Zakat payment. Understanding this distinction is crucial for maintaining both financial and spiritual hygiene in your wealth. Technical Definition: Savings accounts are deposit accounts at financial institutions that pay interest in exchange for keeping your money. Checking accounts typically pay no/minimal interest. Islamic banks offer Shariah-compliant savings accounts based on Mudarabah (profit-sharing) or Wakalah (agency) contracts that distribute profit from permissible investments rather than guaranteed riba. 2026 Calculation Scenarios: (a) Conventional Savings Account: You have $50,000 in a conventional bank savings account earning 4% annual interest. By your Zakat date, the balance is $52,000 ($2,000 interest earned). Zakat Obligation: Pay 2.5% on the principal only = $50,000 × 2.5% = $1,250. Interest Purification: The $2,000 interest is impure wealth that must be donated to charity (poor people, community welfare, disaster relief) WITHOUT Zakat intention. You gain no reward for this disposal; it's purification, not charity. This $2,000 does NOT count toward your $1,250 Zakat obligation - you must pay Zakat separately from halal sources. (b) Islamic Bank Account: You have $50,000 in an Islamic bank's profit-sharing account. It earned $1,800 profit (from bank's halal investments in trade, real estate, etc.). Zakat Calculation: $50,000 + $1,800 = $51,800 × 2.5% = $1,295. The entire balance is pure and Zakatable. The profit is halal income and can be used for any purpose. (c) Mixed Situation: You're unsure if your account earned interest or if a small amount was credited automatically. Conservative Approach: Estimate the interest portion (review statements), donate that estimated amount to charity, pay Zakat on the remaining confirmed halal portion. Shariah Evidence: "Allah has permitted trade and forbidden riba" (Quran 2:275). Umar ibn al-Khattab said, "Avoid riba and doubt" (Bukhari 2051). For interest already earned unknowingly or before learning the ruling, scholars allow one-time purification without sin, but future earnings after knowledge are sinful. Banking Necessity: Many scholars permit keeping funds in interest-bearing accounts out of necessity (no Islamic bank access, safety, legal requirements) but still require interest purification. Checking accounts with minimal/no interest are preferable for daily transactions.</p>
+        <div class="footer-card">Ref: <span>Quran 2:275-279, Sahih Bukhari 2051, Fatawa of Contemporary Scholars</span></div>
+    </div>
+
+    <div class="card" data-key="401k ira roth retirement nest egg america pension tax deferred">
+        <span class="category">Retirement Accounts</span>
+        <h3>401(k), IRA, and US Retirement Plans</h3>
+        <p>American retirement accounts like 401(k), Traditional IRA, and Roth IRA present unique Zakat questions due to their tax-deferred nature, employer matching, early withdrawal penalties, and investment composition. These instruments don't exist in classical Islamic jurisprudence, requiring contemporary scholarly analysis based on fundamental principles. Technical Definitions: 401(k) is an employer-sponsored retirement plan where employees contribute pre-tax salary (reducing current taxes) and funds grow tax-deferred until withdrawal at retirement. Traditional IRA operates similarly with individual contributions. Roth IRA uses post-tax contributions but offers tax-free growth and withdrawals. Employer matching is "free money" added to your account based on your contribution level, subject to vesting schedules. 2026 Calculation Scenarios: (a) Accessible 401(k): You're 45 years old with $180,000 in your 401(k). Your contributions: $100,000. Employer match (fully vested): $50,000. Investment gains: $30,000. Company allows loans against 401(k) or hardship withdrawals. Majority Scholarly Position: The entire vested balance ($180,000) is technically your wealth, even if withdrawing it incurs a 10% penalty + taxes. Zakat: $180,000 × 2.5% = $4,500 annually. Some scholars allow deducting the penalty/tax you'd face if liquidating (e.g., 35% effective rate = $63,000), making Zakatable amount $117,000, Zakat $2,925. Consult your trusted Mufti for your specific situation. (b) Roth IRA: $80,000 balance (all post-tax contributions, already Zakated when earned). Stricter view: Still pay annual Zakat on the growing balance. Lenient view: Since you already paid Zakat on this money when earned (as salary savings), and it's locked until age 59.5, pay only on the accessible portion or defer until retirement. (c) Unvested Employer Match: $40,000 employer contribution that you'll lose if you leave before 3 more years. Not yet your unconditional property, therefore not Zakatable until it vests. Investment Holdings: Most 401(k)s invest in mutual funds. If the funds contain haram stocks/bonds, you face both the compliance issue AND the Zakat calculation. Best practice: Request Shariah-compliant fund options (many large employers now offer them). Required Minimum Distributions (RMDs): Once you turn 73, you must withdraw annually. These distributions become Zakatable cash if held until your Zakat date. Shariah Principle: "Al-kharaj bi al-daman" - ownership brings obligation. If you legally own it, Zakat applies, even if accessing it is costly. However, "La darar wa la dirar" - no harm or causing harm - allows considering genuine inaccessibility in extreme cases.</p>
+        <div class="footer-card">Ref: <span>AMJA Resident Fatwa Committee, Fiqh Council of North America</span></div>
+    </div>
+
+    <div class="card" data-key="real estate crowdfunding fundrise platform investment property digital reit">
+        <span class="category">Alternative Investments</span>
+        <h3>Real Estate Crowdfunding Platforms</h3>
+        <p>Real estate crowdfunding platforms like Fundrise, RealtyMogul, and similar services allow small investors to pool money for large commercial property investments. These hybrid instruments combine elements of equity ownership, rental income, and trade goods, creating complex Zakat scenarios requiring careful analysis of the platform's structure and your investment intention. Technical Definition: Real estate crowdfunding is a method of raising capital for property development or acquisition through online platforms that pool funds from multiple investors, offering fractional ownership or debt positions in real estate projects. Returns come from rental income, property appreciation, or interest on loans. 2026 Calculation Scenarios: (a) Equity REIT Model: You invested $25,000 in a platform that buys and operates apartment complexes. You own fractional equity shares. Platform reports your share of assets: Property value $23,000 (not Zakatable - fixed asset), Cash reserves $1,500 (Zakatable), Rental income $500 (Zakatable). Your Zakatable amount: $1,500 + $500 = $2,000. Zakat: $2,000 × 2.5% = $50. This follows the principle that real estate held for rental income is not Zakatable, only the income generated and held. (b) Flip/Development Model: You invested $30,000 in a platform that buys properties, renovates, and sells within 12-24 months. This is trade inventory (buying to sell). Your share value on Zakat date: $33,000 (market value of your position). Zakat: $33,000 × 2.5% = $825, regardless of whether properties have sold yet. (c) Debt Model: You invested $20,000 in a platform that makes loans to real estate developers, earning fixed returns (interest). Shariah Analysis: This is riba (interest-based lending) and impermissible. If unknowingly invested, liquidate position. Any "returns" earned are impure and must be donated to charity without Zakat credit. Principal $20,000 remains Zakatable: $20,000 × 2.5% = $500. Liquidity Constraints: Many platforms have limited liquidity (can't withdraw on demand). If you genuinely cannot access funds without significant loss exceeding the Zakat amount, some scholars allow deferring Zakat until liquidation, then paying for all years. However, if you can afford to pay Zakat from other sources (recommended), do so annually. Platform Structure Analysis: Before investing or calculating Zakat, determine: Is it equity (ownership) or debt (lending)? Is the business model halal (rental, sale) or haram (interest loans, gambling properties)? Can you liquidate your position, or is it completely locked? Shariah Compliance: Seek platforms that explicitly offer Shariah-compliant structures or consult a Mufti to analyze the specific platform's legal documents.</p>
+        <div class="footer-card">Ref: <span>Contemporary Fiqh Analysis, AAOIFI Standards adapted to Crowdfunding</span></div>
+    </div>
+
+    <div class="card" data-key="amazon fba business ecommerce inventory warehouse third party seller merchant">
+        <span class="category">E-Commerce</span>
+        <h3>Amazon FBA and E-Commerce Business</h3>
+        <p>Amazon FBA (Fulfillment by Amazon) and similar e-commerce business models involve purchasing inventory, storing it in Amazon warehouses, and selling directly to consumers. For Zakat purposes, this is a trade business requiring comprehensive calculation of all Zakatable assets minus short-term liabilities, following classical commercial Zakat principles applied to modern digital commerce. Technical Definition: FBA is a service where Amazon stores your products, handles packaging, shipping, and customer service. You maintain inventory ownership but Amazon physically possesses it. Your business involves: purchasing inventory from suppliers (often overseas), shipping to Amazon warehouses, marketing products, earning revenue, and managing cash flow. 2026 Calculation Scenario: Your Zakat date is Ramadan 1st, 2026. Business financial snapshot: (a) Inventory at Amazon warehouses: 500 units of Product A (cost $15, selling $40 = $20,000 retail value), 300 units of Product B (cost $25, selling $70 = $21,000 retail value). Total inventory retail value: $41,000. (b) Cash in bank account: $18,000 (from recent sales). (c) Amazon account balance (pending transfer): $5,000. (d) Inventory in transit from supplier (shipped but not received): $8,000 paid. (e) Accounts payable to supplier (inventory received, payment due in 30 days): $12,000. (f) Business laptop and software (fixed assets): $3,000. (g) Personal loan used for business: $10,000 due over 12 months. Zakat Calculation: Zakatable Assets: Inventory ($41,000 at retail value per Hanafi school, or $20,000 at cost per Shafi'i school - most scholars recommend retail) + Cash ($18,000) + Amazon balance ($5,000) + In-transit inventory ($8,000) = $72,000. Non-Zakatable: Business equipment ($3,000) is productive asset, exempt. Deductible Liabilities: Accounts payable ($12,000, due within 30 days, definitely deductible) + Loan installments for next 12 months ($10,000, deductible per Hanafi position). Net Zakatable Wealth: $72,000 - $12,000 - $10,000 = $50,000. Zakat Due: $50,000 × 2.5% = $1,250. Complexity Factors: Returns and Refunds - If customers can return products, some scholars allow deducting estimated return value, others say pay on gross inventory. Dead Stock - Unsellable inventory can be written off (valued at zero or scrap value). Advertising Spend - Not deductible; it's an expense, not a liability. Amazon Fees - Future fees aren't deductible, only unpaid fees currently owed. International Inventory: If you have inventory in China awaiting shipment, it's Zakatable once you've paid for it and taken ownership, even if it's 30 days away from reaching Amazon. Shariah Evidence: This follows the same principles as traditional merchant Zakat established in Hadith and classical Fiqh, simply applied to a digital marketplace platform.</p>
+        <div class="footer-card">Ref: <span>Classical Merchant Zakat Fiqh adapted to E-Commerce, Contemporary Scholars</span></div>
+    </div>
+
+    <div class="card" data-key="forex trading currency exchange foreign speculation day trading margin">
+        <span class="category">Trading</span>
+        <h3>Forex Trading and Currency Holdings</h3>
+        <p>Foreign exchange (Forex) trading involves buying and selling currency pairs for profit from exchange rate fluctuations. The Shariah permissibility of Forex is highly debated among scholars, with strict conditions required to avoid riba and gharar. For Zakat purposes, foreign currency holdings are treated as liquid wealth regardless of the currency denomination. Technical Definition: Forex trading is the simultaneous purchase of one currency and sale of another in the global decentralized market. Modern Forex often involves leverage (borrowing to amplify positions) and derivative contracts (CFDs), both problematic in Shariah. Spot Forex (immediate exchange) can be permissible under strict conditions; leveraged and derivative Forex is generally prohibited. 2026 Calculation Scenarios: (a) Currency for Travel/Business: You have $50,000 in a US dollar account and €30,000 (Euros) in a separate account intended for European business operations. On your Zakat date, the exchange rate is €1 = $1.10. Total wealth in USD: $50,000 + (€30,000 × $1.10) = $50,000 + $33,000 = $83,000. Zakat: $83,000 × 2.5% = $2,075. All currency is converted to your base currency (usually your local currency or the currency you use for Zakat calculation) at the current exchange rate on Zakat date. (b) Forex Trading Account (Spot): You actively trade currencies. On Zakat date, your account balance is £25,000 (British Pounds). Convert to your Zakat calculation currency (e.g., USD at £1 = $1.27): £25,000 × $1.27 = $31,750. Zakat: $31,750 × 2.5% = $793.75. This applies if the trading is Shariah-compliant (immediate spot exchange, no leverage, no overnight interest). (c) Leveraged Forex Account: You have $10,000 in a margin account but control $100,000 in currency positions using 10:1 leverage. Shariah Analysis: Leveraged Forex involves borrowing with interest (swap fees/overnight charges) and is categorically haram per majority of scholars. If you're in this situation unknowingly, close positions immediately. Zakat applies to your actual owned capital ($10,000), not the leveraged amount. Any profits from haram trading must be purified (donated to charity), and only the original halal capital is Zakatable. Shariah Conditions for Permissible Forex: (1) Immediate settlement (T+2 maximum), (2) No interest/swap charges, (3) Full payment (no leverage), (4) Actual currency exchange (not derivatives). Few modern Forex platforms meet all conditions; Islamic Forex accounts exist but require verification of Shariah compliance. Multiple Currency Holdings: If you hold assets in various currencies (USD savings, GBP investment, EUR cash), sum ALL on Zakat date using current exchange rates to your calculation currency. Currency fluctuation between Zakat dates doesn't matter - recalculate annually at current rates.</p>
+        <div class="footer-card">Ref: <span>AAOIFI Shariah Standards, OIC Fiqh Academy on Currency Trading</span></div>
+    </div>
+
+    <div class="card" data-key="car vehicle automobile lease monthly payment installment debt">
+        <span class="category">Liabilities</span>
+        <h3>Car Loans and Vehicle Financing</h3>
+        <p>Automobile financing through conventional loans involves riba (interest) and is Islamically impermissible, yet many Muslims find themselves in these arrangements due to necessity or prior ignorance. The Zakat treatment involves understanding which portions of the debt are deductible, how to handle existing haram contracts, and what to do about the vehicle's value itself. Technical Definition: Car loans are installment-based financing where you borrow money to purchase a vehicle, repaying principal plus interest over 3-7 years. Islamic alternatives include Murabaha (cost-plus sale), Ijarah (lease-to-own), or interest-free financing programs from Islamic institutions. The vehicle itself is a depreciating personal asset. 2026 Calculation Scenarios: (a) Conventional Car Loan (Ongoing): You purchased a $40,000 car with a 5-year loan at 6% interest. Current situation: Remaining loan balance $25,000 (3 years left), monthly payment $500. Your other Zakatable assets: $80,000 cash and investments. Zakat Analysis: The car itself is NOT Zakatable (it's a personal use asset, not trade inventory). The loan is a liability, but scholars differ on deductibility: Hanafi school: Deduct the full remaining $25,000. Zakatable wealth: $80,000 - $25,000 = $55,000. Zakat: $1,375. Maliki/Shafi'i school: Only deduct the next 12 months of principal payments (approximately $6,000), not the full loan. Zakatable wealth: $80,000 - $6,000 = $74,000. Zakat: $1,850. Contemporary middle position: Recognize the loan is haram, so you shouldn't benefit from its deductibility beyond the immediate year's obligation. Use the Maliki method. (b) Car Held for Business (Uber/Lyft): You own a $30,000 vehicle used exclusively for ride-sharing business. Two scholarly positions: (i) Personal asset exempt from Zakat despite business use (majority), (ii) Business asset valued at current market price and Zakatable at 2.5% (minority position for pure business vehicles). Most scholars exempt vehicles even if used for business, treating them like machinery. Only the income generated is Zakatable. (c) Car Held for Resale: You're a car dealer with 8 vehicles in inventory, total value $180,000. These are trade goods: $180,000 × 2.5% = $4,500 Zakat due on the entire inventory at current market/retail value. Islamic Financing Alternative: If you have Murabaha financing (Islamic bank bought car for $35,000, selling to you for $42,000 payable over 5 years), the $42,000 total is not riba but a deferred payment sale. You can deduct the remaining debt from Zakatable wealth using the same principles as conventional loans (scholars differ on full amount vs. 12-month deduction). Practical Guidance: If you're in a conventional car loan, complete the contract (breaking it may incur penalties), but avoid such arrangements in the future. The loan remains deductible for Zakat purposes even though the original contract was haram, as you still have a genuine financial obligation.</p>
+        <div class="footer-card">Ref: <span>Al-Fatawa al-Hindiyya, Contemporary Fiqh on Modern Financing</span></div>
+    </div>
+
+    <div class="card" data-key="student loan education debt university college tuition financing">
+        <span class="category">Liabilities</span>
+        <h3>Student Loans and Education Debt</h3>
+        <p>Student loans represent one of the most significant financial burdens for young Muslims, especially in Western countries. These loans typically carry interest (riba), creating both a Shariah compliance issue and a Zakat calculation question regarding debt deductibility. The unique characteristic of student loans - often long-term with income-based repayment options - requires specific analysis. Technical Definition: Student loans are educational financing provided by governments or private lenders to cover tuition, books, and living expenses during university studies. In the US, federal loans have various terms (subsidized vs. unsubsidized, forbearance options, income-driven repayment). In the UK, student loans are repaid as a percentage of income above a threshold. Islamic alternatives (rare) include interest-free community funds or scholarship programs. 2026 Calculation Scenarios: (a) Traditional Student Loan: You have $80,000 in student loan debt with $400 monthly payments. You have $25,000 in savings. Debt Deductibility Analysis: Hanafi Position: The full $80,000 debt is deductible. Your savings ($25,000) is less than your debt, so no Zakat is due (debt exceeds assets). Maliki Position: Student loans are long-term debt (often 10-25 years). Only deduct the next 12 months of principal payments (approximately $3,000-4,000 depending on interest rate). Zakatable wealth: $25,000 - $4,000 = $21,000. Zakat: $525. Contemporary Practical Fatwa: Most scholars allow deducting 12 months' worth of payments (including both principal and interest portion, as it's a legally required payment) from your Zakatable wealth. If you're in forbearance or income-driven repayment with $0 current obligation, some scholars say the debt isn't immediately due and therefore not fully deductible. (b) High Earner with Large Loan: You earn $150,000 annually with $200,000 student debt, making $2,000 monthly payments. You've saved $100,000. The loan won't be paid off for 10 years. Stricter View: Such large long-term debt should not fully offset current liquid wealth. Deduct only 12-24 months of payments ($24,000-$48,000). Remaining Zakatable wealth: $100,000 - $24,000 = $76,000. Zakat: $1,900. Lenient View: The $200,000 is genuine debt; you're legally obligated to pay it with potential collections/garnishment if you default. Deduct the full amount; Zakat due only on amounts exceeding debt. Shariah Perspective on Loan Itself: Interest-based student loans are riba and impermissible except in cases of dire necessity (darurah) where no Islamic alternative exists for essential education required for livelihood. Many scholars reluctantly permit it for medical school, engineering, etc., where the education is necessary and no alternative exists. Once taken, you must fulfill the repayment obligation. Loan Forgiveness Programs: If your loan is forgiven (government program), that forgiveness amount doesn't become Zakatable income; it's simply a liability removed. However, if you've been deducting the loan for Zakat purposes and it's forgiven, your Zakatable wealth immediately increases.</p>
+        <div class="footer-card">Ref: <span>European Council for Fatwa and Research, AMJA on Educational Necessity</span></div>
+    </div>
+
+    <div class="card" data-key="mortgage home loan house debt property financing islamic murabaha">
+        <span class="category">Liabilities</span>
+        <h3>Home Mortgages and Property Debt</h3>
+        <p>Mortgages present one of the most controversial Zakat questions in modern Islamic finance. A typical home mortgage involves hundreds of thousands in debt stretching over 15-30 years with substantial interest payments, yet the home itself appreciates and represents significant equity. The interaction between this large liability and your other Zakatable assets requires careful scholarly-guided analysis. Technical Definition: A mortgage is a secured loan for purchasing real estate where the property serves as collateral. Conventional mortgages charge interest (riba); Islamic mortgages (rare) use structures like Murabaha (bank buys property and sells to you at profit, payable in installments), Musharakah Mutanaqisah (diminishing partnership where you gradually buy the bank's share), or Ijarah (lease-to-own). 2026 Calculation Scenarios: (a) Conventional Mortgage (Primary Residence): You bought a house for $400,000 with a $350,000 mortgage (30 years at 4%). Current situation: House value $450,000, Remaining mortgage $320,000, Your other assets $70,000 cash + $30,000 stocks = $100,000. Zakat Analysis - Four Scholarly Positions: Position 1 (Strictest): The house is a personal asset, not Zakatable. The mortgage debt is long-term, not immediately due, so not deductible. Zakat on $100,000 = $2,500. Position 2 (Hanafi): Deduct the entire mortgage debt. Total Zakatable wealth: $100,000 - $320,000 = negative, no Zakat due. However, some Hanafi scholars say this only applies to consumptive debt, not mortgages for appreciating assets. Position 3 (Moderate/Maliki-influenced): Deduct only 12 months of mortgage principal (approximately $6,000-8,000). Zakatable wealth: $100,000 - $7,000 = $93,000. Zakat: $2,325. Position 4 (Equity-based): You have $130,000 equity in the home ($450,000 value - $320,000 mortgage). If you sell, you'd have $130,000 + $100,000 other assets = $230,000. This represents your true wealth. Zakat: $5,750. Most contemporary Muftis in the West recommend Position 3 (12-month deduction) as a balanced approach that recognizes both the debt obligation and the reality of home equity. (b) Investment Property Mortgage: You own a rental property worth $300,000 with $200,000 mortgage, generating $2,000 monthly rent. The property's value is NOT Zakatable (it's a rental asset). The rent income IS Zakatable if held until Zakat date. The mortgage debt deductibility follows the same debate as above, but some scholars are stricter since it's an investment property, not necessary housing. If you have $24,000 accumulated rent on Zakat date, and you apply 12-month mortgage principal deduction of $8,000, Zakatable amount is $16,000, Zakat is $400. (c) Islamic Mortgage (Murabaha): The bank bought your house for $350,000 and sold it to you for $500,000 payable over 20 years ($2,083/month). You still owe $400,000. This is not riba but a deferred payment sale. The $400,000 remaining is genuine debt. Deductibility follows the same principles: full deduction (Hanafi), 12-month deduction (Maliki), or case-by-case analysis. Refinancing Implications: If you refinance and extract equity (cash-out refinance), that cash becomes immediately Zakatable, and the increased debt may or may not be deductible depending on the scholarly position you follow and what you used the cash for.</p>
+<div class="footer-card">Ref: <span>Fiqh Council of North America, Mufti Taqi Usmani on Mortgages, AMJA Fatwas</span></div>
+</div>
+<div class="card" data-key="credit card debt balance interest apr minimum payment revolving">
+        <span class="category">Liabilities</span>
+        <h3>Credit Card Debt and Interest</h3>
+        <p>Credit card debt carries some of the highest interest rates (often 18-29% APR) and represents pure riba in its most egregious form. While carrying such debt is a major sin, Muslims who find themselves in this situation need guidance on both exiting the debt and calculating Zakat in the meantime. The short-term nature of credit card debt makes it more readily deductible from Zakatable wealth than long-term loans. Technical Definition: Credit cards are revolving lines of credit that allow purchases up to a limit, with minimum monthly payments required. If you pay the full balance within the grace period (typically 21-25 days), no interest is charged, making this usage permissible. Carrying a balance beyond the grace period triggers interest charges (riba), which is categorically haram. 2026 Calculation Scenarios: (a) Credit Card Balance (Interest-bearing): You have $15,000 credit card debt at 24% APR, making $500 monthly payments. You also have $40,000 in savings. Debt Deductibility: Since credit card debt is short-term and immediately callable (the bank can demand payment anytime), all scholars agree it's deductible from Zakatable wealth. Zakatable wealth: $40,000 - $15,000 = $25,000. Zakat: $625. URGENT NOTE: You should prioritize paying off this debt immediately using your savings. Paying $15,000 to eliminate $3,600/year in interest (24% of $15,000) is far more beneficial than keeping savings. The Shariah imperative to avoid riba overrides the preference for maintaining liquid savings. (b) Credit Card Use without Interest: You use credit cards for points/cashback but pay the full balance every month, never paying interest. Your credit card statement shows $3,000 balance on your Zakat date. Two scholarly positions: (i) The $3,000 is a short-term debt (due within 25 days), deduct it from Zakatable wealth. (ii) You have the cash to pay it (otherwise you wouldn't be paying in full monthly), so it's not a real liability reducing your wealth; don't deduct it. Practical approach: If the $3,000 represents purchases you've already mentally allocated cash for, don't deduct. If it's genuinely reducing your available liquid wealth, deduct it. (c) Multiple Cards with Different Balances: Card A: $8,000 balance, Card B: $12,000 balance, Card C: $0 balance (paid in full monthly). Total savings: $60,000. Deductible debt: $20,000 ($8,000 + $12,000). Zakatable wealth: $60,000 - $20,000 = $40,000. Zakat: $1,000. Again, strong recommendation: Use $20,000 of your savings to pay off Cards A and B immediately. Shariah Priority Hierarchy: (1) Eliminate riba-based debts, (2) Maintain Nisab threshold in savings, (3) Pay Zakat on remaining wealth. Interest Accrued: Any interest charged to your account is haram income to the credit card company; it's not your money. Don't include interest charges in your debt amount for Zakat calculation purposes. Only the principal amounts you actually spent are deductible.</p>
+        <div class="footer-card">Ref: <span>Unanimous Scholarly Consensus on Riba Prohibition, Contemporary Fiqh</span></div>
+    </div>
+
+    <div class="card" data-key="business loan liability small business sba financing working capital">
+        <span class="category">Business Liabilities</span>
+        <h3>Business Loans and Commercial Debt</h3>
+        <p>Business loans - whether from banks, SBA programs, or private lenders - are commonly used to finance operations, expansion, equipment, or inventory. For Zakat purposes, business debt is treated distinctly from personal debt, with general scholarly consensus that genuine short-term business liabilities are deductible from the business's Zakatable assets when calculating Zakat. Technical Definition: Business loans are credit extended to a company or sole proprietor for commercial purposes, including working capital loans, equipment financing, lines of credit, and SBA (Small Business Administration) loans. These typically carry interest (riba) in conventional finance; Islamic alternatives include Murabaha (for asset purchase) or Qard Hassan (interest-free benevolent loan). 2026 Calculation Scenarios: (a) Sole Proprietorship with Working Capital Loan: You run a retail business as a sole proprietor. Business assets on Zakat date: Inventory $80,000, Cash in business account $25,000, Accounts receivable $15,000, Equipment $30,000 (exempt as fixed asset). Liabilities: Working capital loan $40,000 (2-year term), Accounts payable to suppliers $18,000, Your personal savings $50,000 (separate from business). Business Zakat Calculation: Zakatable business assets: $80,000 + $25,000 + $15,000 = $120,000. Deductible liabilities: The $18,000 accounts payable is definitely deductible (due in 30 days). The $40,000 loan follows the same debate as personal long-term debt. Conservative approach: Deduct 12 months of principal payments (approximately $20,000). Net business Zakatable wealth: $120,000 - $18,000 - $20,000 = $82,000. Business Zakat: $2,050. Personal Zakat Calculation (separate): Your $50,000 personal savings is Zakatable independently unless you consider the business loan a personal liability (e.g., you personally guaranteed it). If personally guaranteed and you treat business and personal as one financial entity, you could potentially deduct remaining business debt from personal savings per Hanafi position, but most accountants and contemporary scholars prefer keeping business and personal Zakat calculations separate for clarity. (b) LLC/Corporation with Multiple Loans: Your company has $500,000 in assets ($300,000 inventory, $150,000 receivables, $50,000 cash) and $250,000 in various debts (equipment loan, line of credit, payables). Corporate entities can calculate Zakat at the entity level if all shareholders agree, or each shareholder calculates their proportional share. Entity-level: ($300,000 + $150,000 + $50,000) - $250,000 = $250,000. Zakat: $6,250. Shareholder-level: If you own 40% of the company, your share of Zakatable assets is $200,000 (40% of $500,000), minus your share of debt $100,000 (40% of $250,000) = $100,000. Your Zakat: $2,500. (c) Startup with Investor Debt: You received $200,000 from an investor structured as a loan convertible to equity. Is this a liability for Zakat purposes? If it's a genuine loan requiring repayment, yes, it's deductible. If it's de facto equity (investor shares risk and won't demand repayment if business fails), it's not a deductible liability. Shariah Evidence: Early Muslims in trade would calculate Zakat on "capital employed" minus "debts owed." Ibn Abbas advised merchants to "tally your goods and debts, then pay Zakat on the net."</p>
+        <div class="footer-card">Ref: <span>Classical Fiqh: Al-Mughni, Contemporary: Accounting Standards for Islamic Institutions</span></div>
+    </div>
+
+    <div class="card" data-key="gold etf gld paper gold certificate fund trust backed">
+        <span class="category">Financial Instruments</span>
+        <h3>Gold ETFs and Paper Gold</h3>
+        <p>Gold ETFs (Exchange Traded Funds) like GLD and IAU offer convenient gold exposure through securities that track gold prices, but they differ fundamentally from physical gold ownership. For Zakat purposes, scholars distinguish between ETFs backed by actual allocated gold bars versus those using derivatives or pooled unallocated gold, as this affects both permissibility and Zakat calculation methodology. Technical Definition: Gold ETFs are securities traded on stock exchanges representing fractional ownership in gold holdings. "Physically-backed" ETFs hold actual gold bars in vaults with each share representing a specific quantity of gold. "Synthetic" ETFs use derivatives (futures, swaps) to replicate gold price movements without holding physical gold. Only physically-backed ETFs are potentially Shariah-compliant. 2026 Calculation Scenarios: (a) Physically-Backed Gold ETF (e.g., GLD): You own 100 shares of GLD. Each share represents approximately 0.09 ounces of gold. Total gold equivalent: 9 ounces = 253.8 grams. Nisab threshold: 87.48 grams. Your holding (253.8g) exceeds Nisab ✓. 2026 gold price: $2,100/oz. Market value: $18,900. Zakat Calculation: Two methods: (1) Weight-based: 253.8 grams × 2.5% = 6.35 grams gold due, or equivalent cash: 6.35g × $65/gram = $412.75. (2) Value-based: $18,900 × 2.5% = $472.50. Method 1 (weight-based) is technically more precise and aligns with classical gold Zakat. Method 2 is practically easier and commonly used. Shariah Concern: Even "physically-backed" ETFs typically hold gold in pooled unallocated accounts where you don't own specific bars but have a claim on a pool. Stricter scholars question if this constitutes true ownership (milk tamm) required for Zakat obligation. Lenient contemporary view: If the ETF is audited, fully-backed, and you can redeem for physical gold (usually only in large blocks like 10,000 shares), it's sufficient for Zakat purposes. (b) Synthetic/Leveraged Gold ETF: You own shares in a 2x leveraged gold ETF that uses derivatives. Shariah Analysis: This involves elements of gharar (speculation) and possibly riba, making it impermissible per most scholars. If unknowingly invested, liquidate the position. Any gains from haram investments must be purified (donated to charity). Zakat applies only to your original halal capital invested. (c) Gold Mining Stocks: You own $30,000 in gold mining company stocks (not ETFs holding gold, but companies that mine gold). These are treated as regular stocks for Zakat purposes, not as gold itself. Calculate using stock Zakat methodology (2.5% of market value, or detailed breakdown of company's Zakatable assets). This is NOT the same as owning gold. Comparison to Physical Gold: Physical gold you possess (jewelry, coins, bars) has undisputed Zakat obligation. Paper gold/ETFs involve an additional layer of financial engineering, creating scholarly debate. For maximum certainty, prefer physical gold for investment if Shariah compliance is a priority.</p>
+        <div class="footer-card">Ref: <span>AAOIFI Shariah Standards, Scholarly Analysis of ETF Structures</span></div>
+    </div>
+
+    <div class="card" data-key="529 plan education savings college fund child minor dependent">
+        <span class="category">Education Savings</span>
+        <h3>529 Plans and Education Savings</h3>
+        <p>529 college savings plans are tax-advantaged investment accounts designed to fund education expenses. Parents or guardians open these accounts for beneficiaries (typically children), contributing money that grows tax-free if used for qualified education expenses. The Zakat ruling hinges on ownership structure, accessibility, and whether the funds are earmarked for others or remain the contributor's wealth. Technical Definition: 529 plans are state-sponsored investment programs offering tax benefits for education savings. Contributions are post-tax, growth is tax-free, and withdrawals for qualified education expenses are tax-free. Account owner (usually parent) controls the account, can change beneficiaries, and can withdraw funds (with penalties/taxes if not for education). Beneficiary (usually child) has no legal claim to the funds until distributed. 2026 Calculation Scenarios: (a) Parent-Owned 529 for Child: You established a 529 with $50,000 for your daughter's future college expenses. Current value: $62,000 due to investment growth. Ownership Analysis: You legally own this account. You can change the beneficiary to another child, to yourself, or even withdraw the money (paying taxes and 10% penalty on earnings). Therefore, this $62,000 is YOUR wealth. Zakat Obligation: $62,000 × 2.5% = $1,550 annually, until you actually spend it on your daughter's education. Once spent, those funds exit your Zakatable wealth. Alternative Opinion (Minority): Money irrevocably committed to your child's welfare is effectively transferred wealth, similar to a gift given but held in trust. Some scholars allow excluding it from Zakat since you morally cannot use it for yourself. However, the legal reality contradicts this, making the majority position stronger. (b) Grandparent-Owned 529 for Grandchild: Your parents established a $30,000 account for your child's education. This is NOT your wealth; it's your parents' wealth. They calculate Zakat on it (if they're obligated), not you. If they gift it directly to your child (transfer ownership), then it becomes your child's wealth, and if your child has other assets exceeding Nisab, the child owes Zakat (or the guardian pays on behalf of the minor per Hanafi school). (c) Coverdell ESA (Education Savings Account): Similar principles apply. These accounts have lower contribution limits ($2,000/year) but broader use (K-12 and college). If you own the account, it's Zakatable. If held in the child's name with them as legal owner (rare structure), then it's the child's Zakatable wealth. Investment Holdings: 529 plans invest in mutual funds, often with no Shariah-screened options. This creates a compliance issue separate from Zakat. If possible, select the most Shariah-compliant available funds (avoiding explicit alcohol, interest-based banks, etc.). The Zakat calculation applies to the full account value regardless of the underlying investments' compliance status, though you should work toward compliance. Tax Penalty Consideration: If you're calculating Zakat on the account but haven't used it for education yet, can you deduct the potential 10% penalty you'd pay if withdrawing for non-education purposes? Most scholars say no, because the funds ARE available (with penalty), and Zakat doesn't allow deducting hypothetical future costs, only actual debts.</p>
+        <div class="footer-card">Ref: <span>Contemporary Fiqh Analysis, Accounting Principles for Educational Trusts</span></div>
+    </div>
+    </div>
+
+    <div id="noData">No ruling found for this keyword. Try different search terms.</div>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+        <div class="faq-header">
+            <h2>Zakat Master FAQ</h2>
+            <p>Comprehensive answers to the most critical questions about modern Zakat calculation and obligations</p>
         </div>
 
-        <div class="card" data-key="insurance life health policy premium">
-            <span class="category">Insurance</span>
-            <h3>Life Insurance Policies</h3>
-            <p>For conventional life insurance, Zakat is only due on the total premiums paid (principal). For Takaful, it is due on the surrender value.</p>
-            <div class="footer-card">Ref: <span>Islamic Finance Council</span></div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What is the difference between Nisab calculated in gold vs. silver, and which should I use in 2026?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                The Nisab threshold can be calculated using either gold (87.48 grams) or silver (612.36 grams). In 2026, with gold at approximately $65/gram and silver at $0.85/gram, the gold Nisab equals roughly $5,686 while the silver Nisab equals approximately $520. This massive difference creates a crucial decision point. The majority of contemporary scholars, including Mufti Taqi Usmani and Sheikh Yusuf al-Qaradawi, strongly recommend using the silver Nisab in modern times. The reasoning is multi-faceted: First, using the lower threshold means more Muslims qualify to pay Zakat, resulting in greater wealth distribution to the deserving recipients (the ultimate purpose of Zakat). Second, historical inflation has made the gold Nisab extremely high relative to average wealth, potentially exempting many affluent individuals from their obligations. Third, the silver standard was the predominant currency in the Prophetic era and early Islamic period, making it arguably the more authentic benchmark. The Hanafi school explicitly favors the silver Nisab for these reasons. However, if your wealth is primarily in gold itself, calculate using the gold Nisab for that portion. For cash, investments, and mixed assets, the silver Nisab is the recommended and more cautious approach that ensures you fulfill your obligation and maximize benefit to those in need.
+            </div>
         </div>
 
-        <div class="card" data-key="plot land property house real estate">
-            <span class="category">Real Estate</span>
-            <h3>Plots bought for Investment</h3>
-            <p>If property is purchased with the intention of selling for profit, pay 2.5% Zakat on its current market value every year.</p>
-            <div class="footer-card">Ref: <span>Fatawa Alamgiri</span></div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>If I receive my salary throughout the year, how do I determine my Zakat date and calculate properly?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                This is one of the most common sources of confusion in modern Zakat calculation. Technically, each dollar you earn has its own individual Hawl (lunar year cycle) starting from when you received it. This would mean February's salary becomes Zakatable in February of the next year, March's in March, and so on—creating 12 different Zakat dates, which is practically impossible to track. The scholarly solution is the "lunar anniversary method": Choose a specific date in the Islamic calendar (commonly Ramadan 1st, as many Muslims prefer paying Zakat during this blessed month) as your annual Zakat date. On that date, calculate Zakat on ALL savings and Zakatable assets you possess, even if some money was earned recently and hasn't completed a full Hawl. This method errs on the side of paying more rather than less, which is spiritually safer and administratively practical. For example, if your Zakat date is Ramadan 1st, 2026, and you have $40,000 in savings (accumulated throughout the year from monthly salary), you pay 2.5% on the full $40,000 = $1,000, rather than trying to track which portions are "mature" and which aren't. The key principle: salary itself is NOT Zakatable as income; only the accumulated savings from salary that remain in your possession on your Zakat anniversary are Zakatable. If you spend your entire salary each month on living expenses with zero savings, you owe zero Zakat on that salary, regardless of how high your income is.
+            </div>
         </div>
 
-        <div class="card" data-key="rent income property apartment">
-            <span class="category">Real Estate</span>
-            <h3>Zakat on Rental Income</h3>
-            <p>No Zakat on the property value itself. Zakat is only due on accumulated rent money if it remains in your possession on your Zakat date.</p>
-            <div class="footer-card">Ref: <span>Mufti Taqi Usmani</span></div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>I have a mortgage that's larger than my total assets. Do I still owe Zakat?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                This scenario is extremely common in Western countries where Muslims often have $300,000+ mortgages but only $50,000-100,000 in liquid assets. The Zakat ruling depends on which scholarly position you follow, and there's significant legitimate difference of opinion (ikhtilaf). The Hanafi school permits deducting ALL debt, regardless of term length. Under this position, if your mortgage balance exceeds your Zakatable assets, no Zakat is due. However, many contemporary Hanafi scholars qualify this by noting that mortgages for appreciating assets (where you're building equity) differ from consumptive debts. The Maliki and Shafi'i schools only allow deducting immediate or short-term debts. For a 30-year mortgage, they would permit deducting only the next 12 months of principal payments (typically $6,000-10,000 annually), not the entire $300,000 balance. The contemporary mainstream position recommended by major North American and European fatwa councils is to deduct the annual principal amount due in the next 12 months. Example: You have $80,000 in assets and a $250,000 mortgage with $8,000 annual principal. Zakatable wealth: $80,000 - $8,000 = $72,000. Zakat: $1,800. This balanced approach recognizes both the genuine financial obligation and the reality that you're building equity. Some stricter scholars argue that since the house itself is valuable (even if you don't pay Zakat on it as it's personal use), the mortgage shouldn't fully offset unrelated liquid wealth. The safest approach: Consult a qualified local Mufti who can examine your complete financial picture and apply the appropriate madhab or contemporary ijtihad to your situation.
+            </div>
         </div>
 
-        <div class="card" data-key="stock shop inventory warehouse business">
-            <span class="category">Commercial</span>
-            <h3>Shop Inventory & Dead Stock</h3>
-            <p>Zakat is calculated on the current retail value of all stock-in-trade. Furniture and machinery used in the shop are exempt.</p>
-            <div class="footer-card">Ref: <span>Kitab al-Zakat</span></div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>How do I pay Zakat on cryptocurrency that I'm staking or locked in DeFi protocols?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Cryptocurrency staking and DeFi (Decentralized Finance) present cutting-edge Zakat questions that classical scholars never encountered, requiring careful application of fundamental principles to novel situations. First, the permissibility question: Pure Proof-of-Stake staking (where you lock coins to validate transactions and earn rewards) is generally permissible per contemporary scholars, as it's analogous to leasing your assets. Liquidity mining and yield farming involving interest-based lending protocols are highly problematic and often constitute riba. For Zakat calculation on permissible staking: Both your staked principal AND earned rewards are Zakatable. Example: You staked 10 ETH (Ethereum) worth $30,000 at the beginning of your Hawl. By your Zakat date, you have 10.5 ETH (0.5 ETH rewards) now worth $35,000. You owe Zakat on the full $35,000 current value = $875. The fact that the coins are locked or have a waiting period for unstaking doesn't exempt them from Zakat, as they remain your legal property with certain value. For locked tokens with no current market: If you hold tokens from an ICO or private sale that are completely locked with zero trading availability and uncertain future value, some scholars allow deferring Zakat until they unlock and achieve market liquidity, then paying for all years once. However, if there's any secondary market (even limited), the market value determines Zakat. For governance tokens earned through protocol participation: If they have market value and you own them, they're Zakatable at 2.5% of current price. If they have no market/value yet, defer until they do. CRITICAL: Many DeFi protocols involve lending at interest (Compound, Aave), which is riba. If you're unknowingly involved, exit immediately. Any "yield" from interest-based protocols must be disposed of as charity (not Zakat), and only your original principal is Zakatable. The Shariah priority is: (1) Ensure the investment mechanism itself is halal, (2) Then calculate proper Zakat on the halal holdings.
+            </div>
         </div>
 
-        <div class="card" data-key="partnership investment musharakah mudarabah">
-            <span class="category">Commercial</span>
-            <h3>Business Partnerships</h3>
-            <p>Each partner pays Zakat on their share of liquid assets (Cash + Stock + Receivables) after deducting short-term debts.</p>
-            <div class="footer-card">Ref: <span>Majmua Fatawa</span></div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Can I give Zakat to my relatives? Which family members are eligible?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                This is one of the most practically important Zakat questions, as many Muslims prefer helping family members. The ruling is nuanced and depends on the specific relationship and circumstances. PROHIBITED RECIPIENTS (you CANNOT give Zakat to): (1) Your parents, grandparents, and all ancestors—their financial support is your unconditional obligation regardless of Zakat. (2) Your children, grandchildren, and all descendants—same reason. (3) Your spouse—you're already obligated to provide for them. (4) Wealthy individuals who are above Nisab threshold. (5) Non-Muslims (according to majority opinion, though some contemporary scholars permit in specific circumstances of da'wah or communal harmony). PERMITTED RECIPIENTS (you CAN give Zakat to): (1) Siblings (brothers and sisters) if they're poor and you're not legally obligated to support them. (2) Aunts and uncles if they meet the eight eligible categories. (3) Nieces, nephews, cousins, and extended family who are genuinely poor. (4) In-laws (your spouse's family) if they qualify as deserving recipients. In fact, giving Zakat to eligible relatives is HIGHLY RECOMMENDED and earns double reward—the reward of Zakat plus the reward of maintaining family ties (silat al-rahim). The Prophet ﷺ said, "Charity to the poor is charity, but charity to relatives is both charity and maintaining family ties" (Tirmidhi 658). Practical Example: Your brother lost his job and has dependents but no savings. He's clearly eligible. Giving him $3,000 from your Zakat is not only permissible but superior to giving the same amount to a stranger, assuming your intention is purely Zakat (not just helping family). WARNING: You cannot use Zakat to pay off debts you owe to relatives, nor can you give Zakat to someone with the understanding they'll give it back to you or your family. The transfer must be genuine and unconditional. Also, some scholars recommend not telling the recipient it's Zakat if it might hurt their dignity—you can simply say it's a gift or assistance, as long as YOU have the Zakat intention internally.
+            </div>
         </div>
 
-        <div class="card" data-key="debt loan credit mortgage liabilities">
-            <span class="category">Liabilities</span>
-            <h3>Deducting Personal Loans</h3>
-            <p>Money you owe can be subtracted. For long-term loans, only deduct the installments due for the next 12 months.</p>
-            <div class="footer-card">Ref: <span>Islamic Fiqh Academy</span></div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What if I didn't pay Zakat for several years? How do I calculate and make up missed Zakat?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                Missed Zakat (Zakat arrears) is a serious matter because Zakat is an obligation that remains in your liability until fulfilled, similar to missed prayers. The debt doesn't disappear with time; you must calculate and pay all missed years. The process requires honest estimation and sincere repentance. Step-by-Step Calculation Method: (1) Determine how many years you missed—count back to when you first became liable (when your wealth first exceeded Nisab for a complete Hawl). (2) For each year, estimate your Zakatable assets on or around your Zakat anniversary. Use bank statements, tax returns, old records, or honest estimation if precise records don't exist. (3) Calculate 2.5% for each year separately. (4) Sum all years' Zakat to get total arrears. Example: You realize in 2026 that you haven't paid Zakat since 2020. Year 2020: Estimated assets $30,000 → Zakat $750. Year 2021: $42,000 → $1,050. Year 2022: $38,000 → $950. Year 2023: $55,000 → $1,375. Year 2024: $48,000 → $1,200. Year 2025: $60,000 → $1,500. Total arrears: $6,825. You must pay this amount as soon as reasonably possible. If paying the full amount immediately causes genuine financial hardship, scholars permit paying in installments, but don't delay unnecessarily. Intention and Repentance: Make sincere tawbah (repentance) to Allah for the delay, as withholding Zakat is a major sin. The Quran warns severely about those who hoard wealth and don't pay Zakat (9:34-35). When paying arrears, make clear intention for each year, or make a general intention "to fulfill all my Zakat obligations." Uncertainty and Estimation: If you genuinely cannot determine exact amounts for past years, make your best honest estimate erring on the side of paying more rather than less. The Prophet ﷺ allowed estimation in Zakat matters when precision is impossible. Some scholars suggest adding 10-20% to your estimate as a precaution. IMPORTANT: Don't let the large arrears amount prevent you from starting. Begin paying current year's Zakat properly while simultaneously working to clear past debts. Allah's mercy is vast, and sincere effort to rectify past mistakes is highly valued.
+            </div>
         </div>
 
-        <div class="card" data-key="loan given receivable money back">
-            <span class="category">Assets</span>
-            <h3>Money Lent to Others</h3>
-            <p>If repayment is expected, pay Zakat annually. If the person is likely to default, pay only once you actually receive the money.</p>
-            <div class="footer-card">Ref: <span>Hidayah</span></div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Is Zakat calculated on gross wealth or net wealth after deducting all debts?</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+                This question strikes at the heart of Zakat methodology and has significant practical implications. The answer is: net wealth after deducting certain qualifying debts, but scholars differ on which debts qualify for deduction. The Framework: You calculate Zakat on "Al-Amwal al-Zakawiyyah" (Zakatable wealth) minus "Al-Duyun" (debts). The critical questions are: (1) Which assets are Zakatable? (2) Which debts are deductible? Zakatable Assets (the starting point): Cash, gold, silver, trade inventory, stocks held for investment/trading, cryptocurrency, receivables (money owed to you), agricultural produce, livestock (under specific conditions). Total these on your Zakat date. Deductible Debts (scholarly differences): The Hanafi school permits deducting ALL debts, whether short-term or long-term, consumptive or productive. This includes mortgages, car loans, student loans, credit cards, business debts—everything. Rationale: The Prophet ﷺ said "There is no Zakat on the property of a debtor" (Daraqutni). If your gross wealth is $100,000 but you owe $95,000 in various debts, your net wealth is only $5,000, and Zakat is $125. The Maliki, Shafi'i, and Hanbali schools are more restrictive. They generally only allow deducting debts that are immediately due or will come due within the Zakat year. Long-term debts like 30-year mortgages are not fully deductible; only the current year's principal payments can be deducted. Rationale: Long-term debt for appreciating assets (homes, businesses) doesn't genuinely reduce your net worth in the same way as consumptive debt. Contemporary Practical Application in 2026: Most mainstream Muftis recommend a balanced approach: (1) Deduct all short-term debts (credit cards, personal loans due within a year, business payables). (2) For long-term debts, deduct only 12 months of principal payments. (3) Distinguish between debt for consumptive purposes (spending you couldn't afford) vs. productive debt (mortgage on appreciating home, business loan generating income). Example Calculation: Gross Zakatable Assets: Cash $40,000, Stocks $30,000, Gold $15,000 = $85,000. Debts: Credit card $8,000 (fully deductible), Student loan $60,000 with $400/month payment = $4,800 annual principal (deduct $4,800), Mortgage $200,000 with $12,000 annual principal (deduct $12,000). Net Zakatable Wealth: $85,000 - $8,000 - $4,800 - $12,000 = $60,200. Zakat: $60,200 × 2.5% = $1,505. Special Considerations: (1) If you're in the Hanafi madhab and following a qualified Hanafi scholar, you may deduct the full debt amounts. (2) If debt exceeds assets after deductions, no Zakat is due that year. (3) Business debts (accounts payable, supplier invoices due) are universally deductible by all schools. (4) Future obligations (next year's rent, upcoming insurance premiums) are NOT current debts and not deductible. The Wisdom: Zakat is meant to purify wealth, not cause hardship. Genuine debt reduces your actual financial capacity, so accounting for it in Zakat calculation is both just and merciful. However, the system shouldn't allow wealthy individuals with strategic long-term debt to avoid Zakat entirely, hence the nuanced positions.
+</div>
+</div>
+<div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>Do I pay Zakat on my primary residence or rental properties I own?</span>
+            <i class="fas fa-chevron-down"></i>
         </div>
-
-        <div class="card" data-key="agri crops wheat rice fruit ushr">
-            <span class="category">Agriculture</span>
-            <h3>Ushr on Seasonal Crops</h3>
-            <p>Ushr (10%) is due on rain-watered crops. For tube-well watered crops, it is 5%. Due at every harvest.</p>
-            <div class="footer-card">Ref: <span>Sahih Muslim</span></div>
-        </div>
-
-        <div class="card" data-key="cows goat sheep livestock animals">
-            <span class="category">Livestock</span>
-            <h3>Zakat on Farm Animals</h3>
-            <p>Due on grazing animals if they reach Nisab (e.g. 40 goats). If kept for trade, 2.5% of total value is due.</p>
-            <div class="footer-card">Ref: <span>Kitab al-Amwal</span></div>
-        </div>
-
-        <div class="card" data-key="salary wage bonus saving">
-            <span class="category">Income</span>
-            <h3>Zakat on Monthly Salary</h3>
-            <p>No Zakat on salary as it is received. Only the portion you save and hold until your Zakat date is included in wealth.</p>
-            <div class="footer-card">Ref: <span>Fatawa Shami</span></div>
-        </div>
-
-        <div class="card" data-key="pension fund provident pf gratuity">
-            <span class="category">Retirement</span>
-            <h3>Provident Fund (PF)</h3>
-            <p>Zakat is due on your own voluntary contributions annually. Employer's portion is taxed only upon receipt.</p>
-            <div class="footer-card">Ref: <span>Contemporary Scholars</span></div>
-        </div>
-
-        <div class="card" data-key="inheritance wirasat death wealth">
-            <span class="category">Wirasat</span>
-            <h3>Zakat on Inherited Wealth</h3>
-            <p>Once the inheritance is in your possession, the lunar cycle (Hawl) starts. Pay on your next Zakat anniversary.</p>
-            <div class="footer-card">Ref: <span>Quran 4:11</span></div>
-        </div>
-
-        <div class="card" data-key="charity sadaqah donation">
-            <span class="category">Philanthropy</span>
-            <h3>Zakat vs Sadaqah</h3>
-            <p>Zakat is mandatory (2.5%) for specific categories. Sadaqah is voluntary and can be given to any person or cause.</p>
-            <div class="footer-card">Ref: <span>Surah At-Tawbah</span></div>
+        <div class="faq-answer">
+            Real estate Zakat is one of the most misunderstood areas, with many Muslims incorrectly believing they owe Zakat on their home's value. The ruling is clear but depends entirely on the property's purpose and your intention when acquiring it. PRIMARY RESIDENCE: No Zakat whatsoever on the house value, regardless of how valuable it is. Whether your home is worth $200,000 or $2,000,000, zero Zakat applies to the property itself. Reasoning: It's a personal use asset (qinyah), not wealth held for growth or trade. Analogy: Just as you don't pay Zakat on your clothing, furniture, or car (personal use items), you don't pay on your home. This is unanimous among all schools of Islamic jurisprudence. Even if your home has appreciated significantly, no Zakat applies until you actually SELL it and convert it to cash, at which point that cash becomes Zakatable if held until your next Zakat date. RENTAL PROPERTIES (held for income): No Zakat on the property value itself. The building is a productive fixed asset (like a factory or farm machinery) used to generate income. However, Zakat IS due on the rental income you collect and hold. Example: You own three rental apartments worth $600,000 total, generating $3,500/month rent ($42,000 annually). On your Zakat date, you have $28,000 accumulated in your account from rent after expenses. Zakat calculation: Property value $600,000 → Zero Zakat. Rental income held $28,000 → $28,000 × 2.5% = $700 Zakat. If you spent all the rental income on expenses, mortgage payments, or reinvestment with nothing remaining on your Zakat date, then zero Zakat on rental income that year. INVESTMENT PROPERTIES (bought to resell): This is the crucial exception—Zakat IS due on the full market value at 2.5% annually. If you purchased land, a house, or commercial property with the explicit intention of selling it for profit (not renting or personal use), it becomes trade inventory (Urudh al-Tijarah). Example: You bought a plot for $100,000 in 2023 intending to sell when the area develops. By 2026, it's worth $150,000 but hasn't sold. Zakat due in 2026: $150,000 × 2.5% = $3,750, even though you haven't sold it and have no cash from it. This applies every year until you sell. MIXED INTENTION: If you bought property unsure whether to rent or sell, or primarily for personal use, it's NOT trade inventory. Only if you make a firm, clear decision to sell does it convert to Zakatable trade goods, and Zakat begins from that year forward. FLIPPING BUSINESSES: Real estate developers or house flippers who buy, renovate, and sell properties as their business model must pay 2.5% Zakat on the market value of all properties in their inventory, just like any other business inventory. Key Principle: The determining factor is INTENTION (niyyah) at the time of purchase. This intention-based classification is fundamental to Islamic commercial law and cannot be changed retroactively without genuine circumstances.
         </div>
     </div>
 
-    <div id="noData">No ruling found for this keyword.</div>
-
-    <footer>
-        <div class="disclaimer">
-            <strong>OFFICIAL DISCLAIMER:</strong> Hisabify provides these fatawa for educational guidance. We recommend consulting a local Mufti for specific financial verdicts.
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>How do I calculate Zakat if I'm a business owner with inventory, receivables, and liabilities?</span>
+            <i class="fas fa-chevron-down"></i>
         </div>
-        <p>&copy; 2026 Hisabify International. Digital Shariah Authority.</p>
-    </footer>
+        <div class="faq-answer">
+            Business Zakat is one of the most detailed and important calculations, as it formed the foundation of the Islamic economy in the Prophetic era when most Sahaba were merchants and traders. The methodology requires a comprehensive "Zakat balance sheet" approach. STEP-BY-STEP BUSINESS ZAKAT CALCULATION: Step 1 - Determine your Zakat Date: Choose a specific date in the Islamic calendar (many business owners choose end of Ramadan or their fiscal year-end). This becomes your annual calculation point. Step 2 - Calculate Zakatable Assets (what you OWN): (a) Cash: All business bank accounts, petty cash, cash registers = total liquid cash. (b) Inventory: ALL goods held for sale, valued at current market/retail price (Hanafi) or cost price (Shafi'i). Include: Raw materials (if you manufacture), Work-in-progress, Finished goods, Dead stock (even if slow-moving, unless completely worthless). (c) Accounts Receivable: Money customers owe you for goods/services delivered. Include if collection is likely (strong debts). Exclude if highly doubtful (customer bankrupt, in dispute). (d) Investments: Any stocks, bonds, or other financial instruments held by the business. Step 3 - Total Zakatable Assets: Add (a) + (b) + (c) + (d). Example: Cash $50,000 + Inventory $200,000 + Receivables $75,000 + Investments $25,000 = $350,000. Step 4 - Calculate Deductible Liabilities (what you OWE): (a) Accounts Payable: Money you owe suppliers for inventory/goods received. (b) Short-term Loans: Any business loans due within the year. (c) Accrued Expenses: Unpaid salaries, rent, utilities that are currently due. Do NOT deduct: Long-term loans (deduct only 12 months of payments), Future expenses not yet incurred, Depreciation (it's an accounting entry, not a liability). Example: Payables $80,000 + Short-term loan $20,000 + Accrued expenses $10,000 = $110,000. Step 5 - Calculate Net Zakatable Wealth: $350,000 - $110,000 = $240,000. Step 6 - Apply 2.5% Rate: $240,000 × 2.5% = $6,000 Zakat due. EXEMPT BUSINESS ASSETS: Fixed assets (equipment, machinery, vehicles, computers, buildings, land used in operations) are NOT Zakatable. Only pay Zakat on circulating capital (inventory and cash-equivalent assets). PARTNERSHIPS: Each partner calculates Zakat on their ownership share independently, or the business can calculate and pay on behalf of all partners with their consent. SOLE PROPRIETOR: Your personal and business finances may be intermingled. Create a clear separation: Business Zakatable assets + Personal Zakatable assets, minus Business liabilities and Personal liabilities (following the deduction rules), then apply 2.5%. TIMING CONSIDERATION: If your inventory or receivables fluctuate significantly throughout the year, calculate on your designated Zakat date, not an average. Some businesses strategically reduce inventory before their Zakat date (permissible), but this should be for legitimate business reasons, not purely to avoid Zakat (which would be deceptive and sinful). ACCOUNTING STANDARDS: For complex businesses, use AAOIFI (Accounting and Auditing Organization for Islamic Financial Institutions) Zakat Standard No. 35, which provides detailed guidance aligned with Shariah principles. Many Islamic scholars and Shariah-compliant accounting firms can assist with business Zakat calculations.
+        </div>
+    </div>
 
-    <script>
-        function filter() {
-            let val = document.getElementById('searchInput').value.toLowerCase();
-            let cards = document.getElementsByClassName('card');
-            let grid = document.getElementById('grid');
-            let noData = document.getElementById('noData');
-            let visible = 0;
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>What happens if I pay my Zakat late or miss the deadline?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            Zakat has a specific due date—the moment your Hawl (lunar year) completes on your Zakatable wealth. Delaying payment beyond this without valid reason is sinful, though the obligation remains and must be fulfilled. Understanding the ruling and consequences is crucial for maintaining your spiritual and financial integrity. THE DUE DATE: Once 354-355 days (one complete lunar year) pass from when your wealth first reached or exceeded Nisab, Zakat becomes immediately obligatory (wajib). Example: Your wealth first exceeded Nisab on Muharram 1, 1446 AH. Zakat becomes due on Muharram 1, 1447 AH. Paying even one day late without valid excuse is impermissible. VALID EXCUSES FOR DELAY: (1) Genuine inability to access funds (money locked in frozen accounts, investments that cannot be liquidated). (2) No deserving recipients available in your area (rare in modern times with international Zakat organizations). (3) Waiting a few days/weeks to identify the most deserving recipients or most effective distribution (scholars allow brief delays for better distribution, but don't abuse this). (4) Extreme personal financial crisis where paying Zakat would cause severe harm to you or your dependents (this is highly exceptional and requires scholarly consultation). INVALID EXCUSES: (1) "I forgot"—negligence is not an excuse; set reminders and plan ahead. (2) "I don't have cash available"—you should plan your finances to have liquid funds for Zakat, or sell assets if necessary. (3) "I'm waiting to give it in Ramadan" when your Zakat is due in Shawwal—this is impermissible. (Note: You CAN pay Zakat EARLY before it's due and it counts, but not late). (4) "I wanted to give it to my relative but haven't seen them"—the obligation is to pay, not to give to a specific person. CONSEQUENCES OF DELAY: Spiritual: You're in a state of sin for each day the Zakat remains unpaid. The wealth is not fully purified, and there's a barrier between you and Allah's blessings. The Quran strongly warns those who withhold Zakat (9:34-35). Financial: The amount owed does NOT decrease—you still owe the full calculated Zakat plus any additional Zakat that becomes due in subsequent years. Example: 2024 Zakat was $2,000 (unpaid). 2025 Zakat is $2,500 (on your current wealth). You now owe $4,500 total, not just $2,500. Legal (in some Muslim countries): Zakat is legally enforced, and failure to pay can result in penalties, though most countries don't enforce this. ADVANCED PAYMENT (PAYING EARLY): This is permissible and encouraged. If your Zakat becomes due in Shawwal but you want to pay in Ramadan (2 months early), you can calculate an estimate and pay. If you overpaid, the excess counts as voluntary Sadaqah. If you underpaid, pay the difference when the actual date arrives. RECTIFICATION: If you realize you've been delaying Zakat, (1) Make sincere repentance (tawbah) to Allah, (2) Calculate all arrears immediately, (3) Pay as soon as possible, even if in installments if the full amount causes genuine hardship, (4) Don't let past mistakes prevent future compliance—start paying on time from now forward. INTENTIONAL WITHHOLDING: If someone denies that Zakat is obligatory, this is disbelief (kufr) according to scholarly consensus. If someone acknowledges the obligation but refuses to pay out of stinginess or defiance, this is a major sin (kabira) but not disbelief. Abu Bakr رضي الله عنه waged war against tribes that refused Zakat after the Prophet's death, establishing its non-negotiable importance.
+        </div>
+    </div>
 
-            for (let i = 0; i < cards.length; i++) {
-                let keys = cards[i].getAttribute('data-key');
-                if (keys.includes(val)) {
-                    cards[i].style.display = "flex";
-                    visible++;
-                } else {
-                    cards[i].style.display = "none";
-                }
-            }
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>Can I pay Zakat to Islamic organizations, mosques, or must it go directly to individuals?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            The permissibility of giving Zakat to organizations versus individuals is a critical contemporary question, as modern Zakat distribution has largely shifted from personal giving to institutional channels. The answer requires examining both the classical eight categories of recipients and modern organizational structures. THE EIGHT QURANIC CATEGORIES (Surah At-Tawbah 9:60): Zakat can ONLY go to: (1) Al-Fuqara (the poor—those with insufficient means), (2) Al-Masakin (the needy—those with nothing), (3) Al-Amilin Alayha (Zakat administrators/collectors), (4) Al-Mu'allafatu Qulubuhum (those whose hearts are to be reconciled to Islam), (5) Ar-Riqab (freeing slaves/captives—modern application: freeing people from bondage, trafficking), (6) Al-Gharimin (those in debt—unable to repay), (7) Fi Sabilillah (in the path of Allah—scholars differ on scope), (8) Ibn as-Sabil (stranded travelers in need). GIVING TO INDIVIDUALS DIRECTLY: This is the original and always-valid method. You personally identify a poor person, someone in debt, or a stranded traveler, and give them Zakat directly. Advantages: (1) Personal connection and certainty about recipient eligibility, (2) Immediate impact, (3) Maintains community ties. Challenges: (1) Difficult to verify someone's actual financial status without investigation, (2) Time-consuming to find and distribute to multiple recipients, (3) May embarrass recipients or create dependency, (4) Hard to reach distant or hidden deserving people. GIVING TO ISLAMIC ORGANIZATIONS: Permissible ONLY if the organization distributes to the eight categories, not for the organization's general operations. Let's clarify: PERMISSIBLE ZAKAT TO ORGANIZATIONS: (1) Zakat Funds that specifically distribute to verified poor families, refugees, disaster victims, orphans, widows (categories 1, 2, 8). (2) Debt Relief Programs that pay off debts for qualifying Muslims (category 6). (3) Zakat Administration Fees—the people who collect, verify, and distribute Zakat can receive payment from Zakat itself (category 3), typically capped at 12.5% of collected Zakat per classical scholars. (4) Programs that free people from modern bondage (trafficking victims, unjust imprisonment) (category 5). IMPERMISSIBLE ZAKAT TO: (1) Mosque construction or maintenance—mosques are communal property, not individuals in the eight categories. Pay for mosques from Sadaqah, not Zakat. (2) Islamic school operating costs—unless the funds go directly to poor students' tuition (then it's permissible as helping the poor). General institutional costs are not Zakat-eligible. (3) Da'wah programs, Islamic lectures, conferences—highly debated whether "Fi Sabilillah" includes this. Strict interpretation: only military jihad (classical view). Moderate interpretation: any striving for Islam's establishment including education and da'wah. Safest: Use Sadaqah for these, not Zakat. (4) Quran printing, Islamic book distribution—same debate as da'wah. Many scholars say this isn't Zakat-eligible. VERIFICATION RESPONSIBILITY: When giving to an organization, you must have reasonable confidence (ghalabat adh-dhann) that they will distribute properly to eligible categories. Request: (1) Clear Zakat policy statement, (2) List of recipient categories they serve, (3) Percentage used for administration (should be reasonable, under 12-15%), (4) Accountability reports or audits. Reputable organizations like Islamic Relief, Zakat Foundation, Penny Appeal, and others have Shariah boards that certify their Zakat distribution. MIXED FUNDS WARNING: Some organizations collect both Zakat and Sadaqah in a combined fund. Ensure your Zakat is designated specifically and tracked separately, or ask them to allocate your payment to pure Zakat distribution, not general operations. LOCAL VS. INTERNATIONAL: Classical scholars preferred local distribution (prioritize your community's poor). However, in wealthy countries with limited local need, sending Zakat to poorer Muslim regions (Syria, Yemen, Palestine, Bangladesh, etc.) is permissible and may achieve greater impact. The principle: benefit to Muslims in need, wherever they are. PRACTICAL RECOMMENDATION: Divide your Zakat—give some directly to individuals you know (personal connection, certainty), and some to verified organizations (reach, efficiency, specialized programs for categories you cannot personally access like refugees or trafficking victims). This balanced approach honors both the classical wisdom and modern realities.
+        </div>
+    </div>
 
-            if(visible === 0) {
-                grid.style.display = "none";
-                noData.style.display = "block";
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>Do children have to pay Zakat? Who is responsible if they own wealth?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            The question of Zakat on a child's wealth is one where the major Islamic schools (madhahib) differ significantly, creating legitimate scholarly debate. Understanding this difference helps parents and guardians make informed decisions for the children under their care. THE CORE QUESTION: Does Zakat apply to wealth owned by a minor (someone who hasn't reached puberty) or a person who is mentally incompetent? POSITION 1—ZAKAT IS OBLIGATORY (Maliki, Shafi'i, Hanbali, and one narration from Hanafi school): Zakat is due on a child's wealth once it reaches Nisab and completes a Hawl, just like an adult's wealth. The guardian/parent is responsible for calculating and paying it on behalf of the child from the child's assets, not the parent's personal money. Evidence: (1) Umar Ibn Al-Khattab رضي الله عنه said, "Trade with the wealth of orphans lest it be eaten up by Zakat" (Bayhaqi, Daraqutni). This indicates Zakat was due on orphans' wealth. (2) The general Quranic command "Establish Salah and give Zakat" (numerous verses) doesn't exclude minors' wealth. (3) Zakat is a property right, not a personal worship (like prayer), so the property itself is subject to purification regardless of the owner's age. Example Application: Your 8-year-old daughter inherited $50,000 from her grandfather. This money is invested on her behalf. Silver Nisab in 2026 = ~$520. Her wealth far exceeds this. On each lunar anniversary, you (as guardian) must calculate 2.5% = $1,250 and pay from her account, not yours. Over 10 years until she's 18, approximately $12,500 of her wealth goes to Zakat. POSITION 2—ZAKAT IS NOT OBLIGATORY (Majority Hanafi position): Zakat is not due on a child's or mentally incompetent person's wealth because Zakat is a worship act (ibadah) requiring intention (niyyah), and minors/incompetent persons cannot form valid intention. They are "mukallaf" (legally accountable). Evidence: (1) The Prophet ﷺ said, "The pen is lifted from three: from the sleeping person until he awakens, from the child until he reaches puberty, and from the insane person until he regains sanity" (Abu Dawud, Tirmidhi). This hadith exempts minors from legal obligations. (2) Zakat requires intention at the time of payment, which a child cannot validly make. (3) All other acts of worship (prayer, fasting, Hajj) are not obligatory on children; Zakat should be the same. Example Application: Same scenario—$50,000 inherited by 8-year-old. No Zakat is due during her minority. Once she reaches puberty (typically 15 years in Islamic law, or earlier if signs of maturity appear), the Hawl begins on her wealth from that point. At age 16, she owes her first Zakat of $1,250 (on whatever amount remains). PRACTICAL CONSIDERATIONS FOR PARENTS: If you follow Position 1 (Maliki/Shafi'i/Hanbali): (1) Keep detailed records of the child's assets, (2) Calculate and pay Zakat annually from the child's wealth (not your money), (3) Consider this an important act of purifying the child's wealth and training them in Islamic financial obligations. If you follow Position 2 (Hanafi): (1) No Zakat is due during minority, (2) Once the child reaches puberty, begin calculating from that point forward, (3) Some Hanafi scholars recommend voluntary Sadaqah from the child's wealth in the amount of Zakat as a precaution and spiritual benefit, even though not obligatory. GIFTED WEALTH: If you give your child money as a gift (birthday, Eid, etc.) and they accumulate significant amounts, the same ruling applies based on the position you follow. However, if the money is truly just "in the child's name" but you control and use it, it's still your wealth and definitely Zakatable on you. EDUCATION SAVINGS (529, RESP, etc.): If you've set up education savings accounts in your child's name, see the specific FAQ on that topic. Generally, if you legally own the account (most 529s), it's your Zakatable wealth. If the child legally owns it, apply the child Zakat ruling you follow. RECOMMENDATION: Consult a knowledgeable local scholar from the madhab you generally follow for your family's specific situation. Both positions are valid within Islamic jurisprudence. The Maliki/Shafi'i/Hanbali position is more precautious (paying is safer), while the Hanafi position offers respite during the child's minority. Either is acceptable.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>What is the ruling on Zakat for retirement accounts (401k, IRA, pension) that I cannot access?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            Retirement accounts present one of the most complex modern Zakat questions because they combine several challenging elements: inaccessibility, penalties for early withdrawal, tax-deferred growth, employer matching, and often impermissible investments. Scholars have developed multiple approaches based on fundamental principles of ownership and accessibility. THE FUNDAMENTAL QUESTION: Is wealth that you legally own but cannot access without penalties subject to current Zakat, or is Zakat deferred until you actually receive it? APPROACH 1—FULL ANNUAL ZAKAT (Strictest Position): Your retirement accounts are legally your property from the moment contributions are made and vested. Therefore, Zakat is due on the full balance annually at 2.5%, regardless of accessibility. Reasoning: (1) You are the legal owner; the account is in your name with your Social Security number. (2) Inaccessibility doesn't negate ownership—prisoners still own their wealth outside prison and owe Zakat. (3) Early withdrawal is POSSIBLE (you CAN access the money), just costly (penalties + taxes). This is a choice, not absolute prevention. (4) The penalty is your decision to pay or not; it doesn't eliminate the Zakat obligation. Application Example: 45-year-old with $300,000 in 401(k). Annual Zakat: $7,500, paid from other liquid sources if the 401(k) cannot be touched. Over 20 years until retirement: $150,000+ in Zakat payments (assuming static balance, though it would grow). This is the position of some strict contemporary scholars. APPROACH 2—DEFERRED ZAKAT (Lenient Position): No Zakat is due during the accumulation phase when funds are locked. Once you retire and start receiving distributions, pay Zakat on the full lump sum once (treating it like newly acquired wealth) or on each distribution as received. Reasoning: (1) True ownership requires "qabd" (possession/control). You don't have real control if accessing it destroys 30-40% of value to penalties and taxes. (2) Analogy to "dayn da'if" (weak debt receivable)—money you're theoretically owed but may never collect. Some scholars allow deferring Zakat on such assets. (3) Hardship principle (la haraj)—requiring annual Zakat on inaccessible funds creates extreme difficulty. Application Example: Same $300,000 at age 45. No Zakat for 20 years. At 65, you retire and receive a $500,000 lump sum distribution. Pay $12,500 Zakat once in the year of receipt, then normal annual Zakat on whatever remains invested or saved. APPROACH 3—PARTIAL ANNUAL ZAKAT (Moderate/Balanced Position): Most mainstream contemporary scholars, including AMJA (Assembly of Muslim Jurists of America) and major Fiqh councils, recommend this middle path: (1) For employee contributions (your own money), pay annual Zakat if the account is accessible (even with penalties). If genuinely inaccessible (locked government pension), some defer. (2) For employer contributions that haven't vested, no Zakat (not your property yet). (3) For employer contributions that have vested, opinions differ—strict scholars say Zakat is due, lenient allow deferring. (4) For investment gains, include in the annual calculation based on accessibility. (5) If paying annual Zakat from other sources creates genuine hardship, scholars allow (as a concession) deferring until withdrawal, then paying one year's Zakat on the amount received. Application Example: $300,000 total—$180,000 your contributions (vested), $90,000 employer match (vested), $30,000 unvested employer contribution. Zakatable amount: $180,000 (definitely) + $90,000 (scholarly difference). Conservative calculation: $270,000 × 2.5% = $6,750 annually from other funds. If this causes hardship, defer and pay later. SPECIAL CONSIDERATIONS: Tax-Deferred Growth: Some scholars argue that since the account includes "future taxes owed" (not truly your money), you could theoretically deduct estimated tax liability before calculating Zakat. Example: $300,000 account, 30% tax bracket = $90,000 future tax, $210,000 net. This is a minority position and requires scholarly guidance. Impermissible Investments: If your 401(k) is invested in conventional mutual funds containing haram stocks (alcohol, interest-based banks, etc.), you have a separate compliance issue beyond Zakat. Prioritize: (1) Switch to Shariah-compliant funds if available, (2) Calculate Zakat on the full balance, (3) Separately purify any haram gains by donating to charity (not as Zakat). Roth IRA (Post-Tax): You already paid taxes on Roth contributions. Some scholars argue you already paid Zakat on this money when earned (as salary savings), so continuous annual Zakat is double-taxation. Others say each year's balance is still Zakatable. Required Minimum Distributions (RMDs): Once you turn 73, mandatory distributions begin. These definitely become Zakatable cash if held until your Zakat date. RECOMMENDATION: This is a complex personal situation requiring consultation with a qualified Mufti who can examine your specific circumstances, income level, account structure, accessibility, and hardship factors. Many scholars will provide concessions for genuine hardship while maintaining the principle that wealth legally owned is Zakatable. The balanced approach (Approach 3) represents mainstream contemporary thinking and is a safe middle path for most Muslims.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>How do I determine if I should follow the Hanafi, Maliki, Shafi'i, or Hanbali position on Zakat?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            The existence of different scholarly positions (ikhtilaf) in Zakat calculation is not a weakness but a mercy (rahmah) from Allah, providing flexibility for diverse circumstances. However, this can create confusion about which position to follow. Understanding the madhahib (schools of jurisprudence) and how to navigate their differences is essential for informed practice. THE FOUR SUNNI SCHOOLS AND THEIR ZAKAT CHARACTERISTICS: HANAFI SCHOOL (most lenient on deductions, strictest on calculations): - Allows deducting ALL debts (short-term and long-term) from Zakatable wealth. - Requires Zakat on all gold/silver jewelry regardless of use (even worn by women regularly). - Uses market/retail value for trade inventory. - Strong position on paying Zakat on children's wealth. - Calculates Nisab based on silver (lower threshold). Geographical prevalence: Historically dominant in Turkey, Central Asia, Indian subcontinent, parts of Arab world. MALIKI SCHOOL (balanced, community-focused): - Only deducts immediately due debts, not long-term obligations. - Exempts women's customary jewelry from Zakat (up to reasonable cultural norms). - Allows one-time Zakat on hard-to-collect debts receivable (when actually received). - Strong emphasis on local Zakat distribution before sending abroad. Geographical prevalence: North Africa (Morocco, Algeria, Tunisia, Libya), West Africa, some Gulf regions. SHAFI'I SCHOOL (detailed, analytical): - Moderate on debt deduction (short-term yes, long-term debatable). - Exempts women's regularly worn jewelry within customary norms. - Allows valuing trade inventory at cost price (vs. Hanafi's retail price). - Detailed categories for agricultural Zakat with specific calculations. Geographical prevalence: Southeast Asia (Indonesia, Malaysia), East Africa, parts of Middle East (Yemen, some Levant). HANBALI SCHOOL (textually strict, often overlaps with Shafi'i): - Similar to Shafi'i on most issues. - Strict on Zakat obligations and minimal exemptions. - Clear textual evidence required for any exemption. Geographical prevalence: Saudi Arabia, parts of Gulf, growing in Western converts through Salafi influence. HOW TO CHOOSE YOUR APPROACH: Option 1—Follow Your Family/Cultural Madhab: If you're from a traditionally Hanafi, Maliki, Shafi'i, or Hanbali background, continue with your inherited school for consistency in all matters, not just Zakat. This maintains scholarly coherence and prevents "school shopping" for convenient rulings (which is impermissible). Option 2—Follow a Qualified Local Scholar: If you're a convert, mixed background, or uncertain, consult a knowledgeable local Mufti or Imam and consistently follow their guidance. They'll apply scholarly reasoning to your specific situation. Option 3—Follow the Most Cautious Position (Wara'): When schools differ, you can voluntarily adopt the strictest position to ensure your obligation is certainly fulfilled. Example: If Hanafi says no Zakat on your jewelry (because it's necessary) but Maliki says yes, paying it ensures certainty. This is called "khuruj min al-khilaf" (exiting from the difference) and is recommended for the scrupulous. WHAT YOU CANNOT DO: School Shopping (Tatabbu' ar-Rukhas): Cherry-picking the most lenient ruling from each school for different issues is impermissible. Example: Following Maliki to exempt your jewelry from Zakat, then switching to Hanafi to deduct your mortgage, then to Shafi'i for inventory valuation—this is invalid and defeats the coherence of Islamic law. Mixed Approaches: Following different schools for different types of Zakat in the same year without scholarly guidance creates inconsistency. PRACTICAL GUIDANCE FOR 2026: For most Muslims, especially in the West: (1) Determine if your family has a traditional madhab—if yes, follow it consistently. (2) If not, or if you're uns, consult a qualified local scholar and follow their guidance across all your Zakat questions. (3) When in doubt between two positions, choose the one that results in paying MORE Zakat (this is always safer spiritually). (4) Don't let madhab differences delay your Zakat—pick a valid scholarly position and act. (5) For complex modern issues (crypto, retirement accounts), contemporary scholars from all madhahib are developing new positions. Follow recent, credible fatawa from recognized councils (AMJA, ECFR, IFA-Jeddah, AAOIFI). UNITY IN ESSENTIALS: All four madhahib agree on the fundamentals: - Zakat is obligatory at 2.5% (for most categories). - Nisab thresholds (87.48g gold, 612.36g silver). - Hawl (one lunar year). - General categories of Zakatable and exempt wealth. The differences are in details and applications. Don't let these differences divide Muslims or cause paralysis. Choose a path, be consistent, and fulfill your obligation with sincerity. </div> </div>
+            <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+            <span>Is Zakat calculated on the Islamic calendar (lunar year) or Gregorian calendar (solar year)?</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+            This question affects not just when you pay Zakat but how much you pay, because the difference between lunar and solar years creates a significant mathematical impact over time. The Islamic ruling is absolutely clear: Zakat MUST be calculated on the lunar calendar (Hijri year), not the Gregorian solar calendar. THE TEXTUAL EVIDENCE: The Quran establishes the lunar calendar for Islamic months: "Indeed, the number of months with Allah is twelve [lunar] months in the register of Allah [from] the day He created the heavens and the earth" (Quran 9:36). The Hadith specifying Zakat's "Hawl" (annual cycle) refers to the lunar year, as this was the only calendar used by the Prophet ﷺ and Sahaba. When early scholars specified "one year," they universally meant the 354-355 day lunar year, not the 365-day solar year. MATHEMATICAL DIFFERENCE: Lunar year: 354-355 days (12 lunar months). Solar year: 365 days (approximately 11 days longer). Over 33 lunar years = 32 solar years. This means every 33 lunar years, you pay one additional year of Zakat compared to someone incorrectly using the solar calendar. PRACTICAL CALCULATION: If you have $100,000 Zakatable wealth: Lunar year Zakat (every 354 days): $2,500 per year = 33 payments in 33 years = $82,500 total over 32 solar years. Solar year Zakat (every 365 days): $2,500 per year = 32 payments in 32 years = $80,000 total. Difference: $2,500 underpaid over 32 years by using solar calendar. This accumulates to massive underpayment over a lifetime. CHOOSING YOUR ZAKAT DATE: Pick a specific date in the Islamic calendar that's easy to remember: - 1st of Ramadan (most popular, allows paying during the blessed month). - 1st of Muharram (Islamic New Year). - Any other significant Islamic date (Eid al-Fitr, Eid al-Adha, etc.). Examples for 2026: - Ramadan 1, 1447 AH = approximately February 28, 2026 CE. - Muharram 1, 1448 AH = approximately July 7, 2026 CE. Once you choose your Islamic date, keep it consistent every year. The Gregorian equivalent will shift by ~11 days earlier each solar year. CONVERSION TOOLS: Use Islamic calendar apps or websites (IslamicFinder, Salah Times, Hijri-Gregorian converters) to: (1) Determine when your Islamic Zakat date falls in the Gregorian calendar each year. (2) Set annual reminders. (3) Track your lunar year progress. COMPANIES WITH FISCAL YEARS: If you're a business owner and your company operates on a Gregorian fiscal year (January-December or any solar cycle), you must still calculate Zakat on the lunar year. This means your "Zakat fiscal year" will be different from your "tax fiscal year." Example: Your company's tax year ends December 31. Your Zakat year ends Ramadan 1 (shifts yearly in Gregorian calendar). You'll prepare two different financial snapshots for different purposes. THE ERROR OF SOLAR CALCULATION: Some Muslims (especially in the West) mistakenly pay Zakat on January 1st or their solar birthday each year because it's easier to remember. This is NOT valid according to any school of Islamic jurisprudence. If you've been doing this, you must: (1) Recognize the error and repent. (2) Recalculate all past Zakat on the proper lunar timeline. (3) Pay any shortfall (difference between what you paid on solar vs. what was due on lunar). (4) Switch immediately to a lunar calendar Zakat date. ADVANCED CONSIDERATION—MULTIPLE ASSETS WITH DIFFERENT HAWLS: Technically, each Zakatable asset (gold acquired in Muharram, cash saved in Rajab, business started in Dhul Hijjah) has its own Hawl starting from acquisition. This would create multiple Zakat dates throughout the year, which is impractical. SOLUTION: Most scholars allow combining all assets to a single annual lunar date for ease, calculating on everything you own on that date. This usually results in paying slightly MORE Zakat (because some assets haven't completed their full Hawl yet), which is preferable to less. WHY THE LUNAR CALENDAR MATTERS SPIRITUALLY: Using the Islamic calendar for Zakat: (1) Maintains connection to Islamic timekeeping and lunar months' blessings. (2) Ensures mathematical correctness and lifetime obligation fulfillment. (3) Aligns with the Ramadan-Zakat tradition (many Muslims pay during Ramadan, which shifts in the Gregorian year). (4) Honors the Prophetic methodology and Sahaba's practice. BOTTOM LINE FOR 2026: Choose a fixed date in the Hijri calendar (like Ramadan 1, 1447 AH). Use a converter to find its Gregorian equivalent for this year (February 28, 2026). Next year, Ramadan 1, 1448 AH will fall around February 17, 2027 (11 days earlier). Continue this pattern throughout your life, ensuring you're paying on the true Islamic annual cycle that Allah legislated.
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <div class="disclaimer">
+        <strong>⚖️ OFFICIAL LEGAL DISCLAIMER ⚖️</strong><br><br>
+        Hisabify provides these fatawa (Islamic legal rulings) for educational and informational purposes only. While we compile rulings from authenticated classical sources and contemporary scholars, individual financial circumstances vary significantly and may require specific scholarly analysis. We strongly recommend consulting a qualified local Mufti or Islamic scholar for personalized Zakat verdicts, especially for complex situations involving business partnerships, inheritance disputes, international assets, or modern financial instruments. Zakat is a pillar of Islam and a serious obligation—fulfill it with proper knowledge and sincere intention. Hisabify assumes no liability for actions taken based on the general information provided herein. Always verify calculations and seek professional Islamic financial advice when needed.
+    </div>
+    <p style="margin-top: 25px; font-size: 15px; color: #cbd5e1;">
+        <i class="fas fa-moon" style="color: var(--gold); margin-right: 8px;"></i>
+        &copy; 2026 Hisabify International Digital Shariah Authority. 
+        <br>
+        Empowering Muslims Worldwide with Authentic Zakat Knowledge.
+    </p>
+    <p style="margin-top: 15px; font-size: 13px; color: #64748b;">
+        Built with devotion to Islamic scholarship and modern financial clarity.
+    </p>
+</footer>
+
+<script>
+    function filter() {
+        let val = document.getElementById('searchInput').value.toLowerCase();
+        let cards = document.getElementsByClassName('card');
+        let grid = document.getElementById('grid');
+        let noData = document.getElementById('noData');
+        let visible = 0;
+
+        for (let i = 0; i < cards.length; i++) {
+            let keys = cards[i].getAttribute('data-key');
+            if (keys.includes(val)) {
+                cards[i].style.display = "flex";
+                visible++;
             } else {
-                grid.style.display = "grid";
-                noData.style.display = "none";
+                cards[i].style.display = "none";
             }
         }
-    </script>
+
+        if(visible === 0) {
+            grid.style.display = "none";
+            noData.style.display = "block";
+        } else {
+            grid.style.display = "grid";
+            noData.style.display = "none";
+        }
+    }
+
+    function toggleFAQ(element) {
+        const answer = element.nextElementSibling;
+        const allQuestions = document.querySelectorAll('.faq-question');
+        const allAnswers = document.querySelectorAll('.faq-answer');
+        
+        // Close all other FAQs
+        allQuestions.forEach(q => {
+            if (q !== element) {
+                q.classList.remove('active');
+            }
+        });
+        allAnswers.forEach(a => {
+            if (a !== answer) {
+                a.classList.remove('active');
+            }
+        });
+        
+        // Toggle current FAQ
+        element.classList.toggle('active');
+        answer.classList.toggle('active');
+    }
+</script>
 </body>
-</html> 
+</html>
