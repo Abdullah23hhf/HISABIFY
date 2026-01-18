@@ -1,4 +1,16 @@
 User-agent: *
-Allow: /
+# In main pages ko Google index karega (SEO safe)
+Allow: /index.html
+Allow: /fatawa.html
+Allow: /nisab.html
+Allow: /calculators.html
+Allow: /knowledge-hub.html
+Allow: /references.html
+Allow: /contact.html
+Allow: /disclaimer.html
+
+# In paths ko block karein taake ads ke scripts scan na hon
+Disallow: /cgi-bin/
+Disallow: /scripts/
 
 Sitemap: https://hisabify.online/sitemap.xml
