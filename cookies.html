@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Cookie Policy | Hisabify Luxury Transparency Portal</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
@@ -17,19 +17,22 @@
             --text-main: #1e293b;
         }
 
+        /* Essential Reset for Mobile */
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { overflow-x: hidden; -webkit-text-size-adjust: 100%; }
         body { 
             font-family: 'Montserrat', sans-serif; 
             background-color: var(--soft-cream); 
             color: var(--text-main); 
             line-height: 1.8;
             overflow-x: hidden;
+            width: 100%;
         }
 
-        /* Luxury Header */
+        /* Luxury Header - Mobile Optimized */
         header { 
-            background: rgba(255, 255, 255, 0.95); 
-            padding: 1.5rem 8%; 
+            background: rgba(255, 255, 255, 0.98); 
+            padding: 1rem 8%; 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
@@ -37,27 +40,32 @@
             border-image: var(--gold-gradient) 1;
             position: sticky; top: 0; z-index: 1000;
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            min-height: 70px;
         }
         .logo { 
             font-family: 'Cinzel', serif; 
-            font-size: 1.8rem; 
+            font-size: clamp(1.2rem, 4vw, 1.8rem); 
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-decoration: none; 
             font-weight: 900; 
             letter-spacing: 2px;
+            flex-shrink: 0;
         }
         .back-link { 
             text-decoration: none; 
             color: var(--royal-green); 
             font-weight: 700; 
-            font-size: 0.75rem; 
+            font-size: clamp(0.6rem, 2vw, 0.75rem); 
             letter-spacing: 1px;
             border: 2px solid var(--gold-solid); 
-            padding: 0.7rem 1.8rem; 
+            padding: 0.5rem 1rem; 
             border-radius: 50px; 
             transition: 0.4s all ease;
+            text-align: center;
+            white-space: nowrap;
         }
         .back-link:hover { 
             background: var(--gold-gradient); 
@@ -65,53 +73,61 @@
             box-shadow: 0 4px 15px rgba(191, 149, 63, 0.4);
         }
 
-        /* Hero Section */
+        /* Hero Section - Mobile Precision Spacing */
         .policy-hero { 
-            padding: 100px 5% 60px; 
+            padding: clamp(80px, 15vw, 120px) 5% clamp(60px, 10vw, 80px); 
             text-align: center; 
             background: var(--royal-green);
             color: white;
             position: relative;
-            clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+            /* Clip-path maintained as requested */
+            clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
         }
         .policy-hero h1 { 
             font-family: 'Cinzel', serif;
-            font-size: 3.5rem; 
+            font-size: clamp(2rem, 8vw, 3.5rem); 
             margin-bottom: 15px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.1;
         }
         .gold-divider {
             height: 3px;
-            width: 100px;
+            width: 80px;
             background: var(--gold-gradient);
             margin: 20px auto;
         }
-        .last-update { font-size: 0.9rem; color: #a7f3d0; letter-spacing: 2px; font-weight: 600; }
+        .last-update { font-size: clamp(0.7rem, 2.5vw, 0.9rem); color: #a7f3d0; letter-spacing: 2px; font-weight: 600; }
 
-        .container { max-width: 1000px; margin: 80px auto; padding: 0 30px; }
+        .container { 
+            max-width: 1000px; 
+            margin: clamp(40px, 8vw, 80px) auto; 
+            padding: 0 clamp(15px, 5vw, 30px); 
+        }
 
         /* Content Luxury Cards */
         .card { 
             background: white; 
-            padding: 40px; 
+            padding: clamp(25px, 5vw, 40px); 
             border-radius: 20px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            margin-bottom: 50px;
+            margin-bottom: clamp(30px, 6vw, 50px);
             border-top: 5px solid var(--gold-solid);
+            word-wrap: break-word;
         }
         
         h2 { 
             font-family: 'Cinzel', serif;
-            font-size: 1.8rem; 
+            font-size: clamp(1.3rem, 5vw, 1.8rem); 
             color: var(--royal-green); 
             margin-bottom: 25px; 
             display: flex; 
-            align-items: center; 
+            align-items: flex-start; 
             gap: 15px;
+            line-height: 1.3;
         }
-        h2 i { color: var(--gold-solid); }
+        h2 i { color: var(--gold-solid); flex-shrink: 0; margin-top: 5px; }
 
-        p { margin-bottom: 20px; font-size: 1.1rem; color: #334155; }
+        p { margin-bottom: 20px; font-size: clamp(1rem, 2.8vw, 1.1rem); color: #334155; }
         
         .feature-list { list-style: none; margin-bottom: 25px; }
         .feature-list li { 
@@ -121,10 +137,25 @@
             align-items: flex-start;
             gap: 12px;
         }
-        .feature-list li i { color: var(--gold-solid); margin-top: 5px; }
+        .feature-list li i { color: var(--gold-solid); margin-top: 6px; flex-shrink: 0; }
 
-        /* Premium Table */
-        .cookie-table-wrapper { overflow-x: auto; margin: 30px 0; border-radius: 15px; border: 1px solid #e2e8f0; }
+        /* Table Responsiveness - Improved with indicator */
+        .table-hint {
+            display: none;
+            font-size: 0.75rem;
+            color: var(--gold-solid);
+            text-align: right;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .cookie-table-wrapper { 
+            overflow-x: auto; 
+            margin: 30px 0; 
+            border-radius: 15px; 
+            border: 1px solid #e2e8f0;
+            -webkit-overflow-scrolling: touch; /* Smooth iOS scroll */
+        }
         .cookie-table { width: 100%; border-collapse: collapse; min-width: 600px; }
         .cookie-table th { background: var(--royal-green); color: #fff; padding: 20px; text-align: left; }
         .cookie-table td { padding: 20px; border-bottom: 1px solid #f1f5f9; background: #fff; }
@@ -132,9 +163,10 @@
         .highlight-box { 
             background: linear-gradient(to right, #f8fafc, #f1f5f9); 
             border-left: 5px solid var(--royal-green); 
-            padding: 30px; 
+            padding: clamp(20px, 4vw, 30px); 
             margin: 40px 0;
             font-style: italic;
+            font-size: 0.95rem;
         }
 
         footer { 
@@ -142,12 +174,36 @@
             color: #d1d5db; 
             padding: 80px 5% 40px; 
             text-align: center;
+            width: 100%;
         }
-        .footer-logo { font-family: 'Cinzel', serif; font-size: 2rem; color: white; margin-bottom: 20px; display: block; }
+        .footer-logo { font-family: 'Cinzel', serif; font-size: clamp(1.5rem, 6vw, 2rem); color: white; margin-bottom: 20px; display: block; }
         
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin: 15px 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding-top: 15px;
+        }
+
+        /* Mobile Breakpoints Fix */
         @media (max-width: 768px) {
-            .policy-hero h1 { font-size: 2.2rem; }
-            .card { padding: 25px; }
+            header { padding: 1rem 5%; }
+            .container { margin-top: 20px; }
+            .policy-hero { clip-path: polygon(0 0, 100% 0, 100% 92%, 50% 100%, 0 92%); }
+            .table-hint { display: block; }
+            h2 { align-items: center; }
+            .footer-links a { font-size: 11px !important; margin: 0 5px !important; }
+        }
+
+        @media (max-width: 480px) {
+            header { flex-direction: row; justify-content: space-between; gap: 10px; }
+            .back-link { padding: 0.4rem 0.8rem; letter-spacing: 0; }
+            .policy-hero { padding-top: 60px; }
+            .highlight-box { border-left-width: 3px; }
         }
     </style>
 </head>
@@ -177,6 +233,7 @@
             <h2><i class="fas fa-layer-group"></i> How Hisabify Classifies Cookies</h2>
             <p>We use different tiers of cookies to maintain the luxury and functionality of the <strong>Hisabify</strong> portal. Each category serves a specific purpose in ensuring your Zakat is calculated without error:</p>
             
+            <div class="table-hint">Swipe to view details <i class="fas fa-arrow-right"></i></div>
             <div class="cookie-table-wrapper">
                 <table class="cookie-table">
                     <thead>
@@ -211,9 +268,9 @@
             <h2><i class="fas fa-shield-halved"></i> Global Third-Party Partners</h2>
             <p>To support our free mission of providing accurate Zakat tools, <strong>Hisabify</strong> collaborates with world-class partners. These entities may set cookies on your browser through our site:</p>
             <ul class="feature-list">
-                <li><i class="fas fa-check-circle"></i> <strong>Google AdSense:</strong> <strong>Hisabify</strong> uses the DoubleClick DART cookie to serve ads based on your visit to our site and other financial platforms. This ensures the ads you see are relevant and high-quality.</li>
-                <li><i class="fas fa-check-circle"></i> <strong>Google Analytics:</strong> Helps <strong>Hisabify</strong> analyze global traffic flow to ensure our servers remain fast and responsive for users in every time zone.</li>
-                <li><i class="fas fa-check-circle"></i> <strong>Infrastructure CDNs:</strong> Used to load our elegant fonts and complex mathematical scripts instantly, ensuring <strong>Hisabify</strong> performs flawlessly on any device.</li>
+                <li><i class="fas fa-check-circle"></i> <span><strong>Google AdSense:</strong> <strong>Hisabify</strong> uses the DoubleClick DART cookie to serve ads based on your visit to our site and other financial platforms. This ensures the ads you see are relevant and high-quality.</span></li>
+                <li><i class="fas fa-check-circle"></i> <span><strong>Google Analytics:</strong> Helps <strong>Hisabify</strong> analyze global traffic flow to ensure our servers remain fast and responsive for users in every time zone.</span></li>
+                <li><i class="fas fa-check-circle"></i> <span><strong>Infrastructure CDNs:</strong> Used to load our elegant fonts and complex mathematical scripts instantly, ensuring <strong>Hisabify</strong> performs flawlessly on any device.</span></li>
             </ul>
         </div>
 
@@ -227,9 +284,9 @@
             <h2><i class="fas fa-user-shield"></i> Your Authority & Control</h2>
             <p>As a valued user of <strong>Hisabify</strong>, you hold full authority over your digital footprint. You can choose to:</p>
             <ol class="feature-list" style="margin-left: 20px;">
-                <li><strong>Browser Settings:</strong> Adjust your Chrome, Safari, or Firefox settings to block all cookies from <strong>Hisabify</strong>.</li>
-                <li><strong>Opt-Out of Tracking:</strong> Use Google's official opt-out tools to prevent your data from being used by Analytics or AdSense.</li>
-                <li><strong>Clear Session Data:</strong> Manually delete cookies after finishing your Zakat calculation for the year.</li>
+                <li><span><strong>Browser Settings:</strong> Adjust your Chrome, Safari, or Firefox settings to block all cookies from <strong>Hisabify</strong>.</span></li>
+                <li><span><strong>Opt-Out of Tracking:</strong> Use Google's official opt-out tools to prevent your data from being used by Analytics or AdSense.</span></li>
+                <li><span><strong>Clear Session Data:</strong> Manually delete cookies after finishing your Zakat calculation for the year.</span></li>
             </ol>
             <div class="highlight-box">
                 "Please note: <strong>Hisabify</strong> relies on certain cookies to remember your input between steps. Disabling them may require you to re-enter your asset values if the page refreshes."
@@ -251,12 +308,11 @@
         <span class="footer-logo">HISABIFY</span>
         <p style="max-width: 600px; margin: 0 auto 30px;">The world's most transparent Zakat and Shariah compliance portal. Built for the modern Ummah with integrity, precision, and Amanah.</p>
         <p>&copy; 2026 Hisabify Global. All Rights Reserved.</p>
-        <div style="margin-top: 15px; margin-bottom: 15px; border-top: 1px solid rgba(212, 175, 55, 0.2); padding-top: 15px;">
-    <a href="privacy.html" style="color: #d4af37; text-decoration: none; font-size: 13px; margin: 0 10px; font-weight: 600;">Privacy Policy</a> |
-    <a href="terms.html" style="color: #d4af37; text-decoration: none; font-size: 13px; margin: 0 10px; font-weight: 600;">Terms & Conditions</a> |
-    <a href="contact.html" style="color: #d4af37; text-decoration: none; font-size: 13px; margin: 0 10px; font-weight: 600;">Contact Us</a>
-</div>
-
+        <div class="footer-links">
+            <a href="privacy.html" style="color: #d4af37; text-decoration: none; font-size: 13px; margin: 0 10px; font-weight: 600;">Privacy Policy</a> <span style="color: rgba(212, 175, 55, 0.5)">|</span>
+            <a href="terms.html" style="color: #d4af37; text-decoration: none; font-size: 13px; margin: 0 10px; font-weight: 600;">Terms & Conditions</a> <span style="color: rgba(212, 175, 55, 0.5)">|</span>
+            <a href="contact.html" style="color: #d4af37; text-decoration: none; font-size: 13px; margin: 0 10px; font-weight: 600;">Contact Us</a>
+        </div>
     </footer>
 
     <script src="brand.js"></script>
