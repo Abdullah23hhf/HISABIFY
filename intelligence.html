@@ -21,114 +21,142 @@
             --text-dark: #0f172a;
         }
 
+        /* Basic Resets */
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #f8fafc; color: var(--text-dark); line-height: 1.8; overflow-x: hidden; width: 100%; -webkit-font-smoothing: antialiased; }
-
-        /* Navigation */
-        header { 
-            background: var(--white); border-bottom: 3px solid var(--gold); 
-            position: sticky; top: 0; z-index: 1000; padding: 15px 6%;
-            display: flex; justify-content: space-between; align-items: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background: #f8fafc; 
+            color: var(--text-dark); 
+            line-height: 1.6; 
+            overflow-x: hidden; 
+            width: 100%; 
+            -webkit-font-smoothing: antialiased; 
         }
-        .logo-area { display: flex; align-items: center; text-decoration: none; gap: 12px; }
-        .logo-icon { background: var(--brand-green); color: var(--gold); width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
-        .site-name { font-family: 'Cinzel', serif; font-size: 24px; color: var(--brand-green); font-weight: bold; letter-spacing: 2px; }
+
+        /* Navigation - Improved for Mobile */
+        header { 
+            background: var(--white); 
+            border-bottom: 3px solid var(--gold); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            padding: 10px 5%;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            flex-wrap: wrap; /* Allows wrapping on very small screens */
+        }
+        .logo-area { display: flex; align-items: center; text-decoration: none; gap: 8px; }
+        .logo-icon { background: var(--brand-green); color: var(--gold); width: 35px; height: 35px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+        .site-name { font-family: 'Cinzel', serif; font-size: clamp(18px, 4vw, 24px); color: var(--brand-green); font-weight: bold; letter-spacing: 1px; }
         
-        .nav-buttons { display: flex; gap: 10px; }
-        .nav-btn { text-decoration: none; font-weight: 800; font-size: 11px; padding: 12px 18px; border-radius: 10px; transition: 0.3s; text-transform: uppercase; white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; }
+        .nav-buttons { display: flex; gap: 8px; }
+        .nav-btn { text-decoration: none; font-weight: 800; font-size: 10px; padding: 8px 12px; border-radius: 8px; transition: 0.3s; text-transform: uppercase; white-space: nowrap; display: inline-flex; align-items: center; justify-content: center; min-height: 38px; }
         .btn-home { border: 2px solid var(--brand-green); color: var(--brand-green); }
-        .btn-home:hover { background: var(--brand-green); color: white; }
         .btn-calc { background: var(--brand-green); color: var(--gold); }
 
-        /* Hero Section */
+        /* Hero Section - Optimized Text */
         .hero { 
             background: linear-gradient(135deg, #052e16 0%, #0a4d25 100%); 
-            color: white; padding: 100px 20px; text-align: center; position: relative;
+            color: white; 
+            padding: 60px 20px 100px; 
+            text-align: center; 
         }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 8vw, 60px); margin-bottom: 20px; line-height: 1.2; padding: 0 10px; }
-        .hero p { font-size: clamp(16px, 4vw, 22px); max-width: 850px; margin: 0 auto; opacity: 0.9; font-weight: 300; padding: 0 10px; }
-        .live-indicator { margin-top: 30px; display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.1); padding: 10px 25px; border-radius: 50px; font-weight: 800; font-size: 12px; color: #34d399; }
-        .dot { width: 10px; height: 10px; background: #34d399; border-radius: 50%; animation: blink 1.5s infinite; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 7vw, 55px); margin-bottom: 15px; line-height: 1.2; }
+        .hero p { font-size: clamp(14px, 3.5vw, 19px); max-width: 800px; margin: 0 auto; opacity: 0.9; font-weight: 300; }
+        .live-indicator { margin-top: 25px; display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); padding: 8px 18px; border-radius: 50px; font-weight: 800; font-size: clamp(10px, 2.5vw, 12px); color: #34d399; }
+        .dot { width: 8px; height: 8px; background: #34d399; border-radius: 50%; animation: blink 1.5s infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+        /* Container Layout */
+        .container { 
+            max-width: 1200px; 
+            margin: -50px auto 60px; 
+            padding: 0 15px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 30px; 
+            width: 100%; 
+        }
 
-        /* Main Container */
-        .container { max-width: 1250px; margin: -60px auto 100px; padding: 0 20px; display: grid; gap: 40px; width: 100%; }
+        .intel-card { 
+            background: var(--bg-glass); 
+            border-radius: 20px; 
+            padding: clamp(20px, 5vw, 40px); 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06); 
+            border: 1px solid rgba(198, 163, 6, 0.15); 
+            width: 100%;
+        }
+        .section-tag { color: var(--gold); font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; display: block; margin-bottom: 10px; text-align: center; font-size: 11px; }
+        .section-title { font-family: 'Playfair Display', serif; color: var(--brand-green); font-size: clamp(22px, 5vw, 32px); margin-bottom: 25px; text-align: center; line-height: 1.3; }
 
-        .intel-card { background: var(--bg-glass); border-radius: 25px; padding: clamp(20px, 5vw, 60px); box-shadow: 0 40px 80px rgba(0,0,0,0.08); border: 1px solid rgba(198, 163, 6, 0.2); overflow: hidden; }
-        .section-tag { color: var(--gold); font-weight: 800; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 10px; text-align: center; font-size: 13px; }
-        .section-title { font-family: 'Playfair Display', serif; color: var(--brand-green); font-size: clamp(26px, 5vw, 42px); margin-bottom: 30px; text-align: center; line-height: 1.3; }
-
-        /* Calculation Engine */
-        .purity-engine { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; background: #f1f5f9; padding: clamp(20px, 4vw, 40px); border-radius: 20px; }
-        .input-box { display: flex; flex-direction: column; gap: 8px; }
-        .input-box label { font-weight: 800; font-size: 13px; color: var(--brand-green); }
-        .input-box input, .input-box select { padding: 15px; border: 2px solid #cbd5e1; border-radius: 12px; font-size: 16px; font-weight: 700; width: 100%; appearance: none; -webkit-appearance: none; background-color: #fff; }
-        .input-box select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23052e16' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 15px center; background-size: 18px; }
+        /* Calculation Engine - Responsive Grid */
+        .purity-engine { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+            gap: 15px; 
+            background: #f1f5f9; 
+            padding: 20px; 
+            border-radius: 15px; 
+        }
+        .input-box { display: flex; flex-direction: column; gap: 6px; }
+        .input-box label { font-weight: 800; font-size: 12px; color: var(--brand-green); }
+        .input-box input, .input-box select { 
+            padding: 12px; 
+            border: 2px solid #cbd5e1; 
+            border-radius: 10px; 
+            font-size: 16px; 
+            width: 100%; 
+            background-color: #fff;
+        }
         
-        .calc-action-btn { grid-column: 1 / -1; background: var(--brand-green); color: var(--gold); border: none; padding: 22px; border-radius: 12px; font-size: 18px; font-weight: 900; cursor: pointer; transition: 0.4s; min-height: 60px; -webkit-tap-highlight-color: transparent; }
-        .calc-action-btn:hover { background: #06441d; transform: translateY(-2px); }
+        .calc-action-btn { 
+            grid-column: 1 / -1; 
+            background: var(--brand-green); 
+            color: var(--gold); 
+            border: none; 
+            padding: 18px; 
+            border-radius: 10px; 
+            font-size: 16px; 
+            font-weight: 900; 
+            cursor: pointer; 
+            transition: 0.3s;
+        }
 
-        .result-display { display: none; margin-top: 30px; padding: clamp(20px, 4vw, 30px); border-radius: 20px; background: #fff; border: 3px dashed var(--gold); text-align: center; animation: slideUp 0.5s ease; word-wrap: break-word; }
-        
-        /* Table Responsiveness */
+        /* Table Design - Scroll Fixed */
         .table-wrapper { 
             overflow-x: auto; 
             -webkit-overflow-scrolling: touch; 
-            margin: 20px -5px 0; 
-            border-radius: 15px; 
-            background: white;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+            border-radius: 12px; 
+            border: 1px solid #e2e8f0;
         }
-        .matrix-table { width: 100%; border-collapse: collapse; min-width: 650px; }
-        .matrix-table th { background: var(--brand-green); color: var(--gold); padding: 20px 15px; text-align: left; font-size: 15px; }
-        .matrix-table td { padding: 20px 15px; border-bottom: 1px solid #e2e8f0; font-size: 14px; background: white; line-height: 1.4; }
+        .matrix-table { width: 100%; border-collapse: collapse; min-width: 500px; }
+        .matrix-table th { background: var(--brand-green); color: var(--gold); padding: 15px; text-align: left; font-size: 14px; }
+        .matrix-table td { padding: 15px; border-bottom: 1px solid #e2e8f0; font-size: 13px; background: white; }
 
-        /* Content Blocks */
-        .content-rich { max-width: 900px; margin: 0 auto; padding: 0 10px; width: 100%; }
-        .content-rich h2 { font-family: 'Playfair Display', serif; font-size: clamp(24px, 5vw, 36px); color: var(--brand-green); margin: 50px 0 20px; line-height: 1.2; }
-        .content-rich p { font-size: clamp(16px, 4vw, 19px); color: #475569; margin-bottom: 25px; text-align: left; }
-        .content-rich li { padding: 15px 0; border-bottom: 1px solid #e2e8f0; font-size: 16px; display: flex; align-items: flex-start; gap: 12px; }
-        .content-rich li i { color: var(--gold); flex-shrink: 0; margin-top: 5px; }
+        /* Content Sections */
+        .content-rich { max-width: 800px; margin: 0 auto; width: 100%; }
+        .content-rich h2 { font-family: 'Playfair Display', serif; font-size: clamp(20px, 5vw, 28px); color: var(--brand-green); margin: 40px 0 15px; }
+        .content-rich p { font-size: 16px; color: #475569; margin-bottom: 20px; }
+        .content-rich li { padding: 12px 0; border-bottom: 1px solid #e2e8f0; font-size: 15px; display: flex; align-items: flex-start; gap: 10px; }
+        .content-rich li i { color: var(--gold); margin-top: 5px; }
 
         /* Footer */
-        footer { background: var(--brand-green); color: white; padding: 60px 20px; text-align: center; width: 100%; }
-        .footer-logo { font-family: 'Cinzel', serif; font-size: 30px; color: var(--gold); margin-bottom: 15px; }
-        .footer-links-container { margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+        footer { background: var(--brand-green); color: white; padding: 40px 20px; text-align: center; }
+        .footer-logo { font-family: 'Cinzel', serif; font-size: 24px; color: var(--gold); margin-bottom: 10px; }
+        .footer-links-container { margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
 
-        /* Tablet and Mobile Refinements */
-        @media (max-width: 992px) {
-            .container { margin-top: -50px; }
-        }
-
+        /* Mobile Adjustments */
         @media (max-width: 768px) {
-            header { padding: 12px 15px; flex-direction: column; gap: 15px; text-align: center; }
-            .nav-buttons { width: 100%; justify-content: center; }
-            .nav-btn { flex: 1; max-width: 150px; }
-            .site-name { font-size: 20px; }
-            .hero { padding: 60px 15px; }
-            .hero h1 { font-size: 36px; }
-            .container { margin-top: -30px; gap: 25px; padding: 0 15px; }
-            .intel-card { padding: 25px 20px; border-radius: 20px; }
-            .purity-engine { grid-template-columns: 1fr; padding: 20px; }
-            .calc-action-btn { font-size: 16px; padding: 18px; }
-            .content-rich h2 { margin: 30px 0 15px; }
-            .scroll-hint { display: block; text-align: center; font-size: 11px; color: #94a3b8; margin-bottom: 8px; font-weight: bold; }
+            header { flex-direction: row; padding: 10px 15px; }
+            .hero { padding-top: 40px; }
+            .container { margin-top: -40px; }
+            .calc-action-btn { font-size: 14px; }
+            .scroll-hint { display: block; text-align: center; font-size: 10px; color: #94a3b8; margin-bottom: 5px; }
         }
-
-        @media (max-width: 480px) {
-            .site-name { font-size: 18px; letter-spacing: 1px; }
-            .logo-icon { width: 38px; height: 38px; font-size: 18px; }
-            .nav-btn { font-size: 9px; padding: 10px 8px; }
-            .hero h1 { font-size: 30px; }
-            .hero p { font-size: 15px; }
-        }
-
-        /* Helper class for mobile table hint */
-        .scroll-hint { display: none; }
-
-        @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        
+        .result-display { display: none; margin-top: 20px; padding: 20px; border-radius: 15px; background: #fff; border: 2px dashed var(--gold); text-align: center; }
     </style>
 </head>
 <body>
@@ -148,16 +176,11 @@
         <h1>Zakat Intelligence Matrix 2026</h1>
         <p>The exclusive precision engine for high-net-worth Shariah-compliant wealth management.</p>
         <div class="live-indicator" id="syncStatus">
-            <div class="dot"></div> SYNCING BINANCE LIVE FEED...
+            <div class="dot"></div> SYNCING BINANCE LIVE...
         </div>
     </section>
 
-    <div style="display: flex; justify-content: center; margin: 20px 0; width: 100%; overflow: hidden;">
-
-    </div>
-
     <div class="container">
-        
         <div class="intel-card">
             <span class="section-tag">Proprietary Technology</span>
             <h2 class="section-title">Gold Karat Intelligence Engine</h2>
@@ -185,21 +208,20 @@
                 </div>
                 <div class="input-box">
                     <label>Live 24K Price (Auto-Sync)</label>
-                    <input type="text" id="livePrice24" readonly style="background:#e2e8f0;">
+                    <input type="text" id="livePrice24" readonly style="background:#f1f5f9;">
                 </div>
                 <button class="calc-action-btn" onclick="executeIntelligence()">Run Intelligence Analysis</button>
             </div>
 
             <div class="result-display" id="intelResult">
-                <h3 style="color:var(--brand-green); margin-bottom:15px;">Analysis Report</h3>
-                <div id="reportText" style="font-size: 18px; color: #475569;"></div>
+                <div id="reportText"></div>
             </div>
         </div>
 
         <div class="intel-card">
             <span class="section-tag">Shariah Jurisprudence</span>
             <h2 class="section-title">The Debt Liability Matrix</h2>
-            <div class="scroll-hint"><i class="fas fa-arrows-left-right"></i> Scroll table to view details</div>
+            <div class="scroll-hint"><i class="fas fa-arrows-left-right"></i> Swipe table to view</div>
             <div class="table-wrapper">
                 <table class="matrix-table">
                     <thead>
@@ -212,58 +234,156 @@
                     <tbody>
                         <tr>
                             <td>Current Business Debts</td>
-                            <td><span class="tag tag-yes" style="background: #dcfce7; color: #15803d; padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: 800; white-space: nowrap;">Deductible</span></td>
+                            <td><b style="color:#15803d">Deductible</b></td>
                             <td>Liabilities directly impacting trading capital.</td>
                         </tr>
                         <tr>
                             <td>Personal Home Mortgage</td>
-                            <td><span class="tag tag-no" style="background: #fee2e2; color: #b91c1c; padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: 800; white-space: nowrap;">Not Deductible</span></td>
+                            <td><b style="color:#b91c1c">Not Deductible</b></td>
                             <td>Future long-term installments do not reduce current Zakat.</td>
                         </tr>
                         <tr>
                             <td>Unpaid Staff Salaries</td>
-                            <td><span class="tag tag-yes" style="background: #dcfce7; color: #15803d; padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: 800; white-space: nowrap;">Deductible</span></td>
+                            <td><b style="color:#15803d">Deductible</b></td>
                             <td>Debt owed to workers is a primary liability.</td>
-                        </tr>
-                        <tr>
-                            <td>Business Expansion Loans</td>
-                            <td><span class="tag tag-no" style="background: #fee2e2; color: #b91c1c; padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: 800; white-space: nowrap;">Partial</span></td>
-                            <td>Only the current month's installment is considered.</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
 
+<section style="background-color: #002b1b; color: #f1f1f1; padding: 40px 20px; border-radius: 20px; border-top: 3px solid #d4af37; font-family: 'Playfair Display', serif; max-width: 900px; margin: 20px auto;">
+    
+    <div style="text-align: center; margin-bottom: 30px;">
+        <h2 style="color: #d4af37; font-size: 28px; text-transform: uppercase; letter-spacing: 1px;">The Divine Science of Wealth</h2>
+        <div style="width: 60px; height: 2px; background: #d4af37; margin: 10px auto;"></div>
+    </div>
+
+    <div style="line-height: 1.8; font-size: 16px; text-align: justify;">
+        <p>
+            In the modern financial era of <strong>2026</strong>, Zakat calculation requires more than just basic arithmetic; it demands <strong>Financial Intelligence</strong>. Hisabify has pioneered a global standard for wealth purification by integrating real-time market data with traditional Shariah principles. Our engine is not a static tool but a dynamic <strong>Precision Matrix</strong> designed for the global Ummah.
+        </p>
+
+        <h3 style="color: #d4af37; font-size: 20px; margin-top: 25px;">Dynamic Karat Calibration (18K - 24K)</h3>
+        <p>
+            Unlike standard calculators, our <strong>Gold Karat Intelligence Engine</strong> allows users to define the exact purity of their holdings. Whether you are calculating for 18K, 21K, 22K, or 24K gold, the system recalibrates the Nisab value instantaneously. This ensures that your religious obligation is met with surgical accuracy, reflecting the true market worth of your specific assets.
+        </p>
+
+        <h3 style="color: #d4af37; font-size: 20px; margin-top: 25px;">Binance Live Market Integration</h3>
+        <p>
+            To eliminate human error and outdated valuations, Hisabify connects directly to <strong>Binance Live</strong>. Every calculation runs against the current spot price of Gold (PAXG) and Silver. This <strong>Real-Time Synchronization</strong> means that your Zakat is calculated on the exact global value at the moment of your intent, providing peace of mind and spiritual certainty.
+        </p>
+
+        <h3 style="color: #d4af37; font-size: 20px; margin-top: 25px;">Advanced Liability Intelligence</h3>
+        <p>
+            The <strong>Debt Liability Matrix</strong> is the backbone of our Shariah-compliant analysis. It intelligently categorizes business debts, personal mortgages, and outstanding salaries. By distinguishing between deductible and non-deductible liabilities based on 2026 jurisprudence, we ensure that your final Zakatable amount is both fair and halaal.
+        </p>
+
+        <div style="margin-top: 30px; padding: 20px; border: 1px solid rgba(212, 175, 55, 0.4); border-radius: 10px; background: rgba(212, 175, 55, 0.05); text-align: center;">
+            <p style="color: #d4af37; font-style: italic; margin: 0;">
+                "Purify your wealth with the precision it deserves." — Hisabify Intelligence Matrix 2026.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+            <div style="background: rgba(212, 175, 55, 0.1); border: 1px solid #d4af37; padding: 20px; border-radius: 10px; text-align: center; font-style: italic; font-size: 14px; color: #d4af37;">
+                "Wealth does not decrease by giving in Charity."
+            </div>
+        </section>
+
         <div class="content-rich">
             <h2>Why Standard Calculators Fail?</h2>
-            <p>Most Zakat tools online use a "One Size Fits All" approach. They assume all gold is 24K and all debts are the same. In the professional world of 2026, wealth is more complex. **Hisabify Intelligence** was built to handle these complexities.</p>
-            
-            <h2>The Secret of "Hawl"</h2>
-            <p>One of the biggest secrets in Zakat calculation is the "Zakat Date". You don't pay Zakat when you earn money; you pay it once a lunar year has passed on your wealth.</p>
+            <p>Most tools assume all gold is 24K. In 2026, wealth is complex. **Hisabify** handles these complexities with real-time data.</p>
             
             <ul>
-                <li><i class="fas fa-check-circle"></i> <span><strong>Asset Purity:</strong> We analyze the exact gold content.</span></li>
-                <li><i class="fas fa-check-circle"></i> <span><strong>Real-time Markets:</strong> Live Binance streams for Gold (PAXG).</span></li>
-                <li><i class="fas fa-check-circle"></i> <span><strong>Liability Intelligence:</strong> Distinguishing between valid and invalid debts.</span></li>
+                <li><i class="fas fa-check-circle"></i> <span><strong>Asset Purity:</strong> Precise gold content analysis.</span></li>
+                <li><i class="fas fa-check-circle"></i> <span><strong>Real-time Markets:</strong> Live Binance streams.</span></li>
+                <li><i class="fas fa-check-circle"></i> <span><strong>Liability Intelligence:</strong> Smart debt sorting.</span></li>
             </ul>
-
-            <h2>Zakat on Modern Investments: 2026 Perspective</h2>
-            <p>Whether you hold **Bitcoin** in cold storage or have **DeFi Staking** rewards, the rules of Shariah remain firm. Liquid investments are treated like cash.</p>
+        </div>
+    </div>
+<section id="islamic-matrix" style="background: #022c22; color: #f1f5f9; padding: 60px 20px; font-family: 'Plus Jakarta Sans', sans-serif; border-top: 4px solid #c6a306;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+        
+        <div style="text-align: center; margin-bottom: 50px;">
+            <span style="color: #c6a306; text-transform: uppercase; letter-spacing: 4px; font-weight: 800; font-size: 14px;">The Unseen Dimensions</span>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(30px, 6vw, 50px); color: #ffffff; margin: 15px 0; line-height: 1.2;">Al-Ghaib & The Quantum Soul</h2>
+            <div style="width: 80px; height: 3px; background: #c6a306; margin: 0 auto;"></div>
         </div>
 
+        <div class="intel-card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(198, 163, 6, 0.3); padding: clamp(20px, 5vw, 40px); border-radius: 30px; margin-bottom: 40px;">
+            <h3 style="font-family: 'Playfair Display', serif; color: #c6a306; font-size: 28px; margin-bottom: 20px;">01. The 'Ruh' vs. Modern Consciousness</h3>
+            <p style="line-height: 1.9; font-size: 17px; text-align: justify; color: #cbd5e1;">
+                While Western science struggles to define "Consciousness," Islamic metaphysics has provided the blueprint for the <strong>'Ruh' (Soul)</strong> for over 1,400 years. We are introducing a groundbreaking synthesis: <strong>"Quantum Spirituality."</strong> This aligns the Quranic concept of <em>Amr-i-Rabbi</em> (The Divine Command) with modern energy field theories. 
+                <br><br>
+                When a believer performs <em>Sajdah</em> (prostration), the electrical discharges in the frontal lobe synchronize with the Earth’s electromagnetic frequency. This isn't just a ritual; it is a "Spiritual Grounding" protocol that Silicon Valley bio-hackers are only beginning to conceptualize.
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            <div style="background: #064e3b; padding: 30px; border-radius: 20px; border-left: 5px solid #c6a306;">
+                <h4 style="color: #c6a306; font-size: 22px; margin-bottom: 15px;">Economic Barakah Matrix</h4>
+                <p style="font-size: 15px; line-height: 1.7; color: #ecfdf5;">
+                    Modern banking relies on 'Interest,' which mathematically freezes wealth. The Islamic <strong>Zakat Model</strong> is the most advanced version of a "Circular Economy." It introduces <em>Barakah</em>—a Divine Multiplier that defies standard linear mathematics by increasing net value through distribution.
+                </p>
+            </div>
+            <div style="background: #064e3b; padding: 30px; border-radius: 20px; border-left: 5px solid #c6a306;">
+                <h4 style="color: #c6a306; font-size: 22px; margin-bottom: 15px;">Celestial Chronobiology</h4>
+                <p style="font-size: 15px; line-height: 1.7; color: #ecfdf5;">
+                    The world lives on a 24-hour clock, but a believer operates on <strong>"Luni-Solar Cycles."</strong> The <em>Tahajjud</em> window aligns perfectly with peak Alpha-Wave brain activity. This is the ultimate "Time-Hack" for cognitive clarity and metaphysical alignment.
+                </p>
+            </div>
+        </div>
+
+        <div style="background: white; color: #022c22; padding: clamp(25px, 6vw, 50px); border-radius: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.4);">
+            <h2 style="font-family: 'Playfair Display', serif; text-align: center; margin-bottom: 30px;">The Science of the Heart (Qalb)</h2>
+            <div style="column-count: 1; text-align: justify; font-size: 16px; line-height: 1.8;">
+                <p>
+                    In Islamic Philosophy, the "Heart" is not merely a biological pump; it is the <em>Markaz-ul-Idrak</em>—the Center of Perception. While Google is flooded with articles on stress management, the Islamic concept of <strong>"Sakinah"</strong> (Divine Tranquility) remains an untapped secret. Sakinah is a metaphysical state where the soul remains still even amidst a global storm. 
+                    <br><br>
+                    The "Identity Crisis" currently sweeping the US and Europe stems from a lack of vertical alignment. Islam liberates the mind from social engineering by establishing the concept of <em>'Abd'</em> (Servant of the Infinite). By bowing to the Creator, one finds the power to stand before any creation.
+                    <br><br>
+                    <strong>The Hidden Acoustic Science:</strong><br>
+                    Every Quranic verse carries a specific acoustic frequency. Research into sound-resonance suggests that these frequencies interact directly with cellular nuclei. At <strong>Hisabify 2026</strong>, we treat Zakat and prayer not just as duties, but as a "Celestial Operating System" designed to optimize human existence.
+                    <br><br>
+                    <strong>Why the Global Elite is Turning to This?</strong><br>
+                    Materialism has hit a ceiling. People are searching for 'Purpose' beyond the screen. Islam offers a firewall against the viruses of greed and anxiety. When you calculate Zakat, you are not losing 2.5%; you are upgrading your wealth's security protocol and ensuring its spiritual purity.
+                </p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <p style="font-style: italic; color: #c6a306; margin-bottom: 20px;">"Indeed, in the remembrance of Allah do hearts find rest."</p>
+ 
+
     </div>
+</section>
+
+<style>
+    @media (max-width: 768px) {
+        #islamic-matrix {
+            padding: 40px 15px;
+        }
+        .intel-card {
+            border-radius: 20px;
+            padding: 20px;
+        }
+        #islamic-matrix h3 {
+            font-size: 22px;
+        }
+    }
+</style>
 
     <footer>
         <div class="footer-logo">HISABIFY</div>
-        <p>The Global Gold Standard for Zakat Calculation & Financial Integrity.</p>
-        <p style="opacity: 0.5; margin-top: 40px; font-size: 12px;">&copy; 2026 Hisabify Engineering. All Shariah Formulas are Authenticated.</p>
+        <p>The Global Gold Standard for Zakat Calculation.</p>
+        <p style="opacity: 0.5; margin-top: 20px; font-size: 11px;">&copy; 2026 Hisabify Engineering.</p>
         <div class="footer-links-container">
-            <a href="privacy.html" style="color: #d4af37; text-decoration: none; font-size: 13px; margin: 0 10px;">Privacy Policy</a>
-            <span style="color:rgba(255,255,255,0.2)">|</span>
-            <a href="terms.html" style="color: #d4af37; text-decoration: none; font-size: 13px; margin: 0 10px;">Terms</a>
-            <span style="color:rgba(255,255,255,0.2)">|</span>
-            <a href="contact.html" style="color: #d4af37; text-decoration: none; font-size: 13px; margin: 0 10px;">Contact</a>
+            <a href="#" style="color: #d4af37; text-decoration: none; font-size: 12px;">Privacy</a>
+            <a href="#" style="color: #d4af37; text-decoration: none; font-size: 12px;">Terms</a>
+            <a href="#" style="color: #d4af37; text-decoration: none; font-size: 12px;">Contact</a>
         </div>
     </footer>
 
@@ -278,11 +398,11 @@
                 const paxgPrice = parseFloat(data.c);
                 currentGoldRate = paxgPrice / G_FACTOR; 
                 document.getElementById('livePrice24').value = "$" + currentGoldRate.toFixed(2);
-                document.getElementById('syncStatus').innerHTML = '<div class="dot"></div> SYSTEM ONLINE: BINANCE LIVE';
+                document.getElementById('syncStatus').innerHTML = '<div class="dot"></div> ONLINE: BINANCE LIVE';
             };
             ws.onerror = () => {
-                document.getElementById('syncStatus').innerHTML = 'Offline: Using Default Rates';
-                currentGoldRate = 75; // Fallback rate
+                document.getElementById('syncStatus').innerHTML = 'Offline: Default Rates';
+                currentGoldRate = 75; 
             };
         }
 
@@ -291,8 +411,8 @@
             const unit = document.getElementById('weightUnit').value;
             const karat = parseFloat(document.getElementById('karatValue').value);
             
-            if(weight <= 0) { alert("Please enter a valid weight"); return; }
-            if(currentGoldRate === 0) { alert("Syncing live rates... please wait."); return; }
+            if(weight <= 0) { alert("Enter valid weight"); return; }
+            if(currentGoldRate === 0) { alert("Syncing rates... wait"); return; }
 
             let weightInGrams = (unit === 'tolas') ? weight * 11.6638 : weight;
             let pure24KWeight = weightInGrams * karat;
@@ -302,22 +422,16 @@
             const resultDiv = document.getElementById('intelResult');
             resultDiv.style.display = 'block';
             document.getElementById('reportText').innerHTML = `
-                <div style="font-size:clamp(24px, 5vw, 32px); font-weight:900; color:var(--brand-green); margin-bottom:15px; line-height:1.2;">
+                <h3 style="color:var(--brand-green)">Analysis Report</h3>
+                <div style="font-size:24px; font-weight:900; color:var(--brand-green); margin:10px 0;">
                     Zakat Owed: $${zakatAmount.toLocaleString(undefined, {minimumFractionDigits: 2})}
                 </div>
-                <p>Equivalent to <strong>${pure24KWeight.toFixed(3)}g</strong> Pure 24K Gold.</p>
-                <div style="margin-top:15px; font-size:13px; border-top:1px solid #eee; padding-top:15px; opacity:0.8;">
-                    Market Value: $${totalMarketValue.toLocaleString()} | Rate: $${currentGoldRate.toFixed(2)}/g
-                </div>
+                <p style="font-size:14px;">Equivalent: ${pure24KWeight.toFixed(2)}g Pure Gold</p>
             `;
             
-            setTimeout(() => {
-                resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 100);
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-
         window.onload = initLiveSync;
     </script>
-
 </body>
 </html>
