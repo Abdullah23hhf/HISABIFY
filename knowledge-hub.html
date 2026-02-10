@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPDWWEN978"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CPDWWEN978');
-</script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultimate Zakat Hub | Comparison, Guides & Reminders</title>
@@ -111,6 +102,71 @@
         <a href="/" class="home-btn"><i class="fas fa-th-large"></i> DASHBOARD</a>
     </nav>
 </header>
+<div id="hub-search-container" style="max-width: 800px; margin: 20px auto; text-align: center; font-family: sans-serif;">
+    <input type="text" id="hub-search-input" placeholder="Search articles from Knowledge Hub..." 
+           style="width: 90%; padding: 15px; border: 2px solid #004d26; border-radius: 30px; font-size: 16px; outline: none;">
+    <div id="hub-results" style="margin-top: 10px; text-align: left; background: white; border-radius: 10px;"></div>
+</div>
+
+<script>
+    let knowledgeArticles = [];
+
+    // 1. Knowledge Hub file se articles khud hi nikalne ka function
+    async function loadArticlesFromHub() {
+        try {
+            const response = await fetch('knowledge-hub.html');
+            const html = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            
+            // Ye line knowledge-hub.html ke saare links (<a> tags) dhoondti hai
+            const links = doc.querySelectorAll('a');
+            
+            links.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && href.includes('.html')) {
+                    knowledgeArticles.push({
+                        title: link.innerText,
+                        url: href,
+                        // Hum link ke text aur URL ko hi keywords maan rahe hain
+                        keywords: link.innerText.toLowerCase() + " " + href.toLowerCase()
+                    });
+                }
+            });
+            console.log("Knowledge Hub Indexed!");
+        } catch (error) {
+            console.error("Error loading knowledge-hub.html:", error);
+        }
+    }
+
+    // 2. Search Functionality
+    document.getElementById('hub-search-input').addEventListener('input', function() {
+        const query = this.value.toLowerCase();
+        const resultsDiv = document.getElementById('hub-results');
+        resultsDiv.innerHTML = '';
+
+        if (query.length < 2) return;
+
+        const filtered = knowledgeArticles.filter(art => art.keywords.includes(query));
+
+        filtered.forEach(art => {
+            const div = document.createElement('div');
+            div.style.padding = '12px';
+            div.style.borderBottom = '1px solid #eee';
+            div.innerHTML = `<a href="${art.url}" style="text-decoration: none; color: #14532d; font-weight: bold;">
+                                📄 ${art.title}
+                             </a>`;
+            resultsDiv.appendChild(div);
+        });
+
+        if (filtered.length === 0) {
+            resultsDiv.innerHTML = '<p style="padding: 10px; color: #999;">No article found in Knowledge Hub.</p>';
+        }
+    });
+
+    // Page load hote hi indexing shuru karein
+    loadArticlesFromHub();
+</script>
 
 <div class="quick-nav">
     <a href="#vs-tax">ZAKAT VS TAX</a>
@@ -792,6 +848,85 @@
         <h3>Partnerships and Shares</h3>
         <p>If you are in a business partnership, Zakat is paid by each partner on their respective share of the Zakat-able assets, unless the business pays Zakat collectively on behalf of all partners. In 2026, it is common for Shariah-compliant firms to handle Zakat at the corporate level before distributing profits.</p>
     </article>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Zakat - Gold Zakat Calculator & Nisab Guide 2026</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; line-height: 1.8; color: #1a202c; padding: 20px; background: #fff; }
+        .wrapper { max-width: 900px; margin: auto; border: 1px solid #e2e8f0; padding: 40px; }
+        h1 { color: #004d26; font-size: 32px; border-bottom: 3px solid #d4af37; padding-bottom: 10px; }
+        h2 { color: #14532d; font-size: 24px; margin-top: 35px; }
+        .kw { font-weight: bold; color: #b8860b; text-decoration: none; }
+        table { width: 100%; border-collapse: collapse; margin: 25px 0; }
+        th, td { border: 1px solid #cbd5e0; padding: 15px; text-align: left; }
+        th { background: #f7fafc; }
+        .important-note { background: #fffaf0; border-left: 5px solid #d4af37; padding: 20px; margin: 20px 0; }
+        ul { margin-bottom: 25px; }
+        li { margin-bottom: 12px; }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <h1><span class="kw">What is Zakat</span>? The Ultimate Guide for 2026</h1>
+    
+    <p>If you are asking <span class="kw">what is zakat</span>, it is the third <span class="kw">zakat pillar of islam</span>. It is a mandatory act of charity for every Muslim who meets the wealth threshold. In <span class="kw">zakat islam</span>, this process purifies your wealth and provides support to the needy. Understanding <span class="kw">zakat in islam</span> is crucial for maintaining your faith.</p>
+
+    <h2>Understanding Nisab and Gold Zakat</h2>
+    <p>Before you <span class="kw">pay zakat</span>, you must know if you meet the <span class="kw">nisab</span>. The nisab is the minimum amount of wealth you must possess for a full lunar year. For <span class="kw">gold zakat</span>, the requirement is 87.48 grams of gold.</p>
+    
+    <div class="important-note">
+        To get an accurate result, you must check the <span class="kw">gold price today</span>. The <span class="kw">gold price per gram</span> fluctuates daily, so always use the latest market rates before you <span class="kw">calculate zakat on gold</span>.
+    </div>
+
+    <h2>How to Use a Zakat Gold Calculator</h2>
+    <p>Using a <span class="kw">zakat gold calculator</span> or a general <span class="kw">zakat calculator</span> simplifies the process. Whether you are in Pakistan or the USA, the formula remains the same. A <span class="kw">zakat calculator pakistan</span> will use PKR, while in the West, you will use USD or GBP based on the <span class="kw">gold price today</span>.</p>
+
+    <table>
+        <tr>
+            <th>Key Term</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><span class="kw">Islam Zakat</span> Rate</td>
+            <td>2.5% of total qualifying wealth.</td>
+        </tr>
+        <tr>
+            <td><span class="kw">Zakat for Gold Calculator</span></td>
+            <td>Total Gold Weight x Current Rate x 0.025</td>
+        </tr>
+        <tr>
+            <td><span class="kw">Calculate Zakat on Gold</span></td>
+            <td>The most common way to fulfill the <span class="kw">zakat pillar of islam</span>.</td>
+        </tr>
+    </table>
+
+    <h2>Jihad, Sawm, and Sunnah: The Broader Context</h2>
+    <p>Many search for <span class="kw">jihad</span> meaning alongside Zakat. While <span class="kw">jihad</span> refers to the spiritual and physical struggle in the path of Allah, Zakat is a financial struggle (Jihad of wealth). Following the <span class="kw">sunnah</span> of Prophet Muhammad (PBUH) is the only way to ensure your charity is accepted.</p>
+    
+    <p>Furthermore, <span class="kw">what is sawm</span>? Sawm is fasting during Ramadan. This is the month when most Muslims use a <span class="kw">calculator</span> to settle their dues. It is the time for both spiritual and financial purification.</p>
+
+    <h2>Zakat vs Sadaqah: Key Differences</h2>
+    <p>Understanding <span class="kw">zakat vs sadaqah</span> is vital. While <span class="kw">islam zakat</span> is fard (obligatory), <span class="kw">sadaqah meaning</span> refers to voluntary charity. You can give any amount as Sadaqah at any time, but Zakat has a fixed rate and a specific <span class="kw">nisab</span>.</p>
+
+    <div class="important-note">
+        <span class="kw">Summary Checklist:</span>
+        <ul>
+            <li>Check the <span class="kw">gold price per gram</span>.</li>
+            <li>Use a <span class="kw">zakat gold calculator</span> for accuracy.</li>
+            <li>Ensure you meet the <span class="kw">nisab</span>.</li>
+            <li>Follow the <span class="kw">sunnah</span> in distribution.</li>
+        </ul>
+    </div>
+
+    <p>Whether it's the <span class="kw">2026 winter olympics</span> year or any other, the rules of <span class="kw">islam zakat</span> remain unchanged. Stay updated, stay blessed.</p>
+</div>
+
+</body>
+</html>
 
     <article class="hub-section">
         <h2>Digital Wealth Purification: Ethics and Practice</h2>
