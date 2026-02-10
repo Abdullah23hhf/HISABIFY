@@ -102,6 +102,91 @@
         <a href="/" class="home-btn"><i class="fas fa-th-large"></i> DASHBOARD</a>
     </nav>
 </header>
+<div class="search-tip-container">
+    <div class="search-tip-content">
+        <div class="search-icon">🔍</div>
+        <p class="search-text">
+            To find any topic instantly (Gold, Zakat, Jihad), use 
+            <span class="highlight">"Find in page"</span> in your browser menu 
+            <br><small class="desktop-tip">or press <strong>Ctrl + F</strong> on your keyboard</small>
+        </p>
+    </div>
+</div>
+
+<style>
+    .search-tip-container {
+        background: linear-gradient(135deg, #004d26 0%, #002b16 100%); /* Emerald Green */
+        border: 2px solid #d4af37; /* Metallic Gold */
+        border-radius: 15px;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 800px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        position: relative;
+        overflow: hidden;
+        animation: subtleGlow 3s infinite alternate; /* Luxurious Animation */
+    }
+
+    /* Glow Animation */
+    @keyframes subtleGlow {
+        0% { box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2); border-color: #d4af37; }
+        100% { box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5); border-color: #f1d592; }
+    }
+
+    .search-tip-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .search-icon {
+        font-size: 30px;
+        background: #d4af37;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        color: #002b16;
+        animation: pulseIcon 2s infinite;
+    }
+
+    @keyframes pulseIcon {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    .search-text {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .highlight {
+        color: #d4af37;
+        font-weight: bold;
+        text-transform: uppercase;
+        border-bottom: 2px solid #d4af37;
+    }
+
+    .desktop-tip {
+        color: #b3ccbf;
+        font-size: 14px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 600px) {
+        .search-tip-content { flex-direction: column; }
+        .desktop-tip { display: none; }
+        .search-text { font-size: 16px; }
+    }
+</style>
 
 <div class="quick-nav">
     <a href="#vs-tax">ZAKAT VS TAX</a>
